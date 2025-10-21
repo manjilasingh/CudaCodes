@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: profile_add.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/Blog1/MultipleBlocks
+  The memory limit is: 1gb
+  The job will start running after: 202510211550.49
+  Job Name: profile_add_hopper
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu profile_add.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N profile_add_hopper -a 202510211550.49 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+  Job number: 23315
+ 
