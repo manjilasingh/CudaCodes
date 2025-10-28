@@ -1,0 +1,44 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: error_saxpy.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/03_How_to_query_device_properties
+  The working directory is:  /scratch-local/ualmxs002.error_saxpy.25529.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202510280228.26
+  Job Name: error_saxpy
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg007.asc.edu
+  Node list:  asaxg007.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu error_saxpy.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N error_saxpy -a 202510280228.26 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Tue Oct 28 02:28:33 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:29:00.0 Off |                    0 |
+| N/A   41C    P0             61W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Sync kernel error: invalid configuration argument
+Max error: 2.000000
