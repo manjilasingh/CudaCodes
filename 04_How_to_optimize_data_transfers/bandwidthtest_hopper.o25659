@@ -1,0 +1,74 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: bandwidthtest.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/04_How_to_optimize_data_transfers
+  The working directory is:  /scratch-local/ualmxs002.bandwidthtest_hopper.25659.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202510281237.18
+  Job Name: bandwidthtest_hopper
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg007.asc.edu
+  Node list:  asaxg007.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu bandwidthtest.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N bandwidthtest_hopper -a 202510281237.18 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Tue Oct 28 12:37:32 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:29:00.0 Off |                    0 |
+| N/A   39C    P0             60W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+bandwidthtest.cu(122): warning #2464-D: conversion from a string literal to "char *" is deprecated
+    profileCopies(h_aPageable, h_bPageable, d_a, nElements, "Pageable");
+                                                            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+bandwidthtest.cu(123): warning #2464-D: conversion from a string literal to "char *" is deprecated
+    profileCopies(h_aPinned, h_bPinned, d_a, nElements, "Pinned");
+                                                        ^
+
+bandwidthtest.cu(122): warning #2464-D: conversion from a string literal to "char *" is deprecated
+    profileCopies(h_aPageable, h_bPageable, d_a, nElements, "Pageable");
+                                                            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+bandwidthtest.cu(123): warning #2464-D: conversion from a string literal to "char *" is deprecated
+    profileCopies(h_aPinned, h_bPinned, d_a, nElements, "Pinned");
+                                                        ^
+
+
+Device: NVIDIA H100 NVL
+Transfer size (MB): 16
+
+Pageable transfers
+  Host to Device bandwidth (GB/s): 11.387663
+  Device to Host bandwidth (GB/s): 12.319955
+
+Pinned transfers
+  Host to Device bandwidth (GB/s): 27.781263
+  Device to Host bandwidth (GB/s): 27.821068
+
