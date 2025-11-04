@@ -1,0 +1,106 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: async.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/05_How_to_overlap_data_transfers
+  The working directory is:  /scratch-local/ualmxs002.async_ampere.28229.asax-pbs1
+  The memory limit is: 100gb
+  The job will start running after: 202511040812.12
+  Job Name: async_ampere
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg005.asc.edu
+  Node list:  asaxg005.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu async.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N async_ampere -a 202511040812.12 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=ampere:ngpus=1:ncpus=1:mpiprocs=1:mem=100000mb 
+ 
+Tue Nov  4 08:12:22 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   41C    P0             47W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+./async.sh: line 10: 4019635 Bus error               (core dumped) ./async
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2856.529785
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.538330
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.749023
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2856.615234
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.543457
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.962158
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2855.828613
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.535400
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.833496
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2856.404053
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.654541
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.937988
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2856.454834
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.511719
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.554199
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2856.415527
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.755615
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.730225
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2855.250488
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.674805
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.674316
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2856.536377
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.423828
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.657227
+  max error: 1.192093e-07
+Device : NVIDIA A100 80GB PCIe
+Time for sequential transfer and execute (ms): 2857.501953
+  max error: 1.192093e-07
+Time for asynchronous V1 transfer and execute (ms): 2159.908447
+  max error: 1.192093e-07
+Time for asynchronous V2 transfer and execute (ms): 2141.783203
+  max error: 1.192093e-07

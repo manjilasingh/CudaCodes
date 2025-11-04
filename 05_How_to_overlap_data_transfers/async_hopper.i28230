@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: async.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/05_How_to_overlap_data_transfers
+  The memory limit is: 100gb
+  The job will start running after: 202511040812.28
+  Job Name: async_hopper
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu async.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N async_hopper -a 202511040812.28 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=100000mb 
+  Job number: 28230
+ 
