@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: job.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/09_Finite_Difference_part1
+  The memory limit is: 40gb
+  The job will start running after: 202512071302.38
+  Job Name: ampere
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu job.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N ampere -a 202512071302.38 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=ampere:ngpus=1:ncpus=1:mpiprocs=1:mem=40000mb 
+  Job number: 46538
+ 

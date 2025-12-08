@@ -1,0 +1,91 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: job.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/09_Finite_Difference_part1
+  The working directory is:  /scratch-local/ualmxs002.hopper.46539.asax-pbs1
+  The memory limit is: 45gb
+  The job will start running after: 202512071302.47
+  Job Name: hopper
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg007.asc.edu
+  Node list:  asaxg007.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu job.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N hopper -a 202512071302.47 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=45000mb 
+ 
+Sun Dec  7 13:02:55 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:29:00.0 Off |                    0 |
+| N/A   37C    P0             59W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Running on: asaxg007
+===== compiling =====
+===== running finite difference test =====
+
+Device Name: NVIDIA H100 NVL
+Compute Capability: 9.0
+
+X derivatives
+
+  Using shared memory tile of 64 x 4
+   RMS error: 7.136262e-06
+   MAX error: 2.861023e-05
+   Average time (ms): 0.003538
+   Average Bandwidth (GB/s): 592.817710
+
+  Using shared memory tile of 64 x 32
+   RMS error: 7.136262e-06
+   MAX error: 2.861023e-05
+   Average time (ms): 0.004666
+   Average Bandwidth (GB/s): 449.492442
+
+Y derivatives
+
+  Using shared memory tile of 4 x 64
+   RMS error: 7.136262e-06
+   MAX error: 2.861023e-05
+   Average time (ms): 0.003958
+   Average Bandwidth (GB/s): 529.797903
+
+  Using shared memory tile of 32 x 64
+   RMS error: 7.136262e-06
+   MAX error: 2.861023e-05
+   Average time (ms): 0.004771
+   Average Bandwidth (GB/s): 439.543947
+
+Z derivatives
+
+  Using shared memory tile of 4 x 64
+   RMS error: 7.136262e-06
+   MAX error: 2.861023e-05
+   Average time (ms): 0.003995
+   Average Bandwidth (GB/s): 524.917918
+
+  Using shared memory tile of 32 x 64
+   RMS error: 7.136262e-06
+   MAX error: 2.861023e-05
+   Average time (ms): 0.004878
+   Average Bandwidth (GB/s): 429.885218
+
