@@ -1,0 +1,152 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: profile_coalescing.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/06_How_to_access_global_memory_efficiently
+  The working directory is:  /scratch-local/ualmxs002.ampere_double.43939.asax-pbs1
+  The memory limit is: 10gb
+  The job will start running after: 202512020728.59
+  Job Name: ampere_double
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg005.asc.edu
+  Node list:  asaxg005.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu profile_coalescing.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N ampere_double -a 202512020728.59 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=ampere:ngpus=1:ncpus=1:mpiprocs=1:mem=10000mb 
+ 
+Tue Dec  2 07:29:09 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   42C    P0             47W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: NVIDIA A100 80GB PCIe
+Transfer size (MB): 4
+Double Precision
+Offset, Bandwidth (GB/s):
+0, 656.167969
+1, 968.992310
+2, 950.570374
+3, 976.562500
+4, 996.015991
+5, 905.797058
+6, 957.854370
+7, 950.570374
+8, 950.570374
+9, 943.396179
+10, 968.992310
+11, 957.854370
+12, 968.992310
+13, 943.396179
+14, 757.575745
+15, 946.969666
+16, 961.538452
+17, 954.198547
+18, 976.562500
+19, 939.849670
+20, 999.999939
+21, 929.367981
+22, 954.198547
+23, 946.969666
+24, 968.992310
+25, 950.570374
+26, 968.992310
+27, 939.849670
+28, 984.251892
+29, 946.969666
+30, 925.925964
+31, 943.396179
+32, 984.251892
+
+Stride, Bandwidth (GB/s):
+1, 992.063477
+2, 702.247192
+3, 593.824219
+4, 497.017914
+5, 476.190491
+6, 449.640289
+7, 375.375366
+8, 285.388123
+9, 228.310516
+10, 206.100571
+11, 189.393936
+12, 185.322464
+13, 164.257568
+14, 150.693192
+15, 154.990707
+16, 152.718384
+17, 132.625992
+18, 121.951218
+19, 112.815880
+20, 116.333176
+21, 116.658890
+22, 113.584732
+23, 110.132156
+24, 108.837616
+25, 106.337730
+26, 107.158165
+27, 105.218857
+28, 104.210083
+29, 103.348488
+30, 104.427734
+31, 103.734444
+32, 114.468857
+Generating '/scratch-local/ualmxs002.ampere_double.43939.asax-pbs1/nsys-report-3124.qdstrm'
+[1/6] [0%                          ] report3.nsys-rep[1/6] [0%                          ] report3.nsys-rep[1/6] [=16%                        ] report3.nsys-rep[1/6] [==18%                       ] report3.nsys-rep[1/6] [==19%                       ] report3.nsys-rep[1/6] [================71%         ] report3.nsys-rep[1/6] [=================72%        ] report3.nsys-rep[1/6] [=================73%        ] report3.nsys-rep[1/6] [=================74%        ] report3.nsys-rep[1/6] [==================76%       ] report3.nsys-rep[1/6] [==================77%       ] report3.nsys-rep[1/6] [=====================89%    ] report3.nsys-rep[1/6] [========================100%] report3.nsys-rep[1/6] [========================100%] report3.nsys-rep
+[2/6] [0%                          ] report3.sqlite[2/6] [1%                          ] report3.sqlite[2/6] [2%                          ] report3.sqlite[2/6] [3%                          ] report3.sqlite[2/6] [4%                          ] report3.sqlite[2/6] [5%                          ] report3.sqlite[2/6] [6%                          ] report3.sqlite[2/6] [7%                          ] report3.sqlite[2/6] [8%                          ] report3.sqlite[2/6] [9%                          ] report3.sqlite[2/6] [10%                         ] report3.sqlite[2/6] [11%                         ] report3.sqlite[2/6] [12%                         ] report3.sqlite[2/6] [13%                         ] report3.sqlite[2/6] [14%                         ] report3.sqlite[2/6] [=15%                        ] report3.sqlite[2/6] [=16%                        ] report3.sqlite[2/6] [=17%                        ] report3.sqlite[2/6] [==18%                       ] report3.sqlite[2/6] [==19%                       ] report3.sqlite[2/6] [==20%                       ] report3.sqlite[2/6] [==21%                       ] report3.sqlite[2/6] [===22%                      ] report3.sqlite[2/6] [===23%                      ] report3.sqlite[2/6] [===24%                      ] report3.sqlite[2/6] [====25%                     ] report3.sqlite[2/6] [====26%                     ] report3.sqlite[2/6] [====27%                     ] report3.sqlite[2/6] [====28%                     ] report3.sqlite[2/6] [=====29%                    ] report3.sqlite[2/6] [=====30%                    ] report3.sqlite[2/6] [=====31%                    ] report3.sqlite[2/6] [=====32%                    ] report3.sqlite[2/6] [======33%                   ] report3.sqlite[2/6] [======34%                   ] report3.sqlite[2/6] [======35%                   ] report3.sqlite[2/6] [=======36%                  ] report3.sqlite[2/6] [=======37%                  ] report3.sqlite[2/6] [=======38%                  ] report3.sqlite[2/6] [=======39%                  ] report3.sqlite[2/6] [========40%                 ] report3.sqlite[2/6] [========41%                 ] report3.sqlite[2/6] [========42%                 ] report3.sqlite[2/6] [=========43%                ] report3.sqlite[2/6] [=========44%                ] report3.sqlite[2/6] [=========45%                ] report3.sqlite[2/6] [=========46%                ] report3.sqlite[2/6] [==========47%               ] report3.sqlite[2/6] [==========48%               ] report3.sqlite[2/6] [==========49%               ] report3.sqlite[2/6] [===========50%              ] report3.sqlite[2/6] [===========51%              ] report3.sqlite[2/6] [===========52%              ] report3.sqlite[2/6] [===========53%              ] report3.sqlite[2/6] [============54%             ] report3.sqlite[2/6] [============55%             ] report3.sqlite[2/6] [============56%             ] report3.sqlite[2/6] [============57%             ] report3.sqlite[2/6] [=============58%            ] report3.sqlite[2/6] [=============59%            ] report3.sqlite[2/6] [=============60%            ] report3.sqlite[2/6] [==============61%           ] report3.sqlite[2/6] [==============62%           ] report3.sqlite[2/6] [==============63%           ] report3.sqlite[2/6] [==============64%           ] report3.sqlite[2/6] [===============65%          ] report3.sqlite[2/6] [===============66%          ] report3.sqlite[2/6] [===============67%          ] report3.sqlite[2/6] [================68%         ] report3.sqlite[2/6] [================69%         ] report3.sqlite[2/6] [================70%         ] report3.sqlite[2/6] [================71%         ] report3.sqlite[2/6] [=================72%        ] report3.sqlite[2/6] [=================73%        ] report3.sqlite[2/6] [=================74%        ] report3.sqlite[2/6] [==================75%       ] report3.sqlite[2/6] [==================76%       ] report3.sqlite[2/6] [==================77%       ] report3.sqlite[2/6] [==================78%       ] report3.sqlite[2/6] [===================79%      ] report3.sqlite[2/6] [===================80%      ] report3.sqlite[2/6] [===================81%      ] report3.sqlite[2/6] [===================82%      ] report3.sqlite[2/6] [====================83%     ] report3.sqlite[2/6] [====================84%     ] report3.sqlite[2/6] [====================85%     ] report3.sqlite[2/6] [=====================86%    ] report3.sqlite[2/6] [=====================87%    ] report3.sqlite[2/6] [=====================88%    ] report3.sqlite[2/6] [=====================89%    ] report3.sqlite[2/6] [======================90%   ] report3.sqlite[2/6] [======================91%   ] report3.sqlite[2/6] [======================92%   ] report3.sqlite[2/6] [=======================93%  ] report3.sqlite[2/6] [=======================94%  ] report3.sqlite[2/6] [=======================95%  ] report3.sqlite[2/6] [=======================96%  ] report3.sqlite[2/6] [========================97% ] report3.sqlite[2/6] [========================98% ] report3.sqlite[2/6] [========================99% ] report3.sqlite[2/6] [========================100%] report3.sqlite[2/6] [========================100%] report3.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Name         
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  ----------------------
+     50.4          2160061         65   33231.7   11651.0      5670     82892      28735.8  cudaEventSynchronize  
+     27.5          1178069         67   17583.1    3460.0      3301    922461     112244.9  cudaLaunchKernel      
+      7.1           305646        130    2351.1    2290.0      2120      5151        291.8  cudaEventRecord       
+      6.4           272254         65    4188.5    3700.0      3500     18190       2400.5  cudaMemset            
+      4.7           202005          1  202005.0  202005.0    202005    202005          0.0  cudaFree              
+      3.5           150794          1  150794.0  150794.0    150794    150794          0.0  cudaMalloc            
+      0.3            13150          2    6575.0    6575.0       530     12620       8548.9  cudaEventCreate       
+      0.1             2490          1    2490.0    2490.0      2490      2490          0.0  cuModuleGetLoadingMode
+      0.0             1500          2     750.0     750.0       580       920        240.4  cudaEventDestroy      
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)               Name             
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  ------------------------------
+     90.9          1532268         33   46432.4   49185.0      4128     73568      24772.0  void stride<double>(T1 *, int)
+      9.1           152607         34    4488.4    4416.0      4064      8032        639.6  void offset<double>(T1 *, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)    Operation  
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  -------------
+    100.0           280415     65    4314.1    3585.0      3455      6336       1046.5  [CUDA memset]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)    Operation  
+ ----------  -----  --------  --------  --------  --------  -----------  -------------
+    272.630     65     4.194     4.194     4.194     4.194        0.000  [CUDA memset]
+
+Generated:
+    /home/ualmxs002/Cuda/CudaCodes/06_How_to_access_global_memory_efficiently/report3.nsys-rep
+    /home/ualmxs002/Cuda/CudaCodes/06_How_to_access_global_memory_efficiently/report3.sqlite

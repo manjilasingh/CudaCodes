@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: job_base.sh
+  The time limit is 10:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/CS485_HW5
+  The memory limit is: 100gb
+  The job will start running after: 202511091150.07
+  Job Name: base_hopper
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu job_base.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N base_hopper -a 202511091150.07 -r n -M msingh9@crimson.ua.edu -l walltime=10:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=100000mb 
+  Job number: 31030
+ 

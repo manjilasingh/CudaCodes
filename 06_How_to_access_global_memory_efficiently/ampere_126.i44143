@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: profile_coalescing.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/06_How_to_access_global_memory_efficiently
+  The memory limit is: 50gb
+  The job will start running after: 202512021348.51
+  Job Name: ampere_126
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu profile_coalescing.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N ampere_126 -a 202512021348.51 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=ampere:ngpus=1:ncpus=1:mpiprocs=1:mem=50000mb 
+  Job number: 44143
+ 

@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: profile.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/08_An_efficient_matrix_transpose
+  The memory limit is: 20gb
+  The job will start running after: 202512020820.39
+  Job Name: ampere_multiple
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu profile.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N ampere_multiple -a 202512020820.39 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=ampere:ngpus=1:ncpus=1:mpiprocs=1:mem=20000mb 
+  Job number: 43965
+ 

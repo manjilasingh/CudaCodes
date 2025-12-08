@@ -1,0 +1,1905 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: job_base.sh
+  The time limit is 10:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/CS485_HW5
+  The working directory is:  /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1
+  The memory limit is: 100gb
+  The job will start running after: 202511091150.07
+  Job Name: base_hopper
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg006.asc.edu
+  Node list:  asaxg006.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu job_base.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N base_hopper -a 202511091150.07 -r n -M msingh9@crimson.ua.edu -l walltime=10:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=100000mb 
+ 
+Sun Nov  9 11:50:27 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:29:00.0 Off |                    0 |
+| N/A   38C    P0             60W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Starting Game of Life Performance Tests
+========================================
+Test 1: Grid Size Scaling
+Running 500x500 grid, 1000 iterations...
+dimGrid: 63 63 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=18.931681 ms for size=500 iterations=1000
+Failed to create '/scratch/ualmxs002/base/profile_size_500.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-ffc7.qdstrm'
+
+[1/6] [0%                          ] nsys-report-b81a.nsys-rep
+[1/6] [0%                          ] nsys-report-b81a.nsys-rep
+[1/6] [11%                         ] nsys-report-b81a.nsys-rep
+[1/6] [12%                         ] nsys-report-b81a.nsys-rep
+[1/6] [================69%         ] nsys-report-b81a.nsys-rep
+[1/6] [================70%         ] nsys-report-b81a.nsys-rep
+[1/6] [=================72%        ] nsys-report-b81a.nsys-rep
+[1/6] [=================73%        ] nsys-report-b81a.nsys-rep
+[1/6] [=================74%        ] nsys-report-b81a.nsys-rep
+[1/6] [===================80%      ] nsys-report-b81a.nsys-rep
+[1/6] [========================100%] nsys-report-b81a.nsys-rep
+[1/6] [========================100%] nsys-report-b81a.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_size_500.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-b21a.sqlite
+[2/6] [1%                          ] nsys-report-b21a.sqlite
+[2/6] [2%                          ] nsys-report-b21a.sqlite
+[2/6] [3%                          ] nsys-report-b21a.sqlite
+[2/6] [4%                          ] nsys-report-b21a.sqlite
+[2/6] [5%                          ] nsys-report-b21a.sqlite
+[2/6] [6%                          ] nsys-report-b21a.sqlite
+[2/6] [7%                          ] nsys-report-b21a.sqlite
+[2/6] [8%                          ] nsys-report-b21a.sqlite
+[2/6] [9%                          ] nsys-report-b21a.sqlite
+[2/6] [10%                         ] nsys-report-b21a.sqlite
+[2/6] [11%                         ] nsys-report-b21a.sqlite
+[2/6] [12%                         ] nsys-report-b21a.sqlite
+[2/6] [13%                         ] nsys-report-b21a.sqlite
+[2/6] [14%                         ] nsys-report-b21a.sqlite
+[2/6] [=15%                        ] nsys-report-b21a.sqlite
+[2/6] [=16%                        ] nsys-report-b21a.sqlite
+[2/6] [=17%                        ] nsys-report-b21a.sqlite
+[2/6] [==18%                       ] nsys-report-b21a.sqlite
+[2/6] [==19%                       ] nsys-report-b21a.sqlite
+[2/6] [==20%                       ] nsys-report-b21a.sqlite
+[2/6] [==21%                       ] nsys-report-b21a.sqlite
+[2/6] [===22%                      ] nsys-report-b21a.sqlite
+[2/6] [===23%                      ] nsys-report-b21a.sqlite
+[2/6] [===24%                      ] nsys-report-b21a.sqlite
+[2/6] [====25%                     ] nsys-report-b21a.sqlite
+[2/6] [====26%                     ] nsys-report-b21a.sqlite
+[2/6] [====27%                     ] nsys-report-b21a.sqlite
+[2/6] [====28%                     ] nsys-report-b21a.sqlite
+[2/6] [=====29%                    ] nsys-report-b21a.sqlite
+[2/6] [=====30%                    ] nsys-report-b21a.sqlite
+[2/6] [=====31%                    ] nsys-report-b21a.sqlite
+[2/6] [=====32%                    ] nsys-report-b21a.sqlite
+[2/6] [======33%                   ] nsys-report-b21a.sqlite
+[2/6] [======34%                   ] nsys-report-b21a.sqlite
+[2/6] [======35%                   ] nsys-report-b21a.sqlite
+[2/6] [=======36%                  ] nsys-report-b21a.sqlite
+[2/6] [=======37%                  ] nsys-report-b21a.sqlite
+[2/6] [=======38%                  ] nsys-report-b21a.sqlite
+[2/6] [=======39%                  ] nsys-report-b21a.sqlite
+[2/6] [========40%                 ] nsys-report-b21a.sqlite
+[2/6] [========41%                 ] nsys-report-b21a.sqlite
+[2/6] [========42%                 ] nsys-report-b21a.sqlite
+[2/6] [=========43%                ] nsys-report-b21a.sqlite
+[2/6] [=========44%                ] nsys-report-b21a.sqlite
+[2/6] [=========45%                ] nsys-report-b21a.sqlite
+[2/6] [=========46%                ] nsys-report-b21a.sqlite
+[2/6] [==========47%               ] nsys-report-b21a.sqlite
+[2/6] [==========48%               ] nsys-report-b21a.sqlite
+[2/6] [==========49%               ] nsys-report-b21a.sqlite
+[2/6] [===========50%              ] nsys-report-b21a.sqlite
+[2/6] [===========51%              ] nsys-report-b21a.sqlite
+[2/6] [===========52%              ] nsys-report-b21a.sqlite
+[2/6] [===========53%              ] nsys-report-b21a.sqlite
+[2/6] [============54%             ] nsys-report-b21a.sqlite
+[2/6] [============55%             ] nsys-report-b21a.sqlite
+[2/6] [============56%             ] nsys-report-b21a.sqlite
+[2/6] [============57%             ] nsys-report-b21a.sqlite
+[2/6] [=============58%            ] nsys-report-b21a.sqlite
+[2/6] [=============59%            ] nsys-report-b21a.sqlite
+[2/6] [=============60%            ] nsys-report-b21a.sqlite
+[2/6] [==============61%           ] nsys-report-b21a.sqlite
+[2/6] [==============62%           ] nsys-report-b21a.sqlite
+[2/6] [==============63%           ] nsys-report-b21a.sqlite
+[2/6] [==============64%           ] nsys-report-b21a.sqlite
+[2/6] [===============65%          ] nsys-report-b21a.sqlite
+[2/6] [===============66%          ] nsys-report-b21a.sqlite
+[2/6] [===============67%          ] nsys-report-b21a.sqlite
+[2/6] [================68%         ] nsys-report-b21a.sqlite
+[2/6] [================69%         ] nsys-report-b21a.sqlite
+[2/6] [================70%         ] nsys-report-b21a.sqlite
+[2/6] [================71%         ] nsys-report-b21a.sqlite
+[2/6] [=================72%        ] nsys-report-b21a.sqlite
+[2/6] [=================73%        ] nsys-report-b21a.sqlite
+[2/6] [=================74%        ] nsys-report-b21a.sqlite
+[2/6] [==================75%       ] nsys-report-b21a.sqlite
+[2/6] [==================76%       ] nsys-report-b21a.sqlite
+[2/6] [==================77%       ] nsys-report-b21a.sqlite
+[2/6] [==================78%       ] nsys-report-b21a.sqlite
+[2/6] [===================79%      ] nsys-report-b21a.sqlite
+[2/6] [===================80%      ] nsys-report-b21a.sqlite
+[2/6] [===================81%      ] nsys-report-b21a.sqlite
+[2/6] [===================82%      ] nsys-report-b21a.sqlite
+[2/6] [====================83%     ] nsys-report-b21a.sqlite
+[2/6] [====================84%     ] nsys-report-b21a.sqlite
+[2/6] [====================85%     ] nsys-report-b21a.sqlite
+[2/6] [=====================86%    ] nsys-report-b21a.sqlite
+[2/6] [=====================87%    ] nsys-report-b21a.sqlite
+[2/6] [=====================88%    ] nsys-report-b21a.sqlite
+[2/6] [=====================89%    ] nsys-report-b21a.sqlite
+[2/6] [======================90%   ] nsys-report-b21a.sqlite
+[2/6] [======================91%   ] nsys-report-b21a.sqlite
+[2/6] [======================92%   ] nsys-report-b21a.sqlite
+[2/6] [=======================93%  ] nsys-report-b21a.sqlite
+[2/6] [=======================94%  ] nsys-report-b21a.sqlite
+[2/6] [=======================95%  ] nsys-report-b21a.sqlite
+[2/6] [=======================96%  ] nsys-report-b21a.sqlite
+[2/6] [========================97% ] nsys-report-b21a.sqlite
+[2/6] [========================98% ] nsys-report-b21a.sqlite
+[2/6] [========================99% ] nsys-report-b21a.sqlite
+[2/6] [========================100%] nsys-report-b21a.sqlite
+[2/6] [========================100%] nsys-report-b21a.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ----------  --------  ---------  -----------  ----------------------
+     89.6        170685092          2  85342546.0  85342546.0      5797  170679295  120684387.8  cudaMalloc            
+      9.0         17080551       1000     17080.6      5169.0      4609   11765887     371905.5  cudaLaunchKernel      
+      1.4          2620594          5    524118.8    328823.0    109794    1133977     426914.4  cudaMemcpy            
+      0.1           139128          2     69564.0     69564.0     11873     127255      81587.4  cudaFree              
+      0.0            21302          2     10651.0     10651.0      4260      17042       9038.2  cudaEventCreate       
+      0.0            15645          2      7822.5      7822.5      5727       9918       2963.5  cudaEventRecord       
+      0.0             8940          1      8940.0      8940.0      8940       8940          0.0  cudaEventSynchronize  
+      0.0             4191          1      4191.0      4191.0      4191       4191          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -----------------------------------
+    100.0          4990096       1000    4990.1    4992.0      4896      5216         35.6  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     68.5           871143      3  290381.0  250243.0    240449    380451      78156.5  [CUDA memcpy Device-to-Host]
+     31.5           401378      2  200689.0  200689.0    199617    201761       1516.0  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+      3.024      3     1.008     1.008     1.008     1.008        0.000  [CUDA memcpy Device-to-Host]
+      2.016      2     1.008     1.008     1.008     1.008        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-b81a.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-b21a.sqlite
+Running 1000x1000 grid, 1000 iterations...
+dimGrid: 125 125 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=24.162975 ms for size=1000 iterations=1000
+Failed to create '/scratch/ualmxs002/base/profile_size_1000.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-faa2.qdstrm'
+
+[1/6] [0%                          ] nsys-report-1bb1.nsys-rep
+[1/6] [0%                          ] nsys-report-1bb1.nsys-rep
+[1/6] [=15%                        ] nsys-report-1bb1.nsys-rep
+[1/6] [=16%                        ] nsys-report-1bb1.nsys-rep
+[1/6] [===============67%          ] nsys-report-1bb1.nsys-rep
+[1/6] [==================75%       ] nsys-report-1bb1.nsys-rep
+[1/6] [==================76%       ] nsys-report-1bb1.nsys-rep
+[1/6] [==================77%       ] nsys-report-1bb1.nsys-rep
+[1/6] [===================82%      ] nsys-report-1bb1.nsys-rep
+[1/6] [========================100%] nsys-report-1bb1.nsys-rep
+[1/6] [========================100%] nsys-report-1bb1.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_size_1000.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-47bc.sqlite
+[2/6] [1%                          ] nsys-report-47bc.sqlite
+[2/6] [2%                          ] nsys-report-47bc.sqlite
+[2/6] [3%                          ] nsys-report-47bc.sqlite
+[2/6] [4%                          ] nsys-report-47bc.sqlite
+[2/6] [5%                          ] nsys-report-47bc.sqlite
+[2/6] [6%                          ] nsys-report-47bc.sqlite
+[2/6] [7%                          ] nsys-report-47bc.sqlite
+[2/6] [8%                          ] nsys-report-47bc.sqlite
+[2/6] [9%                          ] nsys-report-47bc.sqlite
+[2/6] [10%                         ] nsys-report-47bc.sqlite
+[2/6] [11%                         ] nsys-report-47bc.sqlite
+[2/6] [12%                         ] nsys-report-47bc.sqlite
+[2/6] [13%                         ] nsys-report-47bc.sqlite
+[2/6] [14%                         ] nsys-report-47bc.sqlite
+[2/6] [=15%                        ] nsys-report-47bc.sqlite
+[2/6] [=16%                        ] nsys-report-47bc.sqlite
+[2/6] [=17%                        ] nsys-report-47bc.sqlite
+[2/6] [==18%                       ] nsys-report-47bc.sqlite
+[2/6] [==19%                       ] nsys-report-47bc.sqlite
+[2/6] [==20%                       ] nsys-report-47bc.sqlite
+[2/6] [==21%                       ] nsys-report-47bc.sqlite
+[2/6] [===22%                      ] nsys-report-47bc.sqlite
+[2/6] [===23%                      ] nsys-report-47bc.sqlite
+[2/6] [===24%                      ] nsys-report-47bc.sqlite
+[2/6] [====25%                     ] nsys-report-47bc.sqlite
+[2/6] [====26%                     ] nsys-report-47bc.sqlite
+[2/6] [====27%                     ] nsys-report-47bc.sqlite
+[2/6] [====28%                     ] nsys-report-47bc.sqlite
+[2/6] [=====29%                    ] nsys-report-47bc.sqlite
+[2/6] [=====30%                    ] nsys-report-47bc.sqlite
+[2/6] [=====31%                    ] nsys-report-47bc.sqlite
+[2/6] [=====32%                    ] nsys-report-47bc.sqlite
+[2/6] [======33%                   ] nsys-report-47bc.sqlite
+[2/6] [======34%                   ] nsys-report-47bc.sqlite
+[2/6] [======35%                   ] nsys-report-47bc.sqlite
+[2/6] [=======36%                  ] nsys-report-47bc.sqlite
+[2/6] [=======37%                  ] nsys-report-47bc.sqlite
+[2/6] [=======38%                  ] nsys-report-47bc.sqlite
+[2/6] [=======39%                  ] nsys-report-47bc.sqlite
+[2/6] [========40%                 ] nsys-report-47bc.sqlite
+[2/6] [========41%                 ] nsys-report-47bc.sqlite
+[2/6] [========42%                 ] nsys-report-47bc.sqlite
+[2/6] [=========43%                ] nsys-report-47bc.sqlite
+[2/6] [=========44%                ] nsys-report-47bc.sqlite
+[2/6] [=========45%                ] nsys-report-47bc.sqlite
+[2/6] [=========46%                ] nsys-report-47bc.sqlite
+[2/6] [==========47%               ] nsys-report-47bc.sqlite
+[2/6] [==========48%               ] nsys-report-47bc.sqlite
+[2/6] [==========49%               ] nsys-report-47bc.sqlite
+[2/6] [===========50%              ] nsys-report-47bc.sqlite
+[2/6] [===========51%              ] nsys-report-47bc.sqlite
+[2/6] [===========52%              ] nsys-report-47bc.sqlite
+[2/6] [===========53%              ] nsys-report-47bc.sqlite
+[2/6] [============54%             ] nsys-report-47bc.sqlite
+[2/6] [============55%             ] nsys-report-47bc.sqlite
+[2/6] [============56%             ] nsys-report-47bc.sqlite
+[2/6] [============57%             ] nsys-report-47bc.sqlite
+[2/6] [=============58%            ] nsys-report-47bc.sqlite
+[2/6] [=============59%            ] nsys-report-47bc.sqlite
+[2/6] [=============60%            ] nsys-report-47bc.sqlite
+[2/6] [==============61%           ] nsys-report-47bc.sqlite
+[2/6] [==============62%           ] nsys-report-47bc.sqlite
+[2/6] [==============63%           ] nsys-report-47bc.sqlite
+[2/6] [==============64%           ] nsys-report-47bc.sqlite
+[2/6] [===============65%          ] nsys-report-47bc.sqlite
+[2/6] [===============66%          ] nsys-report-47bc.sqlite
+[2/6] [===============67%          ] nsys-report-47bc.sqlite
+[2/6] [================68%         ] nsys-report-47bc.sqlite
+[2/6] [================69%         ] nsys-report-47bc.sqlite
+[2/6] [================70%         ] nsys-report-47bc.sqlite
+[2/6] [================71%         ] nsys-report-47bc.sqlite
+[2/6] [=================72%        ] nsys-report-47bc.sqlite
+[2/6] [=================73%        ] nsys-report-47bc.sqlite
+[2/6] [=================74%        ] nsys-report-47bc.sqlite
+[2/6] [==================75%       ] nsys-report-47bc.sqlite
+[2/6] [==================76%       ] nsys-report-47bc.sqlite
+[2/6] [==================77%       ] nsys-report-47bc.sqlite
+[2/6] [==================78%       ] nsys-report-47bc.sqlite
+[2/6] [===================79%      ] nsys-report-47bc.sqlite
+[2/6] [===================80%      ] nsys-report-47bc.sqlite
+[2/6] [===================81%      ] nsys-report-47bc.sqlite
+[2/6] [===================82%      ] nsys-report-47bc.sqlite
+[2/6] [====================83%     ] nsys-report-47bc.sqlite
+[2/6] [====================84%     ] nsys-report-47bc.sqlite
+[2/6] [====================85%     ] nsys-report-47bc.sqlite
+[2/6] [=====================86%    ] nsys-report-47bc.sqlite
+[2/6] [=====================87%    ] nsys-report-47bc.sqlite
+[2/6] [=====================88%    ] nsys-report-47bc.sqlite
+[2/6] [=====================89%    ] nsys-report-47bc.sqlite
+[2/6] [======================90%   ] nsys-report-47bc.sqlite
+[2/6] [======================91%   ] nsys-report-47bc.sqlite
+[2/6] [======================92%   ] nsys-report-47bc.sqlite
+[2/6] [=======================93%  ] nsys-report-47bc.sqlite
+[2/6] [=======================94%  ] nsys-report-47bc.sqlite
+[2/6] [=======================95%  ] nsys-report-47bc.sqlite
+[2/6] [=======================96%  ] nsys-report-47bc.sqlite
+[2/6] [========================97% ] nsys-report-47bc.sqlite
+[2/6] [========================98% ] nsys-report-47bc.sqlite
+[2/6] [========================99% ] nsys-report-47bc.sqlite
+[2/6] [========================100%] nsys-report-47bc.sqlite
+[2/6] [========================100%] nsys-report-47bc.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ----------  --------  ---------  -----------  ----------------------
+     88.0        196846821          2  98423410.5  98423410.5     98410  196748411  139052549.2  cudaMalloc            
+      6.6         14827343       1000     14827.3      4261.0      3701   10372442     327866.6  cudaLaunchKernel      
+      3.4          7684659          1   7684659.0   7684659.0   7684659    7684659          0.0  cudaEventSynchronize  
+      1.8          4044701          5    808940.2    371916.0    349148    1563165     621209.3  cudaMemcpy            
+      0.1           313317          2    156658.5    156658.5     92333     220984      90970.0  cudaFree              
+      0.0            16063          2      8031.5      8031.5      1885      14178       8692.5  cudaEventCreate       
+      0.0            14107          2      7053.5      7053.5      4679       9428       3358.1  cudaEventRecord       
+      0.0             2864          1      2864.0      2864.0      2864       2864          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -----------------------------------
+    100.0         12700329       1000   12700.3   12704.0     12607     13024         42.3  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ---------  ---------  --------  --------  -----------  ----------------------------
+     83.9          3005656      3  1001885.3  1312747.0    253761   1439148     650969.9  [CUDA memcpy Device-to-Host]
+     16.1           578726      2   289363.0   289363.0    284707    294019       6584.6  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     12.048      3     4.016     4.016     4.016     4.016        0.000  [CUDA memcpy Device-to-Host]
+      8.032      2     4.016     4.016     4.016     4.016        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-1bb1.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-47bc.sqlite
+Running 5000x5000 grid, 1000 iterations...
+dimGrid: 625 625 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=264.052826 ms for size=5000 iterations=1000
+Failed to create '/scratch/ualmxs002/base/profile_size_5000.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-76d1.qdstrm'
+
+[1/6] [0%                          ] nsys-report-6c89.nsys-rep
+[1/6] [0%                          ] nsys-report-6c89.nsys-rep
+[1/6] [9%                          ] nsys-report-6c89.nsys-rep
+[1/6] [===========53%              ] nsys-report-6c89.nsys-rep
+[1/6] [================69%         ] nsys-report-6c89.nsys-rep
+[1/6] [====================84%     ] nsys-report-6c89.nsys-rep
+[1/6] [======================90%   ] nsys-report-6c89.nsys-rep
+[1/6] [=======================96%  ] nsys-report-6c89.nsys-rep
+[1/6] [========================100%] nsys-report-6c89.nsys-rep
+[1/6] [========================100%] nsys-report-6c89.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_size_5000.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-a1a6.sqlite
+[2/6] [1%                          ] nsys-report-a1a6.sqlite
+[2/6] [2%                          ] nsys-report-a1a6.sqlite
+[2/6] [3%                          ] nsys-report-a1a6.sqlite
+[2/6] [4%                          ] nsys-report-a1a6.sqlite
+[2/6] [5%                          ] nsys-report-a1a6.sqlite
+[2/6] [6%                          ] nsys-report-a1a6.sqlite
+[2/6] [7%                          ] nsys-report-a1a6.sqlite
+[2/6] [8%                          ] nsys-report-a1a6.sqlite
+[2/6] [9%                          ] nsys-report-a1a6.sqlite
+[2/6] [10%                         ] nsys-report-a1a6.sqlite
+[2/6] [11%                         ] nsys-report-a1a6.sqlite
+[2/6] [12%                         ] nsys-report-a1a6.sqlite
+[2/6] [13%                         ] nsys-report-a1a6.sqlite
+[2/6] [14%                         ] nsys-report-a1a6.sqlite
+[2/6] [=15%                        ] nsys-report-a1a6.sqlite
+[2/6] [=16%                        ] nsys-report-a1a6.sqlite
+[2/6] [=17%                        ] nsys-report-a1a6.sqlite
+[2/6] [==18%                       ] nsys-report-a1a6.sqlite
+[2/6] [==19%                       ] nsys-report-a1a6.sqlite
+[2/6] [==20%                       ] nsys-report-a1a6.sqlite
+[2/6] [==21%                       ] nsys-report-a1a6.sqlite
+[2/6] [===22%                      ] nsys-report-a1a6.sqlite
+[2/6] [===23%                      ] nsys-report-a1a6.sqlite
+[2/6] [===24%                      ] nsys-report-a1a6.sqlite
+[2/6] [====25%                     ] nsys-report-a1a6.sqlite
+[2/6] [====26%                     ] nsys-report-a1a6.sqlite
+[2/6] [====27%                     ] nsys-report-a1a6.sqlite
+[2/6] [====28%                     ] nsys-report-a1a6.sqlite
+[2/6] [=====29%                    ] nsys-report-a1a6.sqlite
+[2/6] [=====30%                    ] nsys-report-a1a6.sqlite
+[2/6] [=====31%                    ] nsys-report-a1a6.sqlite
+[2/6] [=====32%                    ] nsys-report-a1a6.sqlite
+[2/6] [======33%                   ] nsys-report-a1a6.sqlite
+[2/6] [======34%                   ] nsys-report-a1a6.sqlite
+[2/6] [======35%                   ] nsys-report-a1a6.sqlite
+[2/6] [=======36%                  ] nsys-report-a1a6.sqlite
+[2/6] [=======37%                  ] nsys-report-a1a6.sqlite
+[2/6] [=======38%                  ] nsys-report-a1a6.sqlite
+[2/6] [=======39%                  ] nsys-report-a1a6.sqlite
+[2/6] [========40%                 ] nsys-report-a1a6.sqlite
+[2/6] [========41%                 ] nsys-report-a1a6.sqlite
+[2/6] [========42%                 ] nsys-report-a1a6.sqlite
+[2/6] [=========43%                ] nsys-report-a1a6.sqlite
+[2/6] [=========44%                ] nsys-report-a1a6.sqlite
+[2/6] [=========45%                ] nsys-report-a1a6.sqlite
+[2/6] [=========46%                ] nsys-report-a1a6.sqlite
+[2/6] [==========47%               ] nsys-report-a1a6.sqlite
+[2/6] [==========48%               ] nsys-report-a1a6.sqlite
+[2/6] [==========49%               ] nsys-report-a1a6.sqlite
+[2/6] [===========50%              ] nsys-report-a1a6.sqlite
+[2/6] [===========51%              ] nsys-report-a1a6.sqlite
+[2/6] [===========52%              ] nsys-report-a1a6.sqlite
+[2/6] [===========53%              ] nsys-report-a1a6.sqlite
+[2/6] [============54%             ] nsys-report-a1a6.sqlite
+[2/6] [============55%             ] nsys-report-a1a6.sqlite
+[2/6] [============56%             ] nsys-report-a1a6.sqlite
+[2/6] [============57%             ] nsys-report-a1a6.sqlite
+[2/6] [=============58%            ] nsys-report-a1a6.sqlite
+[2/6] [=============59%            ] nsys-report-a1a6.sqlite
+[2/6] [=============60%            ] nsys-report-a1a6.sqlite
+[2/6] [==============61%           ] nsys-report-a1a6.sqlite
+[2/6] [==============62%           ] nsys-report-a1a6.sqlite
+[2/6] [==============63%           ] nsys-report-a1a6.sqlite
+[2/6] [==============64%           ] nsys-report-a1a6.sqlite
+[2/6] [===============65%          ] nsys-report-a1a6.sqlite
+[2/6] [===============66%          ] nsys-report-a1a6.sqlite
+[2/6] [===============67%          ] nsys-report-a1a6.sqlite
+[2/6] [================68%         ] nsys-report-a1a6.sqlite
+[2/6] [================69%         ] nsys-report-a1a6.sqlite
+[2/6] [================70%         ] nsys-report-a1a6.sqlite
+[2/6] [================71%         ] nsys-report-a1a6.sqlite
+[2/6] [=================72%        ] nsys-report-a1a6.sqlite
+[2/6] [=================73%        ] nsys-report-a1a6.sqlite
+[2/6] [=================74%        ] nsys-report-a1a6.sqlite
+[2/6] [==================75%       ] nsys-report-a1a6.sqlite
+[2/6] [==================76%       ] nsys-report-a1a6.sqlite
+[2/6] [==================77%       ] nsys-report-a1a6.sqlite
+[2/6] [==================78%       ] nsys-report-a1a6.sqlite
+[2/6] [===================79%      ] nsys-report-a1a6.sqlite
+[2/6] [===================80%      ] nsys-report-a1a6.sqlite
+[2/6] [===================81%      ] nsys-report-a1a6.sqlite
+[2/6] [===================82%      ] nsys-report-a1a6.sqlite
+[2/6] [====================83%     ] nsys-report-a1a6.sqlite
+[2/6] [====================84%     ] nsys-report-a1a6.sqlite
+[2/6] [====================85%     ] nsys-report-a1a6.sqlite
+[2/6] [=====================86%    ] nsys-report-a1a6.sqlite
+[2/6] [=====================87%    ] nsys-report-a1a6.sqlite
+[2/6] [=====================88%    ] nsys-report-a1a6.sqlite
+[2/6] [=====================89%    ] nsys-report-a1a6.sqlite
+[2/6] [======================90%   ] nsys-report-a1a6.sqlite
+[2/6] [======================91%   ] nsys-report-a1a6.sqlite
+[2/6] [======================92%   ] nsys-report-a1a6.sqlite
+[2/6] [=======================93%  ] nsys-report-a1a6.sqlite
+[2/6] [=======================94%  ] nsys-report-a1a6.sqlite
+[2/6] [=======================95%  ] nsys-report-a1a6.sqlite
+[2/6] [=======================96%  ] nsys-report-a1a6.sqlite
+[2/6] [========================97% ] nsys-report-a1a6.sqlite
+[2/6] [========================98% ] nsys-report-a1a6.sqlite
+[2/6] [========================99% ] nsys-report-a1a6.sqlite
+[2/6] [========================100%] nsys-report-a1a6.sqlite
+[2/6] [========================100%] nsys-report-a1a6.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------------
+     51.5        256145534          1  256145534.0  256145534.0  256145534  256145534          0.0  cudaEventSynchronize  
+     33.7        167781354          2   83890677.0   83890677.0     135776  167645578  118447316.9  cudaMalloc            
+     13.5         66964305          5   13392861.0   13267590.0    7262525   17351263    3847337.0  cudaMemcpy            
+      1.2          6188612       1000       6188.6       4749.0       4190    1339806      42236.9  cudaLaunchKernel      
+      0.1           558816          2     279408.0     279408.0     197307     361509     116108.3  cudaFree              
+      0.0            33106          2      16553.0      16553.0       1886      31220      20742.3  cudaEventCreate       
+      0.0            19835          2       9917.5       9917.5       5168      14667       6716.8  cudaEventRecord       
+      0.0             3841          1       3841.0       3841.0       3841       3841          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -----------------------------------
+    100.0        260989130       1000  260989.1  260962.0    260803    261666         99.7  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     69.4         45827717      3  15275905.7  15442489.0  13152935  17232293    2044774.5  [CUDA memcpy Device-to-Host]
+     30.6         20250812      2  10125406.0  10125406.0   7094903  13155909    4285778.4  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+    300.240      3   100.080   100.080   100.080   100.080        0.000  [CUDA memcpy Device-to-Host]
+    200.160      2   100.080   100.080   100.080   100.080        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-6c89.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-a1a6.sqlite
+Running 10000x10000 grid, 1000 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=1037.832520 ms for size=10000 iterations=1000
+Failed to create '/scratch/ualmxs002/base/profile_size_10000.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-0ba3.qdstrm'
+
+[1/6] [0%                          ] nsys-report-8c66.nsys-rep
+[1/6] [0%                          ] nsys-report-8c66.nsys-rep
+[1/6] [===========50%              ] nsys-report-8c66.nsys-rep
+[1/6] [============55%             ] nsys-report-8c66.nsys-rep
+[1/6] [=============59%            ] nsys-report-8c66.nsys-rep
+[1/6] [==============64%           ] nsys-report-8c66.nsys-rep
+[1/6] [================68%         ] nsys-report-8c66.nsys-rep
+[1/6] [=================73%        ] nsys-report-8c66.nsys-rep
+[1/6] [==================77%       ] nsys-report-8c66.nsys-rep
+[1/6] [===================82%      ] nsys-report-8c66.nsys-rep
+[1/6] [=====================86%    ] nsys-report-8c66.nsys-rep
+[1/6] [======================90%   ] nsys-report-8c66.nsys-rep
+[1/6] [======================92%   ] nsys-report-8c66.nsys-rep
+[1/6] [========================97% ] nsys-report-8c66.nsys-rep
+[1/6] [========================99% ] nsys-report-8c66.nsys-rep
+[1/6] [========================100%] nsys-report-8c66.nsys-rep
+[1/6] [========================100%] nsys-report-8c66.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_size_10000.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-71ea.sqlite
+[2/6] [1%                          ] nsys-report-71ea.sqlite
+[2/6] [2%                          ] nsys-report-71ea.sqlite
+[2/6] [3%                          ] nsys-report-71ea.sqlite
+[2/6] [4%                          ] nsys-report-71ea.sqlite
+[2/6] [5%                          ] nsys-report-71ea.sqlite
+[2/6] [6%                          ] nsys-report-71ea.sqlite
+[2/6] [7%                          ] nsys-report-71ea.sqlite
+[2/6] [8%                          ] nsys-report-71ea.sqlite
+[2/6] [9%                          ] nsys-report-71ea.sqlite
+[2/6] [10%                         ] nsys-report-71ea.sqlite
+[2/6] [11%                         ] nsys-report-71ea.sqlite
+[2/6] [12%                         ] nsys-report-71ea.sqlite
+[2/6] [13%                         ] nsys-report-71ea.sqlite
+[2/6] [14%                         ] nsys-report-71ea.sqlite
+[2/6] [=15%                        ] nsys-report-71ea.sqlite
+[2/6] [=16%                        ] nsys-report-71ea.sqlite
+[2/6] [=17%                        ] nsys-report-71ea.sqlite
+[2/6] [==18%                       ] nsys-report-71ea.sqlite
+[2/6] [==19%                       ] nsys-report-71ea.sqlite
+[2/6] [==20%                       ] nsys-report-71ea.sqlite
+[2/6] [==21%                       ] nsys-report-71ea.sqlite
+[2/6] [===22%                      ] nsys-report-71ea.sqlite
+[2/6] [===23%                      ] nsys-report-71ea.sqlite
+[2/6] [===24%                      ] nsys-report-71ea.sqlite
+[2/6] [====25%                     ] nsys-report-71ea.sqlite
+[2/6] [====26%                     ] nsys-report-71ea.sqlite
+[2/6] [====27%                     ] nsys-report-71ea.sqlite
+[2/6] [====28%                     ] nsys-report-71ea.sqlite
+[2/6] [=====29%                    ] nsys-report-71ea.sqlite
+[2/6] [=====30%                    ] nsys-report-71ea.sqlite
+[2/6] [=====31%                    ] nsys-report-71ea.sqlite
+[2/6] [=====32%                    ] nsys-report-71ea.sqlite
+[2/6] [======33%                   ] nsys-report-71ea.sqlite
+[2/6] [======34%                   ] nsys-report-71ea.sqlite
+[2/6] [======35%                   ] nsys-report-71ea.sqlite
+[2/6] [=======36%                  ] nsys-report-71ea.sqlite
+[2/6] [=======37%                  ] nsys-report-71ea.sqlite
+[2/6] [=======38%                  ] nsys-report-71ea.sqlite
+[2/6] [=======39%                  ] nsys-report-71ea.sqlite
+[2/6] [========40%                 ] nsys-report-71ea.sqlite
+[2/6] [========41%                 ] nsys-report-71ea.sqlite
+[2/6] [========42%                 ] nsys-report-71ea.sqlite
+[2/6] [=========43%                ] nsys-report-71ea.sqlite
+[2/6] [=========44%                ] nsys-report-71ea.sqlite
+[2/6] [=========45%                ] nsys-report-71ea.sqlite
+[2/6] [=========46%                ] nsys-report-71ea.sqlite
+[2/6] [==========47%               ] nsys-report-71ea.sqlite
+[2/6] [==========48%               ] nsys-report-71ea.sqlite
+[2/6] [==========49%               ] nsys-report-71ea.sqlite
+[2/6] [===========50%              ] nsys-report-71ea.sqlite
+[2/6] [===========51%              ] nsys-report-71ea.sqlite
+[2/6] [===========52%              ] nsys-report-71ea.sqlite
+[2/6] [===========53%              ] nsys-report-71ea.sqlite
+[2/6] [============54%             ] nsys-report-71ea.sqlite
+[2/6] [============55%             ] nsys-report-71ea.sqlite
+[2/6] [============56%             ] nsys-report-71ea.sqlite
+[2/6] [============57%             ] nsys-report-71ea.sqlite
+[2/6] [=============58%            ] nsys-report-71ea.sqlite
+[2/6] [=============59%            ] nsys-report-71ea.sqlite
+[2/6] [=============60%            ] nsys-report-71ea.sqlite
+[2/6] [==============61%           ] nsys-report-71ea.sqlite
+[2/6] [==============62%           ] nsys-report-71ea.sqlite
+[2/6] [==============63%           ] nsys-report-71ea.sqlite
+[2/6] [==============64%           ] nsys-report-71ea.sqlite
+[2/6] [===============65%          ] nsys-report-71ea.sqlite
+[2/6] [===============66%          ] nsys-report-71ea.sqlite
+[2/6] [===============67%          ] nsys-report-71ea.sqlite
+[2/6] [================68%         ] nsys-report-71ea.sqlite
+[2/6] [================69%         ] nsys-report-71ea.sqlite
+[2/6] [================70%         ] nsys-report-71ea.sqlite
+[2/6] [================71%         ] nsys-report-71ea.sqlite
+[2/6] [=================72%        ] nsys-report-71ea.sqlite
+[2/6] [=================73%        ] nsys-report-71ea.sqlite
+[2/6] [=================74%        ] nsys-report-71ea.sqlite
+[2/6] [==================75%       ] nsys-report-71ea.sqlite
+[2/6] [==================76%       ] nsys-report-71ea.sqlite
+[2/6] [==================77%       ] nsys-report-71ea.sqlite
+[2/6] [==================78%       ] nsys-report-71ea.sqlite
+[2/6] [===================79%      ] nsys-report-71ea.sqlite
+[2/6] [===================80%      ] nsys-report-71ea.sqlite
+[2/6] [===================81%      ] nsys-report-71ea.sqlite
+[2/6] [===================82%      ] nsys-report-71ea.sqlite
+[2/6] [====================83%     ] nsys-report-71ea.sqlite
+[2/6] [====================84%     ] nsys-report-71ea.sqlite
+[2/6] [====================85%     ] nsys-report-71ea.sqlite
+[2/6] [=====================86%    ] nsys-report-71ea.sqlite
+[2/6] [=====================87%    ] nsys-report-71ea.sqlite
+[2/6] [=====================88%    ] nsys-report-71ea.sqlite
+[2/6] [=====================89%    ] nsys-report-71ea.sqlite
+[2/6] [======================90%   ] nsys-report-71ea.sqlite
+[2/6] [======================91%   ] nsys-report-71ea.sqlite
+[2/6] [======================92%   ] nsys-report-71ea.sqlite
+[2/6] [=======================93%  ] nsys-report-71ea.sqlite
+[2/6] [=======================94%  ] nsys-report-71ea.sqlite
+[2/6] [=======================95%  ] nsys-report-71ea.sqlite
+[2/6] [=======================96%  ] nsys-report-71ea.sqlite
+[2/6] [========================97% ] nsys-report-71ea.sqlite
+[2/6] [========================98% ] nsys-report-71ea.sqlite
+[2/6] [========================99% ] nsys-report-71ea.sqlite
+[2/6] [========================100%] nsys-report-71ea.sqlite
+[2/6] [========================100%] nsys-report-71ea.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     69.5       1029525735          1  1029525735.0  1029525735.0  1029525735  1029525735          0.0  cudaEventSynchronize  
+     15.6        230441564          2   115220782.0   115220782.0      158475   230283089  162722675.1  cudaMalloc            
+     14.4        213660503          5    42732100.6    35851591.0    28783020    60109527   15061898.5  cudaMemcpy            
+      0.4          6514716       1000        6514.7        4750.0        3772     1227358      39220.6  cudaLaunchKernel      
+      0.1           871435          2      435717.5      435717.5      343908      527527     129838.2  cudaFree              
+      0.0            21721          2       10860.5       10860.5        1886       19835      12691.9  cudaEventCreate       
+      0.0            13758          2        6879.0        6879.0        5657        8101       1728.2  cudaEventRecord       
+      0.0             4749          1        4749.0        4749.0        4749        4749          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       1034915480       1000  1034915.5  1034889.0   1034600   1036521        156.3  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     72.0        153332794      3  51110931.3  57569023.0  35747081  60016690   13361650.0  [CUDA memcpy Device-to-Host]
+     28.0         59588815      2  29794407.5  29794407.5  28627214  30961601    1650660.9  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-8c66.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-71ea.sqlite
+Running 15000x15000 grid, 1000 iterations...
+dimGrid: 1875 1875 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=2327.901367 ms for size=15000 iterations=1000
+Failed to create '/scratch/ualmxs002/base/profile_size_15000.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-b6ba.qdstrm'
+
+[1/6] [0%                          ] nsys-report-67f3.nsys-rep
+[1/6] [0%                          ] nsys-report-67f3.nsys-rep
+[1/6] [=====29%                    ] nsys-report-67f3.nsys-rep
+[1/6] [===========50%              ] nsys-report-67f3.nsys-rep
+[1/6] [===========52%              ] nsys-report-67f3.nsys-rep
+[1/6] [============54%             ] nsys-report-67f3.nsys-rep
+[1/6] [============56%             ] nsys-report-67f3.nsys-rep
+[1/6] [=============58%            ] nsys-report-67f3.nsys-rep
+[1/6] [=============60%            ] nsys-report-67f3.nsys-rep
+[1/6] [==============62%           ] nsys-report-67f3.nsys-rep
+[1/6] [==============64%           ] nsys-report-67f3.nsys-rep
+[1/6] [===============66%          ] nsys-report-67f3.nsys-rep
+[1/6] [================68%         ] nsys-report-67f3.nsys-rep
+[1/6] [================70%         ] nsys-report-67f3.nsys-rep
+[1/6] [=================72%        ] nsys-report-67f3.nsys-rep
+[1/6] [=================74%        ] nsys-report-67f3.nsys-rep
+[1/6] [==================76%       ] nsys-report-67f3.nsys-rep
+[1/6] [==================78%       ] nsys-report-67f3.nsys-rep
+[1/6] [===================80%      ] nsys-report-67f3.nsys-rep
+[1/6] [===================82%      ] nsys-report-67f3.nsys-rep
+[1/6] [====================84%     ] nsys-report-67f3.nsys-rep
+[1/6] [=====================86%    ] nsys-report-67f3.nsys-rep
+[1/6] [=====================88%    ] nsys-report-67f3.nsys-rep
+[1/6] [======================90%   ] nsys-report-67f3.nsys-rep
+[1/6] [=======================93%  ] nsys-report-67f3.nsys-rep
+[1/6] [=======================95%  ] nsys-report-67f3.nsys-rep
+[1/6] [========================97% ] nsys-report-67f3.nsys-rep
+[1/6] [========================99% ] nsys-report-67f3.nsys-rep
+[1/6] [========================100%] nsys-report-67f3.nsys-rep
+[1/6] [========================100%] nsys-report-67f3.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_size_15000.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-a23c.sqlite
+[2/6] [1%                          ] nsys-report-a23c.sqlite
+[2/6] [2%                          ] nsys-report-a23c.sqlite
+[2/6] [3%                          ] nsys-report-a23c.sqlite
+[2/6] [4%                          ] nsys-report-a23c.sqlite
+[2/6] [5%                          ] nsys-report-a23c.sqlite
+[2/6] [6%                          ] nsys-report-a23c.sqlite
+[2/6] [7%                          ] nsys-report-a23c.sqlite
+[2/6] [8%                          ] nsys-report-a23c.sqlite
+[2/6] [9%                          ] nsys-report-a23c.sqlite
+[2/6] [10%                         ] nsys-report-a23c.sqlite
+[2/6] [11%                         ] nsys-report-a23c.sqlite
+[2/6] [12%                         ] nsys-report-a23c.sqlite
+[2/6] [13%                         ] nsys-report-a23c.sqlite
+[2/6] [14%                         ] nsys-report-a23c.sqlite
+[2/6] [=15%                        ] nsys-report-a23c.sqlite
+[2/6] [=16%                        ] nsys-report-a23c.sqlite
+[2/6] [=17%                        ] nsys-report-a23c.sqlite
+[2/6] [==18%                       ] nsys-report-a23c.sqlite
+[2/6] [==19%                       ] nsys-report-a23c.sqlite
+[2/6] [==20%                       ] nsys-report-a23c.sqlite
+[2/6] [==21%                       ] nsys-report-a23c.sqlite
+[2/6] [===22%                      ] nsys-report-a23c.sqlite
+[2/6] [===23%                      ] nsys-report-a23c.sqlite
+[2/6] [===24%                      ] nsys-report-a23c.sqlite
+[2/6] [====25%                     ] nsys-report-a23c.sqlite
+[2/6] [====26%                     ] nsys-report-a23c.sqlite
+[2/6] [====27%                     ] nsys-report-a23c.sqlite
+[2/6] [====28%                     ] nsys-report-a23c.sqlite
+[2/6] [=====29%                    ] nsys-report-a23c.sqlite
+[2/6] [=====30%                    ] nsys-report-a23c.sqlite
+[2/6] [=====31%                    ] nsys-report-a23c.sqlite
+[2/6] [=====32%                    ] nsys-report-a23c.sqlite
+[2/6] [======33%                   ] nsys-report-a23c.sqlite
+[2/6] [======34%                   ] nsys-report-a23c.sqlite
+[2/6] [======35%                   ] nsys-report-a23c.sqlite
+[2/6] [=======36%                  ] nsys-report-a23c.sqlite
+[2/6] [=======37%                  ] nsys-report-a23c.sqlite
+[2/6] [=======38%                  ] nsys-report-a23c.sqlite
+[2/6] [=======39%                  ] nsys-report-a23c.sqlite
+[2/6] [========40%                 ] nsys-report-a23c.sqlite
+[2/6] [========41%                 ] nsys-report-a23c.sqlite
+[2/6] [========42%                 ] nsys-report-a23c.sqlite
+[2/6] [=========43%                ] nsys-report-a23c.sqlite
+[2/6] [=========44%                ] nsys-report-a23c.sqlite
+[2/6] [=========45%                ] nsys-report-a23c.sqlite
+[2/6] [=========46%                ] nsys-report-a23c.sqlite
+[2/6] [==========47%               ] nsys-report-a23c.sqlite
+[2/6] [==========48%               ] nsys-report-a23c.sqlite
+[2/6] [==========49%               ] nsys-report-a23c.sqlite
+[2/6] [===========50%              ] nsys-report-a23c.sqlite
+[2/6] [===========51%              ] nsys-report-a23c.sqlite
+[2/6] [===========52%              ] nsys-report-a23c.sqlite
+[2/6] [===========53%              ] nsys-report-a23c.sqlite
+[2/6] [============54%             ] nsys-report-a23c.sqlite
+[2/6] [============55%             ] nsys-report-a23c.sqlite
+[2/6] [============56%             ] nsys-report-a23c.sqlite
+[2/6] [============57%             ] nsys-report-a23c.sqlite
+[2/6] [=============58%            ] nsys-report-a23c.sqlite
+[2/6] [=============59%            ] nsys-report-a23c.sqlite
+[2/6] [=============60%            ] nsys-report-a23c.sqlite
+[2/6] [==============61%           ] nsys-report-a23c.sqlite
+[2/6] [==============62%           ] nsys-report-a23c.sqlite
+[2/6] [==============63%           ] nsys-report-a23c.sqlite
+[2/6] [==============64%           ] nsys-report-a23c.sqlite
+[2/6] [===============65%          ] nsys-report-a23c.sqlite
+[2/6] [===============66%          ] nsys-report-a23c.sqlite
+[2/6] [===============67%          ] nsys-report-a23c.sqlite
+[2/6] [================68%         ] nsys-report-a23c.sqlite
+[2/6] [================69%         ] nsys-report-a23c.sqlite
+[2/6] [================70%         ] nsys-report-a23c.sqlite
+[2/6] [================71%         ] nsys-report-a23c.sqlite
+[2/6] [=================72%        ] nsys-report-a23c.sqlite
+[2/6] [=================73%        ] nsys-report-a23c.sqlite
+[2/6] [=================74%        ] nsys-report-a23c.sqlite
+[2/6] [==================75%       ] nsys-report-a23c.sqlite
+[2/6] [==================76%       ] nsys-report-a23c.sqlite
+[2/6] [==================77%       ] nsys-report-a23c.sqlite
+[2/6] [==================78%       ] nsys-report-a23c.sqlite
+[2/6] [===================79%      ] nsys-report-a23c.sqlite
+[2/6] [===================80%      ] nsys-report-a23c.sqlite
+[2/6] [===================81%      ] nsys-report-a23c.sqlite
+[2/6] [===================82%      ] nsys-report-a23c.sqlite
+[2/6] [====================83%     ] nsys-report-a23c.sqlite
+[2/6] [====================84%     ] nsys-report-a23c.sqlite
+[2/6] [====================85%     ] nsys-report-a23c.sqlite
+[2/6] [=====================86%    ] nsys-report-a23c.sqlite
+[2/6] [=====================87%    ] nsys-report-a23c.sqlite
+[2/6] [=====================88%    ] nsys-report-a23c.sqlite
+[2/6] [=====================89%    ] nsys-report-a23c.sqlite
+[2/6] [======================90%   ] nsys-report-a23c.sqlite
+[2/6] [======================91%   ] nsys-report-a23c.sqlite
+[2/6] [======================92%   ] nsys-report-a23c.sqlite
+[2/6] [=======================93%  ] nsys-report-a23c.sqlite
+[2/6] [=======================94%  ] nsys-report-a23c.sqlite
+[2/6] [=======================95%  ] nsys-report-a23c.sqlite
+[2/6] [=======================96%  ] nsys-report-a23c.sqlite
+[2/6] [========================97% ] nsys-report-a23c.sqlite
+[2/6] [========================98% ] nsys-report-a23c.sqlite
+[2/6] [========================99% ] nsys-report-a23c.sqlite
+[2/6] [========================100%] nsys-report-a23c.sqlite
+[2/6] [========================100%] nsys-report-a23c.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     78.0       2319591406          1  2319591406.0  2319591406.0  2319591406  2319591406          0.0  cudaEventSynchronize  
+     15.9        472906367          5    94581273.4    79672680.0    64022393   128109111   30036005.5  cudaMemcpy            
+      5.8        172087581          2    86043790.5    86043790.5      212324   171875257  121384024.0  cudaMalloc            
+      0.2          6565974       1000        6566.0        4749.0        3283     1566586      49766.6  cudaLaunchKernel      
+      0.0          1423617          2      711808.5      711808.5      650102      773515      87266.2  cudaFree              
+      0.0            19416          2        9708.0        9708.0        1885       17531      11063.4  cudaEventCreate       
+      0.0            13270          2        6635.0        6635.0        6146        7124        691.6  cudaEventRecord       
+      0.0             3841          1        3841.0        3841.0        3841        3841          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       2324632070       1000  2324632.1  2324597.0   2324117   2329364        270.2  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)     Med (ns)    Min (ns)  Max (ns)   StdDev (ns)           Operation          
+ --------  ---------------  -----  -----------  -----------  --------  ---------  -----------  ----------------------------
+     69.6        328184580      3  109394860.0  124801515.0  75371929  128011136   29508393.6  [CUDA memcpy Device-to-Host]
+     30.4        143469279      2   71734639.5   71734639.5  63899055   79570224   11081189.9  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   2700.720      3   900.240   900.240   900.240   900.240        0.000  [CUDA memcpy Device-to-Host]
+   1800.480      2   900.240   900.240   900.240   900.240        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-67f3.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-a23c.sqlite
+Running 20000x20000 grid, 1000 iterations...
+dimGrid: 2500 2500 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=4133.914551 ms for size=20000 iterations=1000
+Failed to create '/scratch/ualmxs002/base/profile_size_20000.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-9ebe.qdstrm'
+
+[1/6] [0%                          ] nsys-report-5bad.nsys-rep
+[1/6] [0%                          ] nsys-report-5bad.nsys-rep
+[1/6] [=16%                        ] nsys-report-5bad.nsys-rep
+[1/6] [======34%                   ] nsys-report-5bad.nsys-rep
+[1/6] [===========50%              ] nsys-report-5bad.nsys-rep
+[1/6] [===========51%              ] nsys-report-5bad.nsys-rep
+[1/6] [===========52%              ] nsys-report-5bad.nsys-rep
+[1/6] [===========53%              ] nsys-report-5bad.nsys-rep
+[1/6] [============54%             ] nsys-report-5bad.nsys-rep
+[1/6] [============56%             ] nsys-report-5bad.nsys-rep
+[1/6] [============57%             ] nsys-report-5bad.nsys-rep
+[1/6] [=============58%            ] nsys-report-5bad.nsys-rep
+[1/6] [=============59%            ] nsys-report-5bad.nsys-rep
+[1/6] [=============60%            ] nsys-report-5bad.nsys-rep
+[1/6] [==============61%           ] nsys-report-5bad.nsys-rep
+[1/6] [==============62%           ] nsys-report-5bad.nsys-rep
+[1/6] [==============64%           ] nsys-report-5bad.nsys-rep
+[1/6] [===============65%          ] nsys-report-5bad.nsys-rep
+[1/6] [===============66%          ] nsys-report-5bad.nsys-rep
+[1/6] [===============67%          ] nsys-report-5bad.nsys-rep
+[1/6] [================68%         ] nsys-report-5bad.nsys-rep
+[1/6] [================69%         ] nsys-report-5bad.nsys-rep
+[1/6] [================71%         ] nsys-report-5bad.nsys-rep
+[1/6] [=================72%        ] nsys-report-5bad.nsys-rep
+[1/6] [=================73%        ] nsys-report-5bad.nsys-rep
+[1/6] [=================74%        ] nsys-report-5bad.nsys-rep
+[1/6] [==================75%       ] nsys-report-5bad.nsys-rep
+[1/6] [==================76%       ] nsys-report-5bad.nsys-rep
+[1/6] [==================77%       ] nsys-report-5bad.nsys-rep
+[1/6] [===================79%      ] nsys-report-5bad.nsys-rep
+[1/6] [===================80%      ] nsys-report-5bad.nsys-rep
+[1/6] [===================81%      ] nsys-report-5bad.nsys-rep
+[1/6] [===================82%      ] nsys-report-5bad.nsys-rep
+[1/6] [====================83%     ] nsys-report-5bad.nsys-rep
+[1/6] [====================84%     ] nsys-report-5bad.nsys-rep
+[1/6] [====================85%     ] nsys-report-5bad.nsys-rep
+[1/6] [=====================87%    ] nsys-report-5bad.nsys-rep
+[1/6] [=====================88%    ] nsys-report-5bad.nsys-rep
+[1/6] [=====================89%    ] nsys-report-5bad.nsys-rep
+[1/6] [======================90%   ] nsys-report-5bad.nsys-rep
+[1/6] [======================91%   ] nsys-report-5bad.nsys-rep
+[1/6] [======================92%   ] nsys-report-5bad.nsys-rep
+[1/6] [=======================93%  ] nsys-report-5bad.nsys-rep
+[1/6] [=======================94%  ] nsys-report-5bad.nsys-rep
+[1/6] [=======================95%  ] nsys-report-5bad.nsys-rep
+[1/6] [=======================96%  ] nsys-report-5bad.nsys-rep
+[1/6] [========================98% ] nsys-report-5bad.nsys-rep
+[1/6] [========================99% ] nsys-report-5bad.nsys-rep
+[1/6] [========================100%] nsys-report-5bad.nsys-rep
+[1/6] [========================100%] nsys-report-5bad.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_size_20000.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-18b5.sqlite
+[2/6] [1%                          ] nsys-report-18b5.sqlite
+[2/6] [2%                          ] nsys-report-18b5.sqlite
+[2/6] [3%                          ] nsys-report-18b5.sqlite
+[2/6] [4%                          ] nsys-report-18b5.sqlite
+[2/6] [5%                          ] nsys-report-18b5.sqlite
+[2/6] [6%                          ] nsys-report-18b5.sqlite
+[2/6] [7%                          ] nsys-report-18b5.sqlite
+[2/6] [8%                          ] nsys-report-18b5.sqlite
+[2/6] [9%                          ] nsys-report-18b5.sqlite
+[2/6] [10%                         ] nsys-report-18b5.sqlite
+[2/6] [11%                         ] nsys-report-18b5.sqlite
+[2/6] [12%                         ] nsys-report-18b5.sqlite
+[2/6] [13%                         ] nsys-report-18b5.sqlite
+[2/6] [14%                         ] nsys-report-18b5.sqlite
+[2/6] [=15%                        ] nsys-report-18b5.sqlite
+[2/6] [=16%                        ] nsys-report-18b5.sqlite
+[2/6] [=17%                        ] nsys-report-18b5.sqlite
+[2/6] [==18%                       ] nsys-report-18b5.sqlite
+[2/6] [==19%                       ] nsys-report-18b5.sqlite
+[2/6] [==20%                       ] nsys-report-18b5.sqlite
+[2/6] [==21%                       ] nsys-report-18b5.sqlite
+[2/6] [===22%                      ] nsys-report-18b5.sqlite
+[2/6] [===23%                      ] nsys-report-18b5.sqlite
+[2/6] [===24%                      ] nsys-report-18b5.sqlite
+[2/6] [====25%                     ] nsys-report-18b5.sqlite
+[2/6] [====26%                     ] nsys-report-18b5.sqlite
+[2/6] [====27%                     ] nsys-report-18b5.sqlite
+[2/6] [====28%                     ] nsys-report-18b5.sqlite
+[2/6] [=====29%                    ] nsys-report-18b5.sqlite
+[2/6] [=====30%                    ] nsys-report-18b5.sqlite
+[2/6] [=====31%                    ] nsys-report-18b5.sqlite
+[2/6] [=====32%                    ] nsys-report-18b5.sqlite
+[2/6] [======33%                   ] nsys-report-18b5.sqlite
+[2/6] [======34%                   ] nsys-report-18b5.sqlite
+[2/6] [======35%                   ] nsys-report-18b5.sqlite
+[2/6] [=======36%                  ] nsys-report-18b5.sqlite
+[2/6] [=======37%                  ] nsys-report-18b5.sqlite
+[2/6] [=======38%                  ] nsys-report-18b5.sqlite
+[2/6] [=======39%                  ] nsys-report-18b5.sqlite
+[2/6] [========40%                 ] nsys-report-18b5.sqlite
+[2/6] [========41%                 ] nsys-report-18b5.sqlite
+[2/6] [========42%                 ] nsys-report-18b5.sqlite
+[2/6] [=========43%                ] nsys-report-18b5.sqlite
+[2/6] [=========44%                ] nsys-report-18b5.sqlite
+[2/6] [=========45%                ] nsys-report-18b5.sqlite
+[2/6] [=========46%                ] nsys-report-18b5.sqlite
+[2/6] [==========47%               ] nsys-report-18b5.sqlite
+[2/6] [==========48%               ] nsys-report-18b5.sqlite
+[2/6] [==========49%               ] nsys-report-18b5.sqlite
+[2/6] [===========50%              ] nsys-report-18b5.sqlite
+[2/6] [===========51%              ] nsys-report-18b5.sqlite
+[2/6] [===========52%              ] nsys-report-18b5.sqlite
+[2/6] [===========53%              ] nsys-report-18b5.sqlite
+[2/6] [============54%             ] nsys-report-18b5.sqlite
+[2/6] [============55%             ] nsys-report-18b5.sqlite
+[2/6] [============56%             ] nsys-report-18b5.sqlite
+[2/6] [============57%             ] nsys-report-18b5.sqlite
+[2/6] [=============58%            ] nsys-report-18b5.sqlite
+[2/6] [=============59%            ] nsys-report-18b5.sqlite
+[2/6] [=============60%            ] nsys-report-18b5.sqlite
+[2/6] [==============61%           ] nsys-report-18b5.sqlite
+[2/6] [==============62%           ] nsys-report-18b5.sqlite
+[2/6] [==============63%           ] nsys-report-18b5.sqlite
+[2/6] [==============64%           ] nsys-report-18b5.sqlite
+[2/6] [===============65%          ] nsys-report-18b5.sqlite
+[2/6] [===============66%          ] nsys-report-18b5.sqlite
+[2/6] [===============67%          ] nsys-report-18b5.sqlite
+[2/6] [================68%         ] nsys-report-18b5.sqlite
+[2/6] [================69%         ] nsys-report-18b5.sqlite
+[2/6] [================70%         ] nsys-report-18b5.sqlite
+[2/6] [================71%         ] nsys-report-18b5.sqlite
+[2/6] [=================72%        ] nsys-report-18b5.sqlite
+[2/6] [=================73%        ] nsys-report-18b5.sqlite
+[2/6] [=================74%        ] nsys-report-18b5.sqlite
+[2/6] [==================75%       ] nsys-report-18b5.sqlite
+[2/6] [==================76%       ] nsys-report-18b5.sqlite
+[2/6] [==================77%       ] nsys-report-18b5.sqlite
+[2/6] [==================78%       ] nsys-report-18b5.sqlite
+[2/6] [===================79%      ] nsys-report-18b5.sqlite
+[2/6] [===================80%      ] nsys-report-18b5.sqlite
+[2/6] [===================81%      ] nsys-report-18b5.sqlite
+[2/6] [===================82%      ] nsys-report-18b5.sqlite
+[2/6] [====================83%     ] nsys-report-18b5.sqlite
+[2/6] [====================84%     ] nsys-report-18b5.sqlite
+[2/6] [====================85%     ] nsys-report-18b5.sqlite
+[2/6] [=====================86%    ] nsys-report-18b5.sqlite
+[2/6] [=====================87%    ] nsys-report-18b5.sqlite
+[2/6] [=====================88%    ] nsys-report-18b5.sqlite
+[2/6] [=====================89%    ] nsys-report-18b5.sqlite
+[2/6] [======================90%   ] nsys-report-18b5.sqlite
+[2/6] [======================91%   ] nsys-report-18b5.sqlite
+[2/6] [======================92%   ] nsys-report-18b5.sqlite
+[2/6] [=======================93%  ] nsys-report-18b5.sqlite
+[2/6] [=======================94%  ] nsys-report-18b5.sqlite
+[2/6] [=======================95%  ] nsys-report-18b5.sqlite
+[2/6] [=======================96%  ] nsys-report-18b5.sqlite
+[2/6] [========================97% ] nsys-report-18b5.sqlite
+[2/6] [========================98% ] nsys-report-18b5.sqlite
+[2/6] [========================99% ] nsys-report-18b5.sqlite
+[2/6] [========================100%] nsys-report-18b5.sqlite
+[2/6] [========================100%] nsys-report-18b5.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     80.3       4125840979          1  4125840979.0  4125840979.0  4125840979  4125840979          0.0  cudaEventSynchronize  
+     16.1        827296701          5   165459340.2   136078043.0   114505107   229903161   58333225.2  cudaMemcpy            
+      3.4        174332296          2    87166148.0    87166148.0      235652   174096644  122938286.4  cudaMalloc            
+      0.1          6413776       1000        6413.8        4749.0        3841     1388695      44231.8  cudaLaunchKernel      
+      0.0          2362381          2     1181190.5     1181190.5     1042342     1320039     196361.4  cudaFree              
+      0.0            28915          2       14457.5       14457.5        1886       27029      17778.8  cudaEventCreate       
+      0.0            18509          2        9254.5        9254.5        5169       13340       5777.8  cudaEventRecord       
+      0.0             4330          1        4330.0        4330.0        4330        4330          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       4130819899       1000  4130819.9  4130364.0   4129373   4147965       2625.4  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Operation          
+ --------  ---------------  -----  -----------  -----------  ---------  ---------  -----------  ----------------------------
+     71.8        592742775      3  197580925.0  226967388.0  135968297  229807090   53376988.7  [CUDA memcpy Device-to-Host]
+     28.2        233218791      2  116609395.5  116609395.5  114279397  118939394    3295115.5  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   4800.960      3  1600.320  1600.320  1600.320  1600.320        0.000  [CUDA memcpy Device-to-Host]
+   3200.640      2  1600.320  1600.320  1600.320  1600.320        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-5bad.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-18b5.sqlite
+Test 2: Iteration Scaling
+Running 10000x10000 grid, 100 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=105.233246 ms for size=10000 iterations=100
+Failed to create '/scratch/ualmxs002/base/profile_iter_100.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-1c2c.qdstrm'
+
+[1/6] [0%                          ] nsys-report-986b.nsys-rep
+[1/6] [0%                          ] nsys-report-986b.nsys-rep
+[1/6] [===========50%              ] nsys-report-986b.nsys-rep
+[1/6] [============54%             ] nsys-report-986b.nsys-rep
+[1/6] [=============59%            ] nsys-report-986b.nsys-rep
+[1/6] [==============64%           ] nsys-report-986b.nsys-rep
+[1/6] [================68%         ] nsys-report-986b.nsys-rep
+[1/6] [=================73%        ] nsys-report-986b.nsys-rep
+[1/6] [==================77%       ] nsys-report-986b.nsys-rep
+[1/6] [===================82%      ] nsys-report-986b.nsys-rep
+[1/6] [=====================87%    ] nsys-report-986b.nsys-rep
+[1/6] [======================91%   ] nsys-report-986b.nsys-rep
+[1/6] [=======================93%  ] nsys-report-986b.nsys-rep
+[1/6] [========================98% ] nsys-report-986b.nsys-rep
+[1/6] [========================99% ] nsys-report-986b.nsys-rep
+[1/6] [========================100%] nsys-report-986b.nsys-rep
+[1/6] [========================100%] nsys-report-986b.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_iter_100.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-8fc9.sqlite
+[2/6] [1%                          ] nsys-report-8fc9.sqlite
+[2/6] [2%                          ] nsys-report-8fc9.sqlite
+[2/6] [3%                          ] nsys-report-8fc9.sqlite
+[2/6] [4%                          ] nsys-report-8fc9.sqlite
+[2/6] [5%                          ] nsys-report-8fc9.sqlite
+[2/6] [6%                          ] nsys-report-8fc9.sqlite
+[2/6] [7%                          ] nsys-report-8fc9.sqlite
+[2/6] [8%                          ] nsys-report-8fc9.sqlite
+[2/6] [9%                          ] nsys-report-8fc9.sqlite
+[2/6] [10%                         ] nsys-report-8fc9.sqlite
+[2/6] [11%                         ] nsys-report-8fc9.sqlite
+[2/6] [12%                         ] nsys-report-8fc9.sqlite
+[2/6] [13%                         ] nsys-report-8fc9.sqlite
+[2/6] [14%                         ] nsys-report-8fc9.sqlite
+[2/6] [=15%                        ] nsys-report-8fc9.sqlite
+[2/6] [=16%                        ] nsys-report-8fc9.sqlite
+[2/6] [=17%                        ] nsys-report-8fc9.sqlite
+[2/6] [==18%                       ] nsys-report-8fc9.sqlite
+[2/6] [==19%                       ] nsys-report-8fc9.sqlite
+[2/6] [==20%                       ] nsys-report-8fc9.sqlite
+[2/6] [==21%                       ] nsys-report-8fc9.sqlite
+[2/6] [===22%                      ] nsys-report-8fc9.sqlite
+[2/6] [===23%                      ] nsys-report-8fc9.sqlite
+[2/6] [===24%                      ] nsys-report-8fc9.sqlite
+[2/6] [====25%                     ] nsys-report-8fc9.sqlite
+[2/6] [====26%                     ] nsys-report-8fc9.sqlite
+[2/6] [====27%                     ] nsys-report-8fc9.sqlite
+[2/6] [====28%                     ] nsys-report-8fc9.sqlite
+[2/6] [=====29%                    ] nsys-report-8fc9.sqlite
+[2/6] [=====30%                    ] nsys-report-8fc9.sqlite
+[2/6] [=====31%                    ] nsys-report-8fc9.sqlite
+[2/6] [=====32%                    ] nsys-report-8fc9.sqlite
+[2/6] [======33%                   ] nsys-report-8fc9.sqlite
+[2/6] [======34%                   ] nsys-report-8fc9.sqlite
+[2/6] [======35%                   ] nsys-report-8fc9.sqlite
+[2/6] [=======36%                  ] nsys-report-8fc9.sqlite
+[2/6] [=======37%                  ] nsys-report-8fc9.sqlite
+[2/6] [=======38%                  ] nsys-report-8fc9.sqlite
+[2/6] [=======39%                  ] nsys-report-8fc9.sqlite
+[2/6] [========40%                 ] nsys-report-8fc9.sqlite
+[2/6] [========41%                 ] nsys-report-8fc9.sqlite
+[2/6] [========42%                 ] nsys-report-8fc9.sqlite
+[2/6] [=========43%                ] nsys-report-8fc9.sqlite
+[2/6] [=========44%                ] nsys-report-8fc9.sqlite
+[2/6] [=========45%                ] nsys-report-8fc9.sqlite
+[2/6] [=========46%                ] nsys-report-8fc9.sqlite
+[2/6] [==========47%               ] nsys-report-8fc9.sqlite
+[2/6] [==========48%               ] nsys-report-8fc9.sqlite
+[2/6] [==========49%               ] nsys-report-8fc9.sqlite
+[2/6] [===========50%              ] nsys-report-8fc9.sqlite
+[2/6] [===========51%              ] nsys-report-8fc9.sqlite
+[2/6] [===========52%              ] nsys-report-8fc9.sqlite
+[2/6] [===========53%              ] nsys-report-8fc9.sqlite
+[2/6] [============54%             ] nsys-report-8fc9.sqlite
+[2/6] [============55%             ] nsys-report-8fc9.sqlite
+[2/6] [============56%             ] nsys-report-8fc9.sqlite
+[2/6] [============57%             ] nsys-report-8fc9.sqlite
+[2/6] [=============58%            ] nsys-report-8fc9.sqlite
+[2/6] [=============59%            ] nsys-report-8fc9.sqlite
+[2/6] [=============60%            ] nsys-report-8fc9.sqlite
+[2/6] [==============61%           ] nsys-report-8fc9.sqlite
+[2/6] [==============62%           ] nsys-report-8fc9.sqlite
+[2/6] [==============63%           ] nsys-report-8fc9.sqlite
+[2/6] [==============64%           ] nsys-report-8fc9.sqlite
+[2/6] [===============65%          ] nsys-report-8fc9.sqlite
+[2/6] [===============66%          ] nsys-report-8fc9.sqlite
+[2/6] [===============67%          ] nsys-report-8fc9.sqlite
+[2/6] [================68%         ] nsys-report-8fc9.sqlite
+[2/6] [================69%         ] nsys-report-8fc9.sqlite
+[2/6] [================70%         ] nsys-report-8fc9.sqlite
+[2/6] [================71%         ] nsys-report-8fc9.sqlite
+[2/6] [=================72%        ] nsys-report-8fc9.sqlite
+[2/6] [=================73%        ] nsys-report-8fc9.sqlite
+[2/6] [=================74%        ] nsys-report-8fc9.sqlite
+[2/6] [==================75%       ] nsys-report-8fc9.sqlite
+[2/6] [==================76%       ] nsys-report-8fc9.sqlite
+[2/6] [==================77%       ] nsys-report-8fc9.sqlite
+[2/6] [==================78%       ] nsys-report-8fc9.sqlite
+[2/6] [===================79%      ] nsys-report-8fc9.sqlite
+[2/6] [===================80%      ] nsys-report-8fc9.sqlite
+[2/6] [===================81%      ] nsys-report-8fc9.sqlite
+[2/6] [===================82%      ] nsys-report-8fc9.sqlite
+[2/6] [====================83%     ] nsys-report-8fc9.sqlite
+[2/6] [====================84%     ] nsys-report-8fc9.sqlite
+[2/6] [====================85%     ] nsys-report-8fc9.sqlite
+[2/6] [=====================86%    ] nsys-report-8fc9.sqlite
+[2/6] [=====================87%    ] nsys-report-8fc9.sqlite
+[2/6] [=====================88%    ] nsys-report-8fc9.sqlite
+[2/6] [=====================89%    ] nsys-report-8fc9.sqlite
+[2/6] [======================90%   ] nsys-report-8fc9.sqlite
+[2/6] [======================91%   ] nsys-report-8fc9.sqlite
+[2/6] [======================92%   ] nsys-report-8fc9.sqlite
+[2/6] [=======================93%  ] nsys-report-8fc9.sqlite
+[2/6] [=======================94%  ] nsys-report-8fc9.sqlite
+[2/6] [=======================95%  ] nsys-report-8fc9.sqlite
+[2/6] [=======================96%  ] nsys-report-8fc9.sqlite
+[2/6] [========================97% ] nsys-report-8fc9.sqlite
+[2/6] [========================98% ] nsys-report-8fc9.sqlite
+[2/6] [========================99% ] nsys-report-8fc9.sqlite
+[2/6] [========================100%] nsys-report-8fc9.sqlite
+[2/6] [========================100%] nsys-report-8fc9.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------------
+     41.6        201222858          5   40244571.6   31987097.0   28449457   56653416   14354964.1  cudaMemcpy            
+     36.4        176111358          2   88055679.0   88055679.0     153236  175958122  124312827.1  cudaMalloc            
+     21.3        103069115          1  103069115.0  103069115.0  103069115  103069115          0.0  cudaEventSynchronize  
+      0.4          1993817        100      19938.2       4261.0       3771    1558067     155367.5  cudaLaunchKernel      
+      0.2           854955          2     427477.5     427477.5     341116     513839     122133.6  cudaFree              
+      0.0            28845          2      14422.5      14422.5       6146      22699      11704.7  cudaEventRecord       
+      0.0            27938          2      13969.0      13969.0       1956      25982      16988.9  cudaEventCreate       
+      0.0             5239          1       5239.0       5239.0       5239       5239          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0        103505707        100  1035057.1  1035018.0   1034793   1037002        241.6  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     71.5        143307140      3  47769046.7  54861924.0  31897196  56548020   13771254.9  [CUDA memcpy Device-to-Host]
+     28.5         57177914      2  28588957.0  28588957.0  28282443  28895471     433476.3  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-986b.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-8fc9.sqlite
+Running 10000x10000 grid, 500 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=519.696045 ms for size=10000 iterations=500
+Failed to create '/scratch/ualmxs002/base/profile_iter_500.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-e06d.qdstrm'
+
+[1/6] [0%                          ] nsys-report-ac4f.nsys-rep
+[1/6] [0%                          ] nsys-report-ac4f.nsys-rep
+[1/6] [===========50%              ] nsys-report-ac4f.nsys-rep
+[1/6] [============55%             ] nsys-report-ac4f.nsys-rep
+[1/6] [=============59%            ] nsys-report-ac4f.nsys-rep
+[1/6] [==============64%           ] nsys-report-ac4f.nsys-rep
+[1/6] [================68%         ] nsys-report-ac4f.nsys-rep
+[1/6] [=================73%        ] nsys-report-ac4f.nsys-rep
+[1/6] [==================77%       ] nsys-report-ac4f.nsys-rep
+[1/6] [===================82%      ] nsys-report-ac4f.nsys-rep
+[1/6] [=====================86%    ] nsys-report-ac4f.nsys-rep
+[1/6] [======================91%   ] nsys-report-ac4f.nsys-rep
+[1/6] [=======================93%  ] nsys-report-ac4f.nsys-rep
+[1/6] [========================97% ] nsys-report-ac4f.nsys-rep
+[1/6] [========================99% ] nsys-report-ac4f.nsys-rep
+[1/6] [========================100%] nsys-report-ac4f.nsys-rep
+[1/6] [========================100%] nsys-report-ac4f.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_iter_500.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-8310.sqlite
+[2/6] [1%                          ] nsys-report-8310.sqlite
+[2/6] [2%                          ] nsys-report-8310.sqlite
+[2/6] [3%                          ] nsys-report-8310.sqlite
+[2/6] [4%                          ] nsys-report-8310.sqlite
+[2/6] [5%                          ] nsys-report-8310.sqlite
+[2/6] [6%                          ] nsys-report-8310.sqlite
+[2/6] [7%                          ] nsys-report-8310.sqlite
+[2/6] [8%                          ] nsys-report-8310.sqlite
+[2/6] [9%                          ] nsys-report-8310.sqlite
+[2/6] [10%                         ] nsys-report-8310.sqlite
+[2/6] [11%                         ] nsys-report-8310.sqlite
+[2/6] [12%                         ] nsys-report-8310.sqlite
+[2/6] [13%                         ] nsys-report-8310.sqlite
+[2/6] [14%                         ] nsys-report-8310.sqlite
+[2/6] [=15%                        ] nsys-report-8310.sqlite
+[2/6] [=16%                        ] nsys-report-8310.sqlite
+[2/6] [=17%                        ] nsys-report-8310.sqlite
+[2/6] [==18%                       ] nsys-report-8310.sqlite
+[2/6] [==19%                       ] nsys-report-8310.sqlite
+[2/6] [==20%                       ] nsys-report-8310.sqlite
+[2/6] [==21%                       ] nsys-report-8310.sqlite
+[2/6] [===22%                      ] nsys-report-8310.sqlite
+[2/6] [===23%                      ] nsys-report-8310.sqlite
+[2/6] [===24%                      ] nsys-report-8310.sqlite
+[2/6] [====25%                     ] nsys-report-8310.sqlite
+[2/6] [====26%                     ] nsys-report-8310.sqlite
+[2/6] [====27%                     ] nsys-report-8310.sqlite
+[2/6] [====28%                     ] nsys-report-8310.sqlite
+[2/6] [=====29%                    ] nsys-report-8310.sqlite
+[2/6] [=====30%                    ] nsys-report-8310.sqlite
+[2/6] [=====31%                    ] nsys-report-8310.sqlite
+[2/6] [=====32%                    ] nsys-report-8310.sqlite
+[2/6] [======33%                   ] nsys-report-8310.sqlite
+[2/6] [======34%                   ] nsys-report-8310.sqlite
+[2/6] [======35%                   ] nsys-report-8310.sqlite
+[2/6] [=======36%                  ] nsys-report-8310.sqlite
+[2/6] [=======37%                  ] nsys-report-8310.sqlite
+[2/6] [=======38%                  ] nsys-report-8310.sqlite
+[2/6] [=======39%                  ] nsys-report-8310.sqlite
+[2/6] [========40%                 ] nsys-report-8310.sqlite
+[2/6] [========41%                 ] nsys-report-8310.sqlite
+[2/6] [========42%                 ] nsys-report-8310.sqlite
+[2/6] [=========43%                ] nsys-report-8310.sqlite
+[2/6] [=========44%                ] nsys-report-8310.sqlite
+[2/6] [=========45%                ] nsys-report-8310.sqlite
+[2/6] [=========46%                ] nsys-report-8310.sqlite
+[2/6] [==========47%               ] nsys-report-8310.sqlite
+[2/6] [==========48%               ] nsys-report-8310.sqlite
+[2/6] [==========49%               ] nsys-report-8310.sqlite
+[2/6] [===========50%              ] nsys-report-8310.sqlite
+[2/6] [===========51%              ] nsys-report-8310.sqlite
+[2/6] [===========52%              ] nsys-report-8310.sqlite
+[2/6] [===========53%              ] nsys-report-8310.sqlite
+[2/6] [============54%             ] nsys-report-8310.sqlite
+[2/6] [============55%             ] nsys-report-8310.sqlite
+[2/6] [============56%             ] nsys-report-8310.sqlite
+[2/6] [============57%             ] nsys-report-8310.sqlite
+[2/6] [=============58%            ] nsys-report-8310.sqlite
+[2/6] [=============59%            ] nsys-report-8310.sqlite
+[2/6] [=============60%            ] nsys-report-8310.sqlite
+[2/6] [==============61%           ] nsys-report-8310.sqlite
+[2/6] [==============62%           ] nsys-report-8310.sqlite
+[2/6] [==============63%           ] nsys-report-8310.sqlite
+[2/6] [==============64%           ] nsys-report-8310.sqlite
+[2/6] [===============65%          ] nsys-report-8310.sqlite
+[2/6] [===============66%          ] nsys-report-8310.sqlite
+[2/6] [===============67%          ] nsys-report-8310.sqlite
+[2/6] [================68%         ] nsys-report-8310.sqlite
+[2/6] [================69%         ] nsys-report-8310.sqlite
+[2/6] [================70%         ] nsys-report-8310.sqlite
+[2/6] [================71%         ] nsys-report-8310.sqlite
+[2/6] [=================72%        ] nsys-report-8310.sqlite
+[2/6] [=================73%        ] nsys-report-8310.sqlite
+[2/6] [=================74%        ] nsys-report-8310.sqlite
+[2/6] [==================75%       ] nsys-report-8310.sqlite
+[2/6] [==================76%       ] nsys-report-8310.sqlite
+[2/6] [==================77%       ] nsys-report-8310.sqlite
+[2/6] [==================78%       ] nsys-report-8310.sqlite
+[2/6] [===================79%      ] nsys-report-8310.sqlite
+[2/6] [===================80%      ] nsys-report-8310.sqlite
+[2/6] [===================81%      ] nsys-report-8310.sqlite
+[2/6] [===================82%      ] nsys-report-8310.sqlite
+[2/6] [====================83%     ] nsys-report-8310.sqlite
+[2/6] [====================84%     ] nsys-report-8310.sqlite
+[2/6] [====================85%     ] nsys-report-8310.sqlite
+[2/6] [=====================86%    ] nsys-report-8310.sqlite
+[2/6] [=====================87%    ] nsys-report-8310.sqlite
+[2/6] [=====================88%    ] nsys-report-8310.sqlite
+[2/6] [=====================89%    ] nsys-report-8310.sqlite
+[2/6] [======================90%   ] nsys-report-8310.sqlite
+[2/6] [======================91%   ] nsys-report-8310.sqlite
+[2/6] [======================92%   ] nsys-report-8310.sqlite
+[2/6] [=======================93%  ] nsys-report-8310.sqlite
+[2/6] [=======================94%  ] nsys-report-8310.sqlite
+[2/6] [=======================95%  ] nsys-report-8310.sqlite
+[2/6] [=======================96%  ] nsys-report-8310.sqlite
+[2/6] [========================97% ] nsys-report-8310.sqlite
+[2/6] [========================98% ] nsys-report-8310.sqlite
+[2/6] [========================99% ] nsys-report-8310.sqlite
+[2/6] [========================100%] nsys-report-8310.sqlite
+[2/6] [========================100%] nsys-report-8310.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------------
+     56.7        515051106          1  515051106.0  515051106.0  515051106  515051106          0.0  cudaEventSynchronize  
+     22.7        206046382          5   41209276.4   34642310.0   28448530   56426246   13673865.3  cudaMemcpy            
+     20.1        182459788          2   91229894.0   91229894.0     179358  182280430  128764902.9  cudaMalloc            
+      0.4          3781946        500       7563.9       4680.0       4190    1403851      62581.5  cudaLaunchKernel      
+      0.1           870598          2     435299.0     435299.0     343490     527108     129837.5  cudaFree              
+      0.0            21233          2      10616.5      10616.5       1886      19347      12346.8  cudaEventCreate       
+      0.0            19905          2       9952.5       9952.5       5238      14667       6667.3  cudaEventRecord       
+      0.0             4750          1       4750.0       4750.0       4750       4750          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0        517448753        500  1034897.5  1034858.0   1034601   1036842        173.4  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     69.4        142513295      3  47504431.7  55302243.0  30895648  56315404   14392546.5  [CUDA memcpy Device-to-Host]
+     30.6         62812617      2  31406308.5  31406308.5  28268263  34544354    4437866.5  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-ac4f.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-8310.sqlite
+Running 10000x10000 grid, 1000 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=1038.364136 ms for size=10000 iterations=1000
+Failed to create '/scratch/ualmxs002/base/profile_iter_1000.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-068b.qdstrm'
+
+[1/6] [0%                          ] nsys-report-8424.nsys-rep
+[1/6] [0%                          ] nsys-report-8424.nsys-rep
+[1/6] [===========50%              ] nsys-report-8424.nsys-rep
+[1/6] [============55%             ] nsys-report-8424.nsys-rep
+[1/6] [=============59%            ] nsys-report-8424.nsys-rep
+[1/6] [==============64%           ] nsys-report-8424.nsys-rep
+[1/6] [================68%         ] nsys-report-8424.nsys-rep
+[1/6] [=================73%        ] nsys-report-8424.nsys-rep
+[1/6] [==================77%       ] nsys-report-8424.nsys-rep
+[1/6] [===================82%      ] nsys-report-8424.nsys-rep
+[1/6] [=====================86%    ] nsys-report-8424.nsys-rep
+[1/6] [======================91%   ] nsys-report-8424.nsys-rep
+[1/6] [======================92%   ] nsys-report-8424.nsys-rep
+[1/6] [========================97% ] nsys-report-8424.nsys-rep
+[1/6] [========================99% ] nsys-report-8424.nsys-rep
+[1/6] [========================100%] nsys-report-8424.nsys-rep
+[1/6] [========================100%] nsys-report-8424.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_iter_1000.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-32ad.sqlite
+[2/6] [1%                          ] nsys-report-32ad.sqlite
+[2/6] [2%                          ] nsys-report-32ad.sqlite
+[2/6] [3%                          ] nsys-report-32ad.sqlite
+[2/6] [4%                          ] nsys-report-32ad.sqlite
+[2/6] [5%                          ] nsys-report-32ad.sqlite
+[2/6] [6%                          ] nsys-report-32ad.sqlite
+[2/6] [7%                          ] nsys-report-32ad.sqlite
+[2/6] [8%                          ] nsys-report-32ad.sqlite
+[2/6] [9%                          ] nsys-report-32ad.sqlite
+[2/6] [10%                         ] nsys-report-32ad.sqlite
+[2/6] [11%                         ] nsys-report-32ad.sqlite
+[2/6] [12%                         ] nsys-report-32ad.sqlite
+[2/6] [13%                         ] nsys-report-32ad.sqlite
+[2/6] [14%                         ] nsys-report-32ad.sqlite
+[2/6] [=15%                        ] nsys-report-32ad.sqlite
+[2/6] [=16%                        ] nsys-report-32ad.sqlite
+[2/6] [=17%                        ] nsys-report-32ad.sqlite
+[2/6] [==18%                       ] nsys-report-32ad.sqlite
+[2/6] [==19%                       ] nsys-report-32ad.sqlite
+[2/6] [==20%                       ] nsys-report-32ad.sqlite
+[2/6] [==21%                       ] nsys-report-32ad.sqlite
+[2/6] [===22%                      ] nsys-report-32ad.sqlite
+[2/6] [===23%                      ] nsys-report-32ad.sqlite
+[2/6] [===24%                      ] nsys-report-32ad.sqlite
+[2/6] [====25%                     ] nsys-report-32ad.sqlite
+[2/6] [====26%                     ] nsys-report-32ad.sqlite
+[2/6] [====27%                     ] nsys-report-32ad.sqlite
+[2/6] [====28%                     ] nsys-report-32ad.sqlite
+[2/6] [=====29%                    ] nsys-report-32ad.sqlite
+[2/6] [=====30%                    ] nsys-report-32ad.sqlite
+[2/6] [=====31%                    ] nsys-report-32ad.sqlite
+[2/6] [=====32%                    ] nsys-report-32ad.sqlite
+[2/6] [======33%                   ] nsys-report-32ad.sqlite
+[2/6] [======34%                   ] nsys-report-32ad.sqlite
+[2/6] [======35%                   ] nsys-report-32ad.sqlite
+[2/6] [=======36%                  ] nsys-report-32ad.sqlite
+[2/6] [=======37%                  ] nsys-report-32ad.sqlite
+[2/6] [=======38%                  ] nsys-report-32ad.sqlite
+[2/6] [=======39%                  ] nsys-report-32ad.sqlite
+[2/6] [========40%                 ] nsys-report-32ad.sqlite
+[2/6] [========41%                 ] nsys-report-32ad.sqlite
+[2/6] [========42%                 ] nsys-report-32ad.sqlite
+[2/6] [=========43%                ] nsys-report-32ad.sqlite
+[2/6] [=========44%                ] nsys-report-32ad.sqlite
+[2/6] [=========45%                ] nsys-report-32ad.sqlite
+[2/6] [=========46%                ] nsys-report-32ad.sqlite
+[2/6] [==========47%               ] nsys-report-32ad.sqlite
+[2/6] [==========48%               ] nsys-report-32ad.sqlite
+[2/6] [==========49%               ] nsys-report-32ad.sqlite
+[2/6] [===========50%              ] nsys-report-32ad.sqlite
+[2/6] [===========51%              ] nsys-report-32ad.sqlite
+[2/6] [===========52%              ] nsys-report-32ad.sqlite
+[2/6] [===========53%              ] nsys-report-32ad.sqlite
+[2/6] [============54%             ] nsys-report-32ad.sqlite
+[2/6] [============55%             ] nsys-report-32ad.sqlite
+[2/6] [============56%             ] nsys-report-32ad.sqlite
+[2/6] [============57%             ] nsys-report-32ad.sqlite
+[2/6] [=============58%            ] nsys-report-32ad.sqlite
+[2/6] [=============59%            ] nsys-report-32ad.sqlite
+[2/6] [=============60%            ] nsys-report-32ad.sqlite
+[2/6] [==============61%           ] nsys-report-32ad.sqlite
+[2/6] [==============62%           ] nsys-report-32ad.sqlite
+[2/6] [==============63%           ] nsys-report-32ad.sqlite
+[2/6] [==============64%           ] nsys-report-32ad.sqlite
+[2/6] [===============65%          ] nsys-report-32ad.sqlite
+[2/6] [===============66%          ] nsys-report-32ad.sqlite
+[2/6] [===============67%          ] nsys-report-32ad.sqlite
+[2/6] [================68%         ] nsys-report-32ad.sqlite
+[2/6] [================69%         ] nsys-report-32ad.sqlite
+[2/6] [================70%         ] nsys-report-32ad.sqlite
+[2/6] [================71%         ] nsys-report-32ad.sqlite
+[2/6] [=================72%        ] nsys-report-32ad.sqlite
+[2/6] [=================73%        ] nsys-report-32ad.sqlite
+[2/6] [=================74%        ] nsys-report-32ad.sqlite
+[2/6] [==================75%       ] nsys-report-32ad.sqlite
+[2/6] [==================76%       ] nsys-report-32ad.sqlite
+[2/6] [==================77%       ] nsys-report-32ad.sqlite
+[2/6] [==================78%       ] nsys-report-32ad.sqlite
+[2/6] [===================79%      ] nsys-report-32ad.sqlite
+[2/6] [===================80%      ] nsys-report-32ad.sqlite
+[2/6] [===================81%      ] nsys-report-32ad.sqlite
+[2/6] [===================82%      ] nsys-report-32ad.sqlite
+[2/6] [====================83%     ] nsys-report-32ad.sqlite
+[2/6] [====================84%     ] nsys-report-32ad.sqlite
+[2/6] [====================85%     ] nsys-report-32ad.sqlite
+[2/6] [=====================86%    ] nsys-report-32ad.sqlite
+[2/6] [=====================87%    ] nsys-report-32ad.sqlite
+[2/6] [=====================88%    ] nsys-report-32ad.sqlite
+[2/6] [=====================89%    ] nsys-report-32ad.sqlite
+[2/6] [======================90%   ] nsys-report-32ad.sqlite
+[2/6] [======================91%   ] nsys-report-32ad.sqlite
+[2/6] [======================92%   ] nsys-report-32ad.sqlite
+[2/6] [=======================93%  ] nsys-report-32ad.sqlite
+[2/6] [=======================94%  ] nsys-report-32ad.sqlite
+[2/6] [=======================95%  ] nsys-report-32ad.sqlite
+[2/6] [=======================96%  ] nsys-report-32ad.sqlite
+[2/6] [========================97% ] nsys-report-32ad.sqlite
+[2/6] [========================98% ] nsys-report-32ad.sqlite
+[2/6] [========================99% ] nsys-report-32ad.sqlite
+[2/6] [========================100%] nsys-report-32ad.sqlite
+[2/6] [========================100%] nsys-report-32ad.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     69.8       1029637821          1  1029637821.0  1029637821.0  1029637821  1029637821          0.0  cudaEventSynchronize  
+     15.0        220915259          2   110457629.5   110457629.5      125858   220789401  156032687.6  cudaMalloc            
+     14.7        216505623          5    43301124.6    35471706.0    28853090    60808484   15875325.3  cudaMemcpy            
+      0.5          6909463       1000        6909.5        4819.0        4190     1672960      53101.0  cudaLaunchKernel      
+      0.1           875836          2      437918.0      437918.0      357249      518587     114083.2  cudaFree              
+      0.0            22209          2       11104.5       11104.5        2304       19905      12445.8  cudaEventCreate       
+      0.0            15086          2        7543.0        7543.0        6146        8940       1975.7  cudaEventRecord       
+      0.0             5657          1        5657.0        5657.0        5657        5657          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       1034861063       1000  1034861.1  1034825.5   1034569   1036873        169.7  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     72.3        156020241      3  52006747.0  59926487.0  35364924  60728830   14417823.8  [CUDA memcpy Device-to-Host]
+     27.7         59718388      2  29859194.0  29859194.0  28639391  31078997    1725061.9  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-8424.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-32ad.sqlite
+Running 10000x10000 grid, 2500 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=2592.577393 ms for size=10000 iterations=2500
+Failed to create '/scratch/ualmxs002/base/profile_iter_2500.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-925d.qdstrm'
+
+[1/6] [0%                          ] nsys-report-6b1d.nsys-rep
+[1/6] [0%                          ] nsys-report-6b1d.nsys-rep
+[1/6] [7%                          ] nsys-report-6b1d.nsys-rep
+[1/6] [==========48%               ] nsys-report-6b1d.nsys-rep
+[1/6] [===========52%              ] nsys-report-6b1d.nsys-rep
+[1/6] [============56%             ] nsys-report-6b1d.nsys-rep
+[1/6] [=============60%            ] nsys-report-6b1d.nsys-rep
+[1/6] [==============64%           ] nsys-report-6b1d.nsys-rep
+[1/6] [================68%         ] nsys-report-6b1d.nsys-rep
+[1/6] [=================72%        ] nsys-report-6b1d.nsys-rep
+[1/6] [==================76%       ] nsys-report-6b1d.nsys-rep
+[1/6] [===================80%      ] nsys-report-6b1d.nsys-rep
+[1/6] [====================84%     ] nsys-report-6b1d.nsys-rep
+[1/6] [=====================88%    ] nsys-report-6b1d.nsys-rep
+[1/6] [======================90%   ] nsys-report-6b1d.nsys-rep
+[1/6] [=======================94%  ] nsys-report-6b1d.nsys-rep
+[1/6] [=======================96%  ] nsys-report-6b1d.nsys-rep
+[1/6] [========================100%] nsys-report-6b1d.nsys-rep
+[1/6] [========================100%] nsys-report-6b1d.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_iter_2500.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-30c1.sqlite
+[2/6] [1%                          ] nsys-report-30c1.sqlite
+[2/6] [2%                          ] nsys-report-30c1.sqlite
+[2/6] [3%                          ] nsys-report-30c1.sqlite
+[2/6] [4%                          ] nsys-report-30c1.sqlite
+[2/6] [5%                          ] nsys-report-30c1.sqlite
+[2/6] [6%                          ] nsys-report-30c1.sqlite
+[2/6] [7%                          ] nsys-report-30c1.sqlite
+[2/6] [8%                          ] nsys-report-30c1.sqlite
+[2/6] [9%                          ] nsys-report-30c1.sqlite
+[2/6] [10%                         ] nsys-report-30c1.sqlite
+[2/6] [11%                         ] nsys-report-30c1.sqlite
+[2/6] [12%                         ] nsys-report-30c1.sqlite
+[2/6] [13%                         ] nsys-report-30c1.sqlite
+[2/6] [14%                         ] nsys-report-30c1.sqlite
+[2/6] [=15%                        ] nsys-report-30c1.sqlite
+[2/6] [=16%                        ] nsys-report-30c1.sqlite
+[2/6] [=17%                        ] nsys-report-30c1.sqlite
+[2/6] [==18%                       ] nsys-report-30c1.sqlite
+[2/6] [==19%                       ] nsys-report-30c1.sqlite
+[2/6] [==20%                       ] nsys-report-30c1.sqlite
+[2/6] [==21%                       ] nsys-report-30c1.sqlite
+[2/6] [===22%                      ] nsys-report-30c1.sqlite
+[2/6] [===23%                      ] nsys-report-30c1.sqlite
+[2/6] [===24%                      ] nsys-report-30c1.sqlite
+[2/6] [====25%                     ] nsys-report-30c1.sqlite
+[2/6] [====26%                     ] nsys-report-30c1.sqlite
+[2/6] [====27%                     ] nsys-report-30c1.sqlite
+[2/6] [====28%                     ] nsys-report-30c1.sqlite
+[2/6] [=====29%                    ] nsys-report-30c1.sqlite
+[2/6] [=====30%                    ] nsys-report-30c1.sqlite
+[2/6] [=====31%                    ] nsys-report-30c1.sqlite
+[2/6] [=====32%                    ] nsys-report-30c1.sqlite
+[2/6] [======33%                   ] nsys-report-30c1.sqlite
+[2/6] [======34%                   ] nsys-report-30c1.sqlite
+[2/6] [======35%                   ] nsys-report-30c1.sqlite
+[2/6] [=======36%                  ] nsys-report-30c1.sqlite
+[2/6] [=======37%                  ] nsys-report-30c1.sqlite
+[2/6] [=======38%                  ] nsys-report-30c1.sqlite
+[2/6] [=======39%                  ] nsys-report-30c1.sqlite
+[2/6] [========40%                 ] nsys-report-30c1.sqlite
+[2/6] [========41%                 ] nsys-report-30c1.sqlite
+[2/6] [========42%                 ] nsys-report-30c1.sqlite
+[2/6] [=========43%                ] nsys-report-30c1.sqlite
+[2/6] [=========44%                ] nsys-report-30c1.sqlite
+[2/6] [=========45%                ] nsys-report-30c1.sqlite
+[2/6] [=========46%                ] nsys-report-30c1.sqlite
+[2/6] [==========47%               ] nsys-report-30c1.sqlite
+[2/6] [==========48%               ] nsys-report-30c1.sqlite
+[2/6] [==========49%               ] nsys-report-30c1.sqlite
+[2/6] [===========50%              ] nsys-report-30c1.sqlite
+[2/6] [===========51%              ] nsys-report-30c1.sqlite
+[2/6] [===========52%              ] nsys-report-30c1.sqlite
+[2/6] [===========53%              ] nsys-report-30c1.sqlite
+[2/6] [============54%             ] nsys-report-30c1.sqlite
+[2/6] [============55%             ] nsys-report-30c1.sqlite
+[2/6] [============56%             ] nsys-report-30c1.sqlite
+[2/6] [============57%             ] nsys-report-30c1.sqlite
+[2/6] [=============58%            ] nsys-report-30c1.sqlite
+[2/6] [=============59%            ] nsys-report-30c1.sqlite
+[2/6] [=============60%            ] nsys-report-30c1.sqlite
+[2/6] [==============61%           ] nsys-report-30c1.sqlite
+[2/6] [==============62%           ] nsys-report-30c1.sqlite
+[2/6] [==============63%           ] nsys-report-30c1.sqlite
+[2/6] [==============64%           ] nsys-report-30c1.sqlite
+[2/6] [===============65%          ] nsys-report-30c1.sqlite
+[2/6] [===============66%          ] nsys-report-30c1.sqlite
+[2/6] [===============67%          ] nsys-report-30c1.sqlite
+[2/6] [================68%         ] nsys-report-30c1.sqlite
+[2/6] [================69%         ] nsys-report-30c1.sqlite
+[2/6] [================70%         ] nsys-report-30c1.sqlite
+[2/6] [================71%         ] nsys-report-30c1.sqlite
+[2/6] [=================72%        ] nsys-report-30c1.sqlite
+[2/6] [=================73%        ] nsys-report-30c1.sqlite
+[2/6] [=================74%        ] nsys-report-30c1.sqlite
+[2/6] [==================75%       ] nsys-report-30c1.sqlite
+[2/6] [==================76%       ] nsys-report-30c1.sqlite
+[2/6] [==================77%       ] nsys-report-30c1.sqlite
+[2/6] [==================78%       ] nsys-report-30c1.sqlite
+[2/6] [===================79%      ] nsys-report-30c1.sqlite
+[2/6] [===================80%      ] nsys-report-30c1.sqlite
+[2/6] [===================81%      ] nsys-report-30c1.sqlite
+[2/6] [===================82%      ] nsys-report-30c1.sqlite
+[2/6] [====================83%     ] nsys-report-30c1.sqlite
+[2/6] [====================84%     ] nsys-report-30c1.sqlite
+[2/6] [====================85%     ] nsys-report-30c1.sqlite
+[2/6] [=====================86%    ] nsys-report-30c1.sqlite
+[2/6] [=====================87%    ] nsys-report-30c1.sqlite
+[2/6] [=====================88%    ] nsys-report-30c1.sqlite
+[2/6] [=====================89%    ] nsys-report-30c1.sqlite
+[2/6] [======================90%   ] nsys-report-30c1.sqlite
+[2/6] [======================91%   ] nsys-report-30c1.sqlite
+[2/6] [======================92%   ] nsys-report-30c1.sqlite
+[2/6] [=======================93%  ] nsys-report-30c1.sqlite
+[2/6] [=======================94%  ] nsys-report-30c1.sqlite
+[2/6] [=======================95%  ] nsys-report-30c1.sqlite
+[2/6] [=======================96%  ] nsys-report-30c1.sqlite
+[2/6] [========================97% ] nsys-report-30c1.sqlite
+[2/6] [========================98% ] nsys-report-30c1.sqlite
+[2/6] [========================99% ] nsys-report-30c1.sqlite
+[2/6] [========================100%] nsys-report-30c1.sqlite
+[2/6] [========================100%] nsys-report-30c1.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     51.7       1529216114       2500      611686.4     1034171.0        3283     1543329     507278.2  cudaLaunchKernel      
+     35.8       1058163699          1  1058163699.0  1058163699.0  1058163699  1058163699          0.0  cudaEventSynchronize  
+      6.8        202118408          5    40423681.6    32236418.0    28878628    56441407   14051081.7  cudaMemcpy            
+      5.6        164096656          2    82048328.0    82048328.0      169929   163926727  115793542.3  cudaMalloc            
+      0.0          1052191          2      526095.5      526095.5       12712     1039479     726033.9  cudaEventRecord       
+      0.0           981858          2      490929.0      490929.0      329381      652477     228463.4  cudaFree              
+      0.0            30732          2       15366.0       15366.0        1816       28916      19162.6  cudaEventCreate       
+      0.0             5238          1        5238.0        5238.0        5238        5238          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       2586975426       2500  1034790.2  1034760.0   1034504   1036872        141.2  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     71.2        143205683      3  47735227.7  54759442.0  32119583  56326658   13546228.6  [CUDA memcpy Device-to-Host]
+     28.8         58046032      2  29023016.0  29023016.0  28667205  29378827     503192.7  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-6b1d.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-30c1.sqlite
+Running 10000x10000 grid, 5000 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=5187.154297 ms for size=10000 iterations=5000
+Failed to create '/scratch/ualmxs002/base/profile_iter_5000.nsys-rep': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+Generating '/scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-ae3e.qdstrm'
+
+[1/6] [0%                          ] nsys-report-9710.nsys-rep
+[1/6] [0%                          ] nsys-report-9710.nsys-rep
+[1/6] [12%                         ] nsys-report-9710.nsys-rep
+[1/6] [====25%                     ] nsys-report-9710.nsys-rep
+[1/6] [===========53%              ] nsys-report-9710.nsys-rep
+[1/6] [============57%             ] nsys-report-9710.nsys-rep
+[1/6] [=============60%            ] nsys-report-9710.nsys-rep
+[1/6] [==============64%           ] nsys-report-9710.nsys-rep
+[1/6] [================68%         ] nsys-report-9710.nsys-rep
+[1/6] [================71%         ] nsys-report-9710.nsys-rep
+[1/6] [==================75%       ] nsys-report-9710.nsys-rep
+[1/6] [==================78%       ] nsys-report-9710.nsys-rep
+[1/6] [===================82%      ] nsys-report-9710.nsys-rep
+[1/6] [====================85%     ] nsys-report-9710.nsys-rep
+[1/6] [=====================87%    ] nsys-report-9710.nsys-rep
+[1/6] [======================90%   ] nsys-report-9710.nsys-rep
+[1/6] [=======================93%  ] nsys-report-9710.nsys-rep
+[1/6] [========================100%] nsys-report-9710.nsys-rep
+[1/6] [========================100%] nsys-report-9710.nsys-rep
+Failed to create '/scratch/ualmxs002/base/profile_iter_5000.sqlite': File exists.
+Use `--force-overwrite true` to overwrite existing files.
+
+[2/6] [0%                          ] nsys-report-4a56.sqlite
+[2/6] [1%                          ] nsys-report-4a56.sqlite
+[2/6] [2%                          ] nsys-report-4a56.sqlite
+[2/6] [3%                          ] nsys-report-4a56.sqlite
+[2/6] [4%                          ] nsys-report-4a56.sqlite
+[2/6] [5%                          ] nsys-report-4a56.sqlite
+[2/6] [6%                          ] nsys-report-4a56.sqlite
+[2/6] [7%                          ] nsys-report-4a56.sqlite
+[2/6] [8%                          ] nsys-report-4a56.sqlite
+[2/6] [9%                          ] nsys-report-4a56.sqlite
+[2/6] [10%                         ] nsys-report-4a56.sqlite
+[2/6] [11%                         ] nsys-report-4a56.sqlite
+[2/6] [12%                         ] nsys-report-4a56.sqlite
+[2/6] [13%                         ] nsys-report-4a56.sqlite
+[2/6] [14%                         ] nsys-report-4a56.sqlite
+[2/6] [=15%                        ] nsys-report-4a56.sqlite
+[2/6] [=16%                        ] nsys-report-4a56.sqlite
+[2/6] [=17%                        ] nsys-report-4a56.sqlite
+[2/6] [==18%                       ] nsys-report-4a56.sqlite
+[2/6] [==19%                       ] nsys-report-4a56.sqlite
+[2/6] [==20%                       ] nsys-report-4a56.sqlite
+[2/6] [==21%                       ] nsys-report-4a56.sqlite
+[2/6] [===22%                      ] nsys-report-4a56.sqlite
+[2/6] [===23%                      ] nsys-report-4a56.sqlite
+[2/6] [===24%                      ] nsys-report-4a56.sqlite
+[2/6] [====25%                     ] nsys-report-4a56.sqlite
+[2/6] [====26%                     ] nsys-report-4a56.sqlite
+[2/6] [====27%                     ] nsys-report-4a56.sqlite
+[2/6] [====28%                     ] nsys-report-4a56.sqlite
+[2/6] [=====29%                    ] nsys-report-4a56.sqlite
+[2/6] [=====30%                    ] nsys-report-4a56.sqlite
+[2/6] [=====31%                    ] nsys-report-4a56.sqlite
+[2/6] [=====32%                    ] nsys-report-4a56.sqlite
+[2/6] [======33%                   ] nsys-report-4a56.sqlite
+[2/6] [======34%                   ] nsys-report-4a56.sqlite
+[2/6] [======35%                   ] nsys-report-4a56.sqlite
+[2/6] [=======36%                  ] nsys-report-4a56.sqlite
+[2/6] [=======37%                  ] nsys-report-4a56.sqlite
+[2/6] [=======38%                  ] nsys-report-4a56.sqlite
+[2/6] [=======39%                  ] nsys-report-4a56.sqlite
+[2/6] [========40%                 ] nsys-report-4a56.sqlite
+[2/6] [========41%                 ] nsys-report-4a56.sqlite
+[2/6] [========42%                 ] nsys-report-4a56.sqlite
+[2/6] [=========43%                ] nsys-report-4a56.sqlite
+[2/6] [=========44%                ] nsys-report-4a56.sqlite
+[2/6] [=========45%                ] nsys-report-4a56.sqlite
+[2/6] [=========46%                ] nsys-report-4a56.sqlite
+[2/6] [==========47%               ] nsys-report-4a56.sqlite
+[2/6] [==========48%               ] nsys-report-4a56.sqlite
+[2/6] [==========49%               ] nsys-report-4a56.sqlite
+[2/6] [===========50%              ] nsys-report-4a56.sqlite
+[2/6] [===========51%              ] nsys-report-4a56.sqlite
+[2/6] [===========52%              ] nsys-report-4a56.sqlite
+[2/6] [===========53%              ] nsys-report-4a56.sqlite
+[2/6] [============54%             ] nsys-report-4a56.sqlite
+[2/6] [============55%             ] nsys-report-4a56.sqlite
+[2/6] [============56%             ] nsys-report-4a56.sqlite
+[2/6] [============57%             ] nsys-report-4a56.sqlite
+[2/6] [=============58%            ] nsys-report-4a56.sqlite
+[2/6] [=============59%            ] nsys-report-4a56.sqlite
+[2/6] [=============60%            ] nsys-report-4a56.sqlite
+[2/6] [==============61%           ] nsys-report-4a56.sqlite
+[2/6] [==============62%           ] nsys-report-4a56.sqlite
+[2/6] [==============63%           ] nsys-report-4a56.sqlite
+[2/6] [==============64%           ] nsys-report-4a56.sqlite
+[2/6] [===============65%          ] nsys-report-4a56.sqlite
+[2/6] [===============66%          ] nsys-report-4a56.sqlite
+[2/6] [===============67%          ] nsys-report-4a56.sqlite
+[2/6] [================68%         ] nsys-report-4a56.sqlite
+[2/6] [================69%         ] nsys-report-4a56.sqlite
+[2/6] [================70%         ] nsys-report-4a56.sqlite
+[2/6] [================71%         ] nsys-report-4a56.sqlite
+[2/6] [=================72%        ] nsys-report-4a56.sqlite
+[2/6] [=================73%        ] nsys-report-4a56.sqlite
+[2/6] [=================74%        ] nsys-report-4a56.sqlite
+[2/6] [==================75%       ] nsys-report-4a56.sqlite
+[2/6] [==================76%       ] nsys-report-4a56.sqlite
+[2/6] [==================77%       ] nsys-report-4a56.sqlite
+[2/6] [==================78%       ] nsys-report-4a56.sqlite
+[2/6] [===================79%      ] nsys-report-4a56.sqlite
+[2/6] [===================80%      ] nsys-report-4a56.sqlite
+[2/6] [===================81%      ] nsys-report-4a56.sqlite
+[2/6] [===================82%      ] nsys-report-4a56.sqlite
+[2/6] [====================83%     ] nsys-report-4a56.sqlite
+[2/6] [====================84%     ] nsys-report-4a56.sqlite
+[2/6] [====================85%     ] nsys-report-4a56.sqlite
+[2/6] [=====================86%    ] nsys-report-4a56.sqlite
+[2/6] [=====================87%    ] nsys-report-4a56.sqlite
+[2/6] [=====================88%    ] nsys-report-4a56.sqlite
+[2/6] [=====================89%    ] nsys-report-4a56.sqlite
+[2/6] [======================90%   ] nsys-report-4a56.sqlite
+[2/6] [======================91%   ] nsys-report-4a56.sqlite
+[2/6] [======================92%   ] nsys-report-4a56.sqlite
+[2/6] [=======================93%  ] nsys-report-4a56.sqlite
+[2/6] [=======================94%  ] nsys-report-4a56.sqlite
+[2/6] [=======================95%  ] nsys-report-4a56.sqlite
+[2/6] [=======================96%  ] nsys-report-4a56.sqlite
+[2/6] [========================97% ] nsys-report-4a56.sqlite
+[2/6] [========================98% ] nsys-report-4a56.sqlite
+[2/6] [========================99% ] nsys-report-4a56.sqlite
+[2/6] [========================100%] nsys-report-4a56.sqlite
+[2/6] [========================100%] nsys-report-4a56.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     74.2       4118584664       5000      823716.9     1034310.0        3702     2326831     417458.2  cudaLaunchKernel      
+     19.1       1058250057          1  1058250057.0  1058250057.0  1058250057  1058250057          0.0  cudaEventSynchronize  
+      3.8        208395044          5    41679008.8    34637067.0    28330211    57337135   13340329.4  cudaMemcpy            
+      3.0        165826288          2    82913144.0    82913144.0      124461   165701827  117080878.3  cudaMalloc            
+      0.0          1045625          2      522812.5      522812.5        8032     1037593     728009.6  cudaEventRecord       
+      0.0           768347          2      384173.5      384173.5      311781      456566     102378.5  cudaFree              
+      0.0            28008          2       14004.0       14004.0        1956       26052      17038.4  cudaEventCreate       
+      0.0             4749          1        4749.0        4749.0        4749        4749          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       5177490480       5000  1035498.1  1034760.0   1034440   2326482      28607.6  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     70.4        146220794      3  48740264.7  54460280.0  34535895  57224619   12378751.2  [CUDA memcpy Device-to-Host]
+     29.6         61501517      2  30750758.5  30750758.5  28232098  33269419    3561923.8  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-9710.nsys-rep
+    /scratch-local/ualmxs002.base_hopper.31030.asax-pbs1/nsys-report-4a56.sqlite
+Tests complete! Results in /scratch/ualmxs002/base

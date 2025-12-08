@@ -1,0 +1,142 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: profile.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/08_An_efficient_matrix_transpose
+  The working directory is:  /scratch-local/ualmxs002.hopper_multiple.43966.asax-pbs1
+  The memory limit is: 10gb
+  The job will start running after: 202512020820.51
+  Job Name: hopper_multiple
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg006.asc.edu
+  Node list:  asaxg006.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu profile.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N hopper_multiple -a 202512020820.51 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=10000mb 
+ 
+Tue Dec  2 08:21:03 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   41C    P0             61W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2227.98
+       shared memory copy             2212.75
+          naive transpose              426.83
+      coalesced transpose             1069.15
+  conflict-free transpose             2237.87
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2225.52
+       shared memory copy             2219.68
+          naive transpose              427.77
+      coalesced transpose             1068.75
+  conflict-free transpose             2249.00
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2224.76
+       shared memory copy             2212.00
+          naive transpose              427.86
+      coalesced transpose             1069.10
+  conflict-free transpose             2236.34
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2222.50
+       shared memory copy             2216.30
+          naive transpose              427.54
+      coalesced transpose             1069.02
+  conflict-free transpose             2242.85
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2222.50
+       shared memory copy             2215.36
+          naive transpose              427.60
+      coalesced transpose             1068.58
+  conflict-free transpose             2236.91
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2212.93
+       shared memory copy             2213.31
+          naive transpose              427.38
+      coalesced transpose             1068.80
+  conflict-free transpose             2244.00
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2221.37
+       shared memory copy             2216.11
+          naive transpose              427.70
+      coalesced transpose             1070.98
+  conflict-free transpose             2242.46
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2226.47
+       shared memory copy             2214.62
+          naive transpose              427.50
+      coalesced transpose             1068.84
+  conflict-free transpose             2236.91
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2222.69
+       shared memory copy             2209.76
+          naive transpose              427.08
+      coalesced transpose             1067.58
+  conflict-free transpose             2246.88
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2172.22
+       shared memory copy             2214.80
+          naive transpose              427.31
+      coalesced transpose             1068.97
+  conflict-free transpose             2233.48

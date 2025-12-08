@@ -1,0 +1,47 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: job.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/CuBLAS
+  The working directory is:  /scratch-local/ualmxs002.hopper.31121.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202511092306.43
+  Job Name: hopper
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg007.asc.edu
+  Node list:  asaxg007.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu job.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N hopper -a 202511092306.43 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Sun Nov  9 23:06:53 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:29:00.0 Off |                    0 |
+| N/A   37C    P0             60W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+      1      6     11     16     21     26
+      2      7     12     17     22     27
+      3   1536    156    216    276    336
+      4    144     14     19     24     29
+      5    160     15     20     25     30

@@ -1,0 +1,113 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: profile_coalescing.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/06_How_to_access_global_memory_efficiently
+  The working directory is:  /scratch-local/ualmxs002.hopper_single_no_profile.43974.asax-pbs1
+  The memory limit is: 10gb
+  The job will start running after: 202512020847.08
+  Job Name: hopper_single_no_profile
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg006.asc.edu
+  Node list:  asaxg006.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu profile_coalescing.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N hopper_single_no_profile -a 202512020847.08 -r n -M msingh9@crimson.ua.edu -l walltime=01:00:00 -l select=1:gpuname=hopper:ngpus=1:ncpus=1:mpiprocs=1:mem=10000mb 
+ 
+Tue Dec  2 08:47:22 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   38C    P0             60W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: NVIDIA H100 NVL
+Transfer size (MB): 4
+Single Precision
+Offset, Bandwidth (GB/s):
+0, 712.250732
+1, 1046.025146
+2, 1041.666748
+3, 1041.666748
+4, 1041.666748
+5, 1054.852295
+6, 1041.666748
+7, 1050.420166
+8, 1046.025146
+9, 1068.376099
+10, 1033.057861
+11, 1054.852295
+12, 1004.016052
+13, 1059.322021
+14, 1054.852295
+15, 1046.025146
+16, 1059.322021
+17, 1063.829834
+18, 1046.025146
+19, 1046.025146
+20, 1037.344360
+21, 1046.025146
+22, 1054.852295
+23, 1063.829834
+24, 1041.666748
+25, 1041.666748
+26, 1050.420166
+27, 1059.322021
+28, 1041.666748
+29, 1063.829834
+30, 1037.344360
+31, 1046.025146
+32, 1037.344360
+
+Stride, Bandwidth (GB/s):
+1, 1054.852295
+2, 905.797058
+3, 786.163513
+4, 657.894714
+5, 595.238098
+6, 565.610901
+7, 503.018097
+8, 465.549347
+9, 425.170074
+10, 399.361023
+11, 343.878937
+12, 279.955200
+13, 260.416687
+14, 241.545898
+15, 229.568405
+16, 211.148636
+17, 212.044098
+18, 199.521149
+19, 196.695511
+20, 189.969604
+21, 182.481750
+22, 180.766449
+23, 168.690964
+24, 162.022034
+25, 155.763245
+26, 152.439026
+27, 147.318802
+28, 143.843506
+29, 133.547012
+30, 136.836349
+31, 130.412094
+32, 127.226456

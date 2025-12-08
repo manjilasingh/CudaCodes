@@ -1,0 +1,1827 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: job_base.sh
+  The time limit is 10:00:00 HH:MM:SS.
+  The target directory is: /home/ualmxs002/Cuda/CudaCodes/CS485_HW5
+  The working directory is:  /scratch-local/ualmxs002.base_ampere.31029.asax-pbs1
+  The memory limit is: 100gb
+  The job will start running after: 202511091149.27
+  Job Name: base_ampere
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg005.asc.edu
+  Node list:  asaxg005.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu job_base.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N base_ampere -a 202511091149.27 -r n -M msingh9@crimson.ua.edu -l walltime=10:00:00 -l select=1:gpuname=ampere:ngpus=1:ncpus=1:mpiprocs=1:mem=100000mb 
+ 
+Sun Nov  9 11:50:00 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   41C    P0             47W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Starting Game of Life Performance Tests
+========================================
+Test 1: Grid Size Scaling
+Running 500x500 grid, 1000 iterations...
+dimGrid: 63 63 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=16.223904 ms for size=500 iterations=1000
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-0f76.qdstrm'
+
+[1/6] [0%                          ] profile_size_500.nsys-rep
+[1/6] [0%                          ] profile_size_500.nsys-rep
+[1/6] [11%                         ] profile_size_500.nsys-rep
+[1/6] [12%                         ] profile_size_500.nsys-rep
+[1/6] [13%                         ] profile_size_500.nsys-rep
+[1/6] [================69%         ] profile_size_500.nsys-rep
+[1/6] [================70%         ] profile_size_500.nsys-rep
+[1/6] [=================72%        ] profile_size_500.nsys-rep
+[1/6] [=================73%        ] profile_size_500.nsys-rep
+[1/6] [=================74%        ] profile_size_500.nsys-rep
+[1/6] [===================80%      ] profile_size_500.nsys-rep
+[1/6] [===================81%      ] profile_size_500.nsys-rep
+[1/6] [========================100%] profile_size_500.nsys-rep
+[1/6] [========================100%] profile_size_500.nsys-rep
+
+[2/6] [0%                          ] profile_size_500.sqlite
+[2/6] [1%                          ] profile_size_500.sqlite
+[2/6] [2%                          ] profile_size_500.sqlite
+[2/6] [3%                          ] profile_size_500.sqlite
+[2/6] [4%                          ] profile_size_500.sqlite
+[2/6] [5%                          ] profile_size_500.sqlite
+[2/6] [6%                          ] profile_size_500.sqlite
+[2/6] [7%                          ] profile_size_500.sqlite
+[2/6] [8%                          ] profile_size_500.sqlite
+[2/6] [9%                          ] profile_size_500.sqlite
+[2/6] [10%                         ] profile_size_500.sqlite
+[2/6] [11%                         ] profile_size_500.sqlite
+[2/6] [12%                         ] profile_size_500.sqlite
+[2/6] [13%                         ] profile_size_500.sqlite
+[2/6] [14%                         ] profile_size_500.sqlite
+[2/6] [=15%                        ] profile_size_500.sqlite
+[2/6] [=16%                        ] profile_size_500.sqlite
+[2/6] [=17%                        ] profile_size_500.sqlite
+[2/6] [==18%                       ] profile_size_500.sqlite
+[2/6] [==19%                       ] profile_size_500.sqlite
+[2/6] [==20%                       ] profile_size_500.sqlite
+[2/6] [==21%                       ] profile_size_500.sqlite
+[2/6] [===22%                      ] profile_size_500.sqlite
+[2/6] [===23%                      ] profile_size_500.sqlite
+[2/6] [===24%                      ] profile_size_500.sqlite
+[2/6] [====25%                     ] profile_size_500.sqlite
+[2/6] [====26%                     ] profile_size_500.sqlite
+[2/6] [====27%                     ] profile_size_500.sqlite
+[2/6] [====28%                     ] profile_size_500.sqlite
+[2/6] [=====29%                    ] profile_size_500.sqlite
+[2/6] [=====30%                    ] profile_size_500.sqlite
+[2/6] [=====31%                    ] profile_size_500.sqlite
+[2/6] [=====32%                    ] profile_size_500.sqlite
+[2/6] [======33%                   ] profile_size_500.sqlite
+[2/6] [======34%                   ] profile_size_500.sqlite
+[2/6] [======35%                   ] profile_size_500.sqlite
+[2/6] [=======36%                  ] profile_size_500.sqlite
+[2/6] [=======37%                  ] profile_size_500.sqlite
+[2/6] [=======38%                  ] profile_size_500.sqlite
+[2/6] [=======39%                  ] profile_size_500.sqlite
+[2/6] [========40%                 ] profile_size_500.sqlite
+[2/6] [========41%                 ] profile_size_500.sqlite
+[2/6] [========42%                 ] profile_size_500.sqlite
+[2/6] [=========43%                ] profile_size_500.sqlite
+[2/6] [=========44%                ] profile_size_500.sqlite
+[2/6] [=========45%                ] profile_size_500.sqlite
+[2/6] [=========46%                ] profile_size_500.sqlite
+[2/6] [==========47%               ] profile_size_500.sqlite
+[2/6] [==========48%               ] profile_size_500.sqlite
+[2/6] [==========49%               ] profile_size_500.sqlite
+[2/6] [===========50%              ] profile_size_500.sqlite
+[2/6] [===========51%              ] profile_size_500.sqlite
+[2/6] [===========52%              ] profile_size_500.sqlite
+[2/6] [===========53%              ] profile_size_500.sqlite
+[2/6] [============54%             ] profile_size_500.sqlite
+[2/6] [============55%             ] profile_size_500.sqlite
+[2/6] [============56%             ] profile_size_500.sqlite
+[2/6] [============57%             ] profile_size_500.sqlite
+[2/6] [=============58%            ] profile_size_500.sqlite
+[2/6] [=============59%            ] profile_size_500.sqlite
+[2/6] [=============60%            ] profile_size_500.sqlite
+[2/6] [==============61%           ] profile_size_500.sqlite
+[2/6] [==============62%           ] profile_size_500.sqlite
+[2/6] [==============63%           ] profile_size_500.sqlite
+[2/6] [==============64%           ] profile_size_500.sqlite
+[2/6] [===============65%          ] profile_size_500.sqlite
+[2/6] [===============66%          ] profile_size_500.sqlite
+[2/6] [===============67%          ] profile_size_500.sqlite
+[2/6] [================68%         ] profile_size_500.sqlite
+[2/6] [================69%         ] profile_size_500.sqlite
+[2/6] [================70%         ] profile_size_500.sqlite
+[2/6] [================71%         ] profile_size_500.sqlite
+[2/6] [=================72%        ] profile_size_500.sqlite
+[2/6] [=================73%        ] profile_size_500.sqlite
+[2/6] [=================74%        ] profile_size_500.sqlite
+[2/6] [==================75%       ] profile_size_500.sqlite
+[2/6] [==================76%       ] profile_size_500.sqlite
+[2/6] [==================77%       ] profile_size_500.sqlite
+[2/6] [==================78%       ] profile_size_500.sqlite
+[2/6] [===================79%      ] profile_size_500.sqlite
+[2/6] [===================80%      ] profile_size_500.sqlite
+[2/6] [===================81%      ] profile_size_500.sqlite
+[2/6] [===================82%      ] profile_size_500.sqlite
+[2/6] [====================83%     ] profile_size_500.sqlite
+[2/6] [====================84%     ] profile_size_500.sqlite
+[2/6] [====================85%     ] profile_size_500.sqlite
+[2/6] [=====================86%    ] profile_size_500.sqlite
+[2/6] [=====================87%    ] profile_size_500.sqlite
+[2/6] [=====================88%    ] profile_size_500.sqlite
+[2/6] [=====================89%    ] profile_size_500.sqlite
+[2/6] [======================90%   ] profile_size_500.sqlite
+[2/6] [======================91%   ] profile_size_500.sqlite
+[2/6] [======================92%   ] profile_size_500.sqlite
+[2/6] [=======================93%  ] profile_size_500.sqlite
+[2/6] [=======================94%  ] profile_size_500.sqlite
+[2/6] [=======================95%  ] profile_size_500.sqlite
+[2/6] [=======================96%  ] profile_size_500.sqlite
+[2/6] [========================97% ] profile_size_500.sqlite
+[2/6] [========================98% ] profile_size_500.sqlite
+[2/6] [========================99% ] profile_size_500.sqlite
+[2/6] [========================100%] profile_size_500.sqlite
+[2/6] [========================100%] profile_size_500.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ----------  --------  ---------  -----------  ----------------------
+     88.4        142157780          2  71078890.0  71078890.0      6990  142150790  100510844.9  cudaMalloc            
+      8.2         13259308       1000     13259.3      3410.0      3231    9724346     307400.4  cudaLaunchKernel      
+      1.7          2714460          1   2714460.0   2714460.0   2714460    2714460          0.0  cudaEventSynchronize  
+      1.5          2469875          5    493975.0    316807.0    100002    1068024     391715.5  cudaMemcpy            
+      0.1           161753          2     80876.5     80876.5     12080     149673      97292.9  cudaFree              
+      0.0            12780          2      6390.0      6390.0      3910       8870       3507.2  cudaEventRecord       
+      0.0            12520          2      6260.0      6260.0       460      12060       8202.4  cudaEventCreate       
+      0.0             3210          1      3210.0      3210.0      3210       3210          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -----------------------------------
+    100.0          5443014       1000    5443.0    5440.0      5248      6240         86.4  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     66.9           808487      3  269495.7  227106.0    225858    355523      74504.5  [CUDA memcpy Device-to-Host]
+     33.1           400674      2  200337.0  200337.0    199809    200865        746.7  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+      3.024      3     1.008     1.008     1.008     1.008        0.000  [CUDA memcpy Device-to-Host]
+      2.016      2     1.008     1.008     1.008     1.008        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_size_500.nsys-rep
+    /scratch/ualmxs002/base/profile_size_500.sqlite
+Running 1000x1000 grid, 1000 iterations...
+dimGrid: 125 125 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=24.257759 ms for size=1000 iterations=1000
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-6a08.qdstrm'
+
+[1/6] [0%                          ] profile_size_1000.nsys-rep
+[1/6] [0%                          ] profile_size_1000.nsys-rep
+[1/6] [=15%                        ] profile_size_1000.nsys-rep
+[1/6] [=16%                        ] profile_size_1000.nsys-rep
+[1/6] [===============67%          ] profile_size_1000.nsys-rep
+[1/6] [==================75%       ] profile_size_1000.nsys-rep
+[1/6] [==================76%       ] profile_size_1000.nsys-rep
+[1/6] [===================82%      ] profile_size_1000.nsys-rep
+[1/6] [========================100%] profile_size_1000.nsys-rep
+[1/6] [========================100%] profile_size_1000.nsys-rep
+
+[2/6] [0%                          ] profile_size_1000.sqlite
+[2/6] [1%                          ] profile_size_1000.sqlite
+[2/6] [2%                          ] profile_size_1000.sqlite
+[2/6] [3%                          ] profile_size_1000.sqlite
+[2/6] [4%                          ] profile_size_1000.sqlite
+[2/6] [5%                          ] profile_size_1000.sqlite
+[2/6] [6%                          ] profile_size_1000.sqlite
+[2/6] [7%                          ] profile_size_1000.sqlite
+[2/6] [8%                          ] profile_size_1000.sqlite
+[2/6] [9%                          ] profile_size_1000.sqlite
+[2/6] [10%                         ] profile_size_1000.sqlite
+[2/6] [11%                         ] profile_size_1000.sqlite
+[2/6] [12%                         ] profile_size_1000.sqlite
+[2/6] [13%                         ] profile_size_1000.sqlite
+[2/6] [14%                         ] profile_size_1000.sqlite
+[2/6] [=15%                        ] profile_size_1000.sqlite
+[2/6] [=16%                        ] profile_size_1000.sqlite
+[2/6] [=17%                        ] profile_size_1000.sqlite
+[2/6] [==18%                       ] profile_size_1000.sqlite
+[2/6] [==19%                       ] profile_size_1000.sqlite
+[2/6] [==20%                       ] profile_size_1000.sqlite
+[2/6] [==21%                       ] profile_size_1000.sqlite
+[2/6] [===22%                      ] profile_size_1000.sqlite
+[2/6] [===23%                      ] profile_size_1000.sqlite
+[2/6] [===24%                      ] profile_size_1000.sqlite
+[2/6] [====25%                     ] profile_size_1000.sqlite
+[2/6] [====26%                     ] profile_size_1000.sqlite
+[2/6] [====27%                     ] profile_size_1000.sqlite
+[2/6] [====28%                     ] profile_size_1000.sqlite
+[2/6] [=====29%                    ] profile_size_1000.sqlite
+[2/6] [=====30%                    ] profile_size_1000.sqlite
+[2/6] [=====31%                    ] profile_size_1000.sqlite
+[2/6] [=====32%                    ] profile_size_1000.sqlite
+[2/6] [======33%                   ] profile_size_1000.sqlite
+[2/6] [======34%                   ] profile_size_1000.sqlite
+[2/6] [======35%                   ] profile_size_1000.sqlite
+[2/6] [=======36%                  ] profile_size_1000.sqlite
+[2/6] [=======37%                  ] profile_size_1000.sqlite
+[2/6] [=======38%                  ] profile_size_1000.sqlite
+[2/6] [=======39%                  ] profile_size_1000.sqlite
+[2/6] [========40%                 ] profile_size_1000.sqlite
+[2/6] [========41%                 ] profile_size_1000.sqlite
+[2/6] [========42%                 ] profile_size_1000.sqlite
+[2/6] [=========43%                ] profile_size_1000.sqlite
+[2/6] [=========44%                ] profile_size_1000.sqlite
+[2/6] [=========45%                ] profile_size_1000.sqlite
+[2/6] [=========46%                ] profile_size_1000.sqlite
+[2/6] [==========47%               ] profile_size_1000.sqlite
+[2/6] [==========48%               ] profile_size_1000.sqlite
+[2/6] [==========49%               ] profile_size_1000.sqlite
+[2/6] [===========50%              ] profile_size_1000.sqlite
+[2/6] [===========51%              ] profile_size_1000.sqlite
+[2/6] [===========52%              ] profile_size_1000.sqlite
+[2/6] [===========53%              ] profile_size_1000.sqlite
+[2/6] [============54%             ] profile_size_1000.sqlite
+[2/6] [============55%             ] profile_size_1000.sqlite
+[2/6] [============56%             ] profile_size_1000.sqlite
+[2/6] [============57%             ] profile_size_1000.sqlite
+[2/6] [=============58%            ] profile_size_1000.sqlite
+[2/6] [=============59%            ] profile_size_1000.sqlite
+[2/6] [=============60%            ] profile_size_1000.sqlite
+[2/6] [==============61%           ] profile_size_1000.sqlite
+[2/6] [==============62%           ] profile_size_1000.sqlite
+[2/6] [==============63%           ] profile_size_1000.sqlite
+[2/6] [==============64%           ] profile_size_1000.sqlite
+[2/6] [===============65%          ] profile_size_1000.sqlite
+[2/6] [===============66%          ] profile_size_1000.sqlite
+[2/6] [===============67%          ] profile_size_1000.sqlite
+[2/6] [================68%         ] profile_size_1000.sqlite
+[2/6] [================69%         ] profile_size_1000.sqlite
+[2/6] [================70%         ] profile_size_1000.sqlite
+[2/6] [================71%         ] profile_size_1000.sqlite
+[2/6] [=================72%        ] profile_size_1000.sqlite
+[2/6] [=================73%        ] profile_size_1000.sqlite
+[2/6] [=================74%        ] profile_size_1000.sqlite
+[2/6] [==================75%       ] profile_size_1000.sqlite
+[2/6] [==================76%       ] profile_size_1000.sqlite
+[2/6] [==================77%       ] profile_size_1000.sqlite
+[2/6] [==================78%       ] profile_size_1000.sqlite
+[2/6] [===================79%      ] profile_size_1000.sqlite
+[2/6] [===================80%      ] profile_size_1000.sqlite
+[2/6] [===================81%      ] profile_size_1000.sqlite
+[2/6] [===================82%      ] profile_size_1000.sqlite
+[2/6] [====================83%     ] profile_size_1000.sqlite
+[2/6] [====================84%     ] profile_size_1000.sqlite
+[2/6] [====================85%     ] profile_size_1000.sqlite
+[2/6] [=====================86%    ] profile_size_1000.sqlite
+[2/6] [=====================87%    ] profile_size_1000.sqlite
+[2/6] [=====================88%    ] profile_size_1000.sqlite
+[2/6] [=====================89%    ] profile_size_1000.sqlite
+[2/6] [======================90%   ] profile_size_1000.sqlite
+[2/6] [======================91%   ] profile_size_1000.sqlite
+[2/6] [======================92%   ] profile_size_1000.sqlite
+[2/6] [=======================93%  ] profile_size_1000.sqlite
+[2/6] [=======================94%  ] profile_size_1000.sqlite
+[2/6] [=======================95%  ] profile_size_1000.sqlite
+[2/6] [=======================96%  ] profile_size_1000.sqlite
+[2/6] [========================97% ] profile_size_1000.sqlite
+[2/6] [========================98% ] profile_size_1000.sqlite
+[2/6] [========================99% ] profile_size_1000.sqlite
+[2/6] [========================100%] profile_size_1000.sqlite
+[2/6] [========================100%] profile_size_1000.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ----------  --------  ---------  -----------  ----------------------
+     81.9        138831215          2  69415607.5  69415607.5    100332  138730883   98026602.7  cudaMalloc            
+      7.4         12618690       1000     12618.7      3310.0      3150    9186354     290390.7  cudaLaunchKernel      
+      6.7         11402073          1  11402073.0  11402073.0  11402073   11402073          0.0  cudaEventSynchronize  
+      3.7          6342272          5   1268454.4   1030183.0    756397    2061506     535075.6  cudaMemcpy            
+      0.2           352238          2    176119.0    176119.0    143313     208925      46394.7  cudaFree              
+      0.0            13510          2      6755.0      6755.0       730      12780       8520.6  cudaEventCreate       
+      0.0            12690          2      6345.0      6345.0      3950       8740       3387.0  cudaEventRecord       
+      0.0             2310          1      2310.0      2310.0      2310       2310          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -----------------------------------
+    100.0         14016785       1000   14016.8   14016.0     13791     14848         76.8  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ---------  ---------  --------  --------  -----------  ----------------------------
+     71.8          4262463      3  1420821.0  1493067.0    959335   1810061     429939.9  [CUDA memcpy Device-to-Host]
+     28.2          1674957      2   837478.5   837478.5    824134    850823      18872.0  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     12.048      3     4.016     4.016     4.016     4.016        0.000  [CUDA memcpy Device-to-Host]
+      8.032      2     4.016     4.016     4.016     4.016        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_size_1000.nsys-rep
+    /scratch/ualmxs002/base/profile_size_1000.sqlite
+Running 5000x5000 grid, 1000 iterations...
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-fa83.qdstrm'
+
+[1/6] [0%                          ] profile_size_5000.nsys-rep
+[1/6] [0%                          ] profile_size_5000.nsys-rep
+[1/6] [===========50%              ] profile_size_5000.nsys-rep
+[1/6] [=================73%        ] profile_size_5000.nsys-rep
+[1/6] [=======================96%  ] profile_size_5000.nsys-rep
+[1/6] [========================100%] profile_size_5000.nsys-rep
+[1/6] [========================100%] profile_size_5000.nsys-rep
+[1/6] [========================100%] profile_size_5000.nsys-rep
+
+[2/6] [0%                          ] profile_size_5000.sqlite
+[2/6] [1%                          ] profile_size_5000.sqlite
+[2/6] [2%                          ] profile_size_5000.sqlite
+[2/6] [3%                          ] profile_size_5000.sqlite
+[2/6] [4%                          ] profile_size_5000.sqlite
+[2/6] [5%                          ] profile_size_5000.sqlite
+[2/6] [6%                          ] profile_size_5000.sqlite
+[2/6] [7%                          ] profile_size_5000.sqlite
+[2/6] [8%                          ] profile_size_5000.sqlite
+[2/6] [9%                          ] profile_size_5000.sqlite
+[2/6] [10%                         ] profile_size_5000.sqlite
+[2/6] [11%                         ] profile_size_5000.sqlite
+[2/6] [12%                         ] profile_size_5000.sqlite
+[2/6] [13%                         ] profile_size_5000.sqlite
+[2/6] [14%                         ] profile_size_5000.sqlite
+[2/6] [=15%                        ] profile_size_5000.sqlite
+[2/6] [=16%                        ] profile_size_5000.sqlite
+[2/6] [=17%                        ] profile_size_5000.sqlite
+[2/6] [==18%                       ] profile_size_5000.sqlite
+[2/6] [==19%                       ] profile_size_5000.sqlite
+[2/6] [==20%                       ] profile_size_5000.sqlite
+[2/6] [==21%                       ] profile_size_5000.sqlite
+[2/6] [===22%                      ] profile_size_5000.sqlite
+[2/6] [===23%                      ] profile_size_5000.sqlite
+[2/6] [===24%                      ] profile_size_5000.sqlite
+[2/6] [====25%                     ] profile_size_5000.sqlite
+[2/6] [====26%                     ] profile_size_5000.sqlite
+[2/6] [====27%                     ] profile_size_5000.sqlite
+[2/6] [====28%                     ] profile_size_5000.sqlite
+[2/6] [=====29%                    ] profile_size_5000.sqlite
+[2/6] [=====30%                    ] profile_size_5000.sqlite
+[2/6] [=====31%                    ] profile_size_5000.sqlite
+[2/6] [=====32%                    ] profile_size_5000.sqlite
+[2/6] [======33%                   ] profile_size_5000.sqlite
+[2/6] [======34%                   ] profile_size_5000.sqlite
+[2/6] [======35%                   ] profile_size_5000.sqlite
+[2/6] [=======36%                  ] profile_size_5000.sqlite
+[2/6] [=======37%                  ] profile_size_5000.sqlite
+[2/6] [=======38%                  ] profile_size_5000.sqlite
+[2/6] [=======39%                  ] profile_size_5000.sqlite
+[2/6] [========40%                 ] profile_size_5000.sqlite
+[2/6] [========41%                 ] profile_size_5000.sqlite
+[2/6] [========42%                 ] profile_size_5000.sqlite
+[2/6] [=========43%                ] profile_size_5000.sqlite
+[2/6] [=========44%                ] profile_size_5000.sqlite
+[2/6] [=========45%                ] profile_size_5000.sqlite
+[2/6] [=========46%                ] profile_size_5000.sqlite
+[2/6] [==========47%               ] profile_size_5000.sqlite
+[2/6] [==========48%               ] profile_size_5000.sqlite
+[2/6] [==========49%               ] profile_size_5000.sqlite
+[2/6] [===========50%              ] profile_size_5000.sqlite
+[2/6] [===========51%              ] profile_size_5000.sqlite
+[2/6] [===========52%              ] profile_size_5000.sqlite
+[2/6] [===========53%              ] profile_size_5000.sqlite
+[2/6] [============54%             ] profile_size_5000.sqlite
+[2/6] [============55%             ] profile_size_5000.sqlite
+[2/6] [============56%             ] profile_size_5000.sqlite
+[2/6] [============57%             ] profile_size_5000.sqlite
+[2/6] [=============58%            ] profile_size_5000.sqlite
+[2/6] [=============59%            ] profile_size_5000.sqlite
+[2/6] [=============60%            ] profile_size_5000.sqlite
+[2/6] [==============61%           ] profile_size_5000.sqlite
+[2/6] [==============62%           ] profile_size_5000.sqlite
+[2/6] [==============63%           ] profile_size_5000.sqlite
+[2/6] [==============64%           ] profile_size_5000.sqlite
+[2/6] [===============65%          ] profile_size_5000.sqlite
+[2/6] [===============66%          ] profile_size_5000.sqlite
+[2/6] [===============67%          ] profile_size_5000.sqlite
+[2/6] [================68%         ] profile_size_5000.sqlite
+[2/6] [================69%         ] profile_size_5000.sqlite
+[2/6] [================70%         ] profile_size_5000.sqlite
+[2/6] [================71%         ] profile_size_5000.sqlite
+[2/6] [=================72%        ] profile_size_5000.sqlite
+[2/6] [=================73%        ] profile_size_5000.sqlite
+[2/6] [=================74%        ] profile_size_5000.sqlite
+[2/6] [==================75%       ] profile_size_5000.sqlite
+[2/6] [==================76%       ] profile_size_5000.sqlite
+[2/6] [==================77%       ] profile_size_5000.sqlite
+[2/6] [==================78%       ] profile_size_5000.sqlite
+[2/6] [===================79%      ] profile_size_5000.sqlite
+[2/6] [===================80%      ] profile_size_5000.sqlite
+[2/6] [===================81%      ] profile_size_5000.sqlite
+[2/6] [===================82%      ] profile_size_5000.sqlite
+[2/6] [====================83%     ] profile_size_5000.sqlite
+[2/6] [====================84%     ] profile_size_5000.sqlite
+[2/6] [====================85%     ] profile_size_5000.sqlite
+[2/6] [=====================86%    ] profile_size_5000.sqlite
+[2/6] [=====================87%    ] profile_size_5000.sqlite
+[2/6] [=====================88%    ] profile_size_5000.sqlite
+[2/6] [=====================89%    ] profile_size_5000.sqlite
+[2/6] [======================90%   ] profile_size_5000.sqlite
+[2/6] [======================91%   ] profile_size_5000.sqlite
+[2/6] [======================92%   ] profile_size_5000.sqlite
+[2/6] [=======================93%  ] profile_size_5000.sqlite
+[2/6] [=======================94%  ] profile_size_5000.sqlite
+[2/6] [=======================95%  ] profile_size_5000.sqlite
+[2/6] [=======================96%  ] profile_size_5000.sqlite
+[2/6] [========================97% ] profile_size_5000.sqlite
+[2/6] [========================98% ] profile_size_5000.sqlite
+[2/6] [========================99% ] profile_size_5000.sqlite
+[2/6] [========================100%] profile_size_5000.sqlite
+[2/6] [========================100%] profile_size_5000.sqlite
+SKIPPED: /scratch/ualmxs002/base/profile_size_5000.sqlite does not contain CUDA trace data.
+SKIPPED: /scratch/ualmxs002/base/profile_size_5000.sqlite does not contain CUDA kernel data.
+SKIPPED: /scratch/ualmxs002/base/profile_size_5000.sqlite does not contain GPU memory data.
+SKIPPED: /scratch/ualmxs002/base/profile_size_5000.sqlite does not contain GPU memory data.
+[3/6] Executing 'cuda_api_sum' stats report
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+Generated:
+    /scratch/ualmxs002/base/profile_size_5000.nsys-rep
+    /scratch/ualmxs002/base/profile_size_5000.sqlite
+Running 10000x10000 grid, 1000 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=1740.924316 ms for size=10000 iterations=1000
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-edd7.qdstrm'
+
+[1/6] [0%                          ] profile_size_10000.nsys-rep
+[1/6] [0%                          ] profile_size_10000.nsys-rep
+[1/6] [===========50%              ] profile_size_10000.nsys-rep
+[1/6] [===========51%              ] profile_size_10000.nsys-rep
+[1/6] [============55%             ] profile_size_10000.nsys-rep
+[1/6] [=============60%            ] profile_size_10000.nsys-rep
+[1/6] [==============64%           ] profile_size_10000.nsys-rep
+[1/6] [================69%         ] profile_size_10000.nsys-rep
+[1/6] [=================73%        ] profile_size_10000.nsys-rep
+[1/6] [==================78%       ] profile_size_10000.nsys-rep
+[1/6] [===================82%      ] profile_size_10000.nsys-rep
+[1/6] [=====================87%    ] profile_size_10000.nsys-rep
+[1/6] [======================91%   ] profile_size_10000.nsys-rep
+[1/6] [=======================95%  ] profile_size_10000.nsys-rep
+[1/6] [========================99% ] profile_size_10000.nsys-rep
+[1/6] [========================100%] profile_size_10000.nsys-rep
+[1/6] [========================100%] profile_size_10000.nsys-rep
+
+[2/6] [0%                          ] profile_size_10000.sqlite
+[2/6] [1%                          ] profile_size_10000.sqlite
+[2/6] [2%                          ] profile_size_10000.sqlite
+[2/6] [3%                          ] profile_size_10000.sqlite
+[2/6] [4%                          ] profile_size_10000.sqlite
+[2/6] [5%                          ] profile_size_10000.sqlite
+[2/6] [6%                          ] profile_size_10000.sqlite
+[2/6] [7%                          ] profile_size_10000.sqlite
+[2/6] [8%                          ] profile_size_10000.sqlite
+[2/6] [9%                          ] profile_size_10000.sqlite
+[2/6] [10%                         ] profile_size_10000.sqlite
+[2/6] [11%                         ] profile_size_10000.sqlite
+[2/6] [12%                         ] profile_size_10000.sqlite
+[2/6] [13%                         ] profile_size_10000.sqlite
+[2/6] [14%                         ] profile_size_10000.sqlite
+[2/6] [=15%                        ] profile_size_10000.sqlite
+[2/6] [=16%                        ] profile_size_10000.sqlite
+[2/6] [=17%                        ] profile_size_10000.sqlite
+[2/6] [==18%                       ] profile_size_10000.sqlite
+[2/6] [==19%                       ] profile_size_10000.sqlite
+[2/6] [==20%                       ] profile_size_10000.sqlite
+[2/6] [==21%                       ] profile_size_10000.sqlite
+[2/6] [===22%                      ] profile_size_10000.sqlite
+[2/6] [===23%                      ] profile_size_10000.sqlite
+[2/6] [===24%                      ] profile_size_10000.sqlite
+[2/6] [====25%                     ] profile_size_10000.sqlite
+[2/6] [====26%                     ] profile_size_10000.sqlite
+[2/6] [====27%                     ] profile_size_10000.sqlite
+[2/6] [====28%                     ] profile_size_10000.sqlite
+[2/6] [=====29%                    ] profile_size_10000.sqlite
+[2/6] [=====30%                    ] profile_size_10000.sqlite
+[2/6] [=====31%                    ] profile_size_10000.sqlite
+[2/6] [=====32%                    ] profile_size_10000.sqlite
+[2/6] [======33%                   ] profile_size_10000.sqlite
+[2/6] [======34%                   ] profile_size_10000.sqlite
+[2/6] [======35%                   ] profile_size_10000.sqlite
+[2/6] [=======36%                  ] profile_size_10000.sqlite
+[2/6] [=======37%                  ] profile_size_10000.sqlite
+[2/6] [=======38%                  ] profile_size_10000.sqlite
+[2/6] [=======39%                  ] profile_size_10000.sqlite
+[2/6] [========40%                 ] profile_size_10000.sqlite
+[2/6] [========41%                 ] profile_size_10000.sqlite
+[2/6] [========42%                 ] profile_size_10000.sqlite
+[2/6] [=========43%                ] profile_size_10000.sqlite
+[2/6] [=========44%                ] profile_size_10000.sqlite
+[2/6] [=========45%                ] profile_size_10000.sqlite
+[2/6] [=========46%                ] profile_size_10000.sqlite
+[2/6] [==========47%               ] profile_size_10000.sqlite
+[2/6] [==========48%               ] profile_size_10000.sqlite
+[2/6] [==========49%               ] profile_size_10000.sqlite
+[2/6] [===========50%              ] profile_size_10000.sqlite
+[2/6] [===========51%              ] profile_size_10000.sqlite
+[2/6] [===========52%              ] profile_size_10000.sqlite
+[2/6] [===========53%              ] profile_size_10000.sqlite
+[2/6] [============54%             ] profile_size_10000.sqlite
+[2/6] [============55%             ] profile_size_10000.sqlite
+[2/6] [============56%             ] profile_size_10000.sqlite
+[2/6] [============57%             ] profile_size_10000.sqlite
+[2/6] [=============58%            ] profile_size_10000.sqlite
+[2/6] [=============59%            ] profile_size_10000.sqlite
+[2/6] [=============60%            ] profile_size_10000.sqlite
+[2/6] [==============61%           ] profile_size_10000.sqlite
+[2/6] [==============62%           ] profile_size_10000.sqlite
+[2/6] [==============63%           ] profile_size_10000.sqlite
+[2/6] [==============64%           ] profile_size_10000.sqlite
+[2/6] [===============65%          ] profile_size_10000.sqlite
+[2/6] [===============66%          ] profile_size_10000.sqlite
+[2/6] [===============67%          ] profile_size_10000.sqlite
+[2/6] [================68%         ] profile_size_10000.sqlite
+[2/6] [================69%         ] profile_size_10000.sqlite
+[2/6] [================70%         ] profile_size_10000.sqlite
+[2/6] [================71%         ] profile_size_10000.sqlite
+[2/6] [=================72%        ] profile_size_10000.sqlite
+[2/6] [=================73%        ] profile_size_10000.sqlite
+[2/6] [=================74%        ] profile_size_10000.sqlite
+[2/6] [==================75%       ] profile_size_10000.sqlite
+[2/6] [==================76%       ] profile_size_10000.sqlite
+[2/6] [==================77%       ] profile_size_10000.sqlite
+[2/6] [==================78%       ] profile_size_10000.sqlite
+[2/6] [===================79%      ] profile_size_10000.sqlite
+[2/6] [===================80%      ] profile_size_10000.sqlite
+[2/6] [===================81%      ] profile_size_10000.sqlite
+[2/6] [===================82%      ] profile_size_10000.sqlite
+[2/6] [====================83%     ] profile_size_10000.sqlite
+[2/6] [====================84%     ] profile_size_10000.sqlite
+[2/6] [====================85%     ] profile_size_10000.sqlite
+[2/6] [=====================86%    ] profile_size_10000.sqlite
+[2/6] [=====================87%    ] profile_size_10000.sqlite
+[2/6] [=====================88%    ] profile_size_10000.sqlite
+[2/6] [=====================89%    ] profile_size_10000.sqlite
+[2/6] [======================90%   ] profile_size_10000.sqlite
+[2/6] [======================91%   ] profile_size_10000.sqlite
+[2/6] [======================92%   ] profile_size_10000.sqlite
+[2/6] [=======================93%  ] profile_size_10000.sqlite
+[2/6] [=======================94%  ] profile_size_10000.sqlite
+[2/6] [=======================95%  ] profile_size_10000.sqlite
+[2/6] [=======================96%  ] profile_size_10000.sqlite
+[2/6] [========================97% ] profile_size_10000.sqlite
+[2/6] [========================98% ] profile_size_10000.sqlite
+[2/6] [========================99% ] profile_size_10000.sqlite
+[2/6] [========================100%] profile_size_10000.sqlite
+[2/6] [========================100%] profile_size_10000.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     83.0       1736276863          1  1736276863.0  1736276863.0  1736276863  1736276863          0.0  cudaEventSynchronize  
+      9.8        205791250          5    41158250.0    34532135.0    28142163    57881403   13084381.9  cudaMemcpy            
+      6.9        145071634          2    72535817.0    72535817.0      152683   144918951  102365209.8  cudaMalloc            
+      0.2          4436856       1000        4436.9        3040.0        2900     1039743      33356.5  cudaLaunchKernel      
+      0.1          1205686          2      602843.0      602843.0      476980      728706     177997.2  cudaFree              
+      0.0            21311          2       10655.5       10655.5        3170       18141      10586.1  cudaEventCreate       
+      0.0            13490          2        6745.0        6745.0        4030        9460       3839.6  cudaEventRecord       
+      0.0             2561          1        2561.0        2561.0        2561        2561          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       1738829184       1000  1738829.2  1738828.0   1715404   1759053       5352.8  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     70.4        144283148      3  48094382.7  52073226.0  34416591  57793331   12185704.3  [CUDA memcpy Device-to-Host]
+     29.6         60809510      2  30404755.0  30404755.0  27963490  32846020    3452470.1  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_size_10000.nsys-rep
+    /scratch/ualmxs002/base/profile_size_10000.sqlite
+Running 15000x15000 grid, 1000 iterations...
+dimGrid: 1875 1875 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=4156.018066 ms for size=15000 iterations=1000
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-1743.qdstrm'
+
+[1/6] [0%                          ] profile_size_15000.nsys-rep
+[1/6] [0%                          ] profile_size_15000.nsys-rep
+[1/6] [=====31%                    ] profile_size_15000.nsys-rep
+[1/6] [===========50%              ] profile_size_15000.nsys-rep
+[1/6] [===========52%              ] profile_size_15000.nsys-rep
+[1/6] [============54%             ] profile_size_15000.nsys-rep
+[1/6] [============56%             ] profile_size_15000.nsys-rep
+[1/6] [=============58%            ] profile_size_15000.nsys-rep
+[1/6] [=============60%            ] profile_size_15000.nsys-rep
+[1/6] [==============62%           ] profile_size_15000.nsys-rep
+[1/6] [==============64%           ] profile_size_15000.nsys-rep
+[1/6] [===============66%          ] profile_size_15000.nsys-rep
+[1/6] [================69%         ] profile_size_15000.nsys-rep
+[1/6] [================71%         ] profile_size_15000.nsys-rep
+[1/6] [=================73%        ] profile_size_15000.nsys-rep
+[1/6] [==================75%       ] profile_size_15000.nsys-rep
+[1/6] [==================77%       ] profile_size_15000.nsys-rep
+[1/6] [===================79%      ] profile_size_15000.nsys-rep
+[1/6] [===================81%      ] profile_size_15000.nsys-rep
+[1/6] [====================83%     ] profile_size_15000.nsys-rep
+[1/6] [====================85%     ] profile_size_15000.nsys-rep
+[1/6] [=====================87%    ] profile_size_15000.nsys-rep
+[1/6] [=====================89%    ] profile_size_15000.nsys-rep
+[1/6] [======================91%   ] profile_size_15000.nsys-rep
+[1/6] [=======================93%  ] profile_size_15000.nsys-rep
+[1/6] [=======================95%  ] profile_size_15000.nsys-rep
+[1/6] [========================98% ] profile_size_15000.nsys-rep
+[1/6] [========================99% ] profile_size_15000.nsys-rep
+[1/6] [========================100%] profile_size_15000.nsys-rep
+[1/6] [========================100%] profile_size_15000.nsys-rep
+
+[2/6] [0%                          ] profile_size_15000.sqlite
+[2/6] [1%                          ] profile_size_15000.sqlite
+[2/6] [2%                          ] profile_size_15000.sqlite
+[2/6] [3%                          ] profile_size_15000.sqlite
+[2/6] [4%                          ] profile_size_15000.sqlite
+[2/6] [5%                          ] profile_size_15000.sqlite
+[2/6] [6%                          ] profile_size_15000.sqlite
+[2/6] [7%                          ] profile_size_15000.sqlite
+[2/6] [8%                          ] profile_size_15000.sqlite
+[2/6] [9%                          ] profile_size_15000.sqlite
+[2/6] [10%                         ] profile_size_15000.sqlite
+[2/6] [11%                         ] profile_size_15000.sqlite
+[2/6] [12%                         ] profile_size_15000.sqlite
+[2/6] [13%                         ] profile_size_15000.sqlite
+[2/6] [14%                         ] profile_size_15000.sqlite
+[2/6] [=15%                        ] profile_size_15000.sqlite
+[2/6] [=16%                        ] profile_size_15000.sqlite
+[2/6] [=17%                        ] profile_size_15000.sqlite
+[2/6] [==18%                       ] profile_size_15000.sqlite
+[2/6] [==19%                       ] profile_size_15000.sqlite
+[2/6] [==20%                       ] profile_size_15000.sqlite
+[2/6] [==21%                       ] profile_size_15000.sqlite
+[2/6] [===22%                      ] profile_size_15000.sqlite
+[2/6] [===23%                      ] profile_size_15000.sqlite
+[2/6] [===24%                      ] profile_size_15000.sqlite
+[2/6] [====25%                     ] profile_size_15000.sqlite
+[2/6] [====26%                     ] profile_size_15000.sqlite
+[2/6] [====27%                     ] profile_size_15000.sqlite
+[2/6] [====28%                     ] profile_size_15000.sqlite
+[2/6] [=====29%                    ] profile_size_15000.sqlite
+[2/6] [=====30%                    ] profile_size_15000.sqlite
+[2/6] [=====31%                    ] profile_size_15000.sqlite
+[2/6] [=====32%                    ] profile_size_15000.sqlite
+[2/6] [======33%                   ] profile_size_15000.sqlite
+[2/6] [======34%                   ] profile_size_15000.sqlite
+[2/6] [======35%                   ] profile_size_15000.sqlite
+[2/6] [=======36%                  ] profile_size_15000.sqlite
+[2/6] [=======37%                  ] profile_size_15000.sqlite
+[2/6] [=======38%                  ] profile_size_15000.sqlite
+[2/6] [=======39%                  ] profile_size_15000.sqlite
+[2/6] [========40%                 ] profile_size_15000.sqlite
+[2/6] [========41%                 ] profile_size_15000.sqlite
+[2/6] [========42%                 ] profile_size_15000.sqlite
+[2/6] [=========43%                ] profile_size_15000.sqlite
+[2/6] [=========44%                ] profile_size_15000.sqlite
+[2/6] [=========45%                ] profile_size_15000.sqlite
+[2/6] [=========46%                ] profile_size_15000.sqlite
+[2/6] [==========47%               ] profile_size_15000.sqlite
+[2/6] [==========48%               ] profile_size_15000.sqlite
+[2/6] [==========49%               ] profile_size_15000.sqlite
+[2/6] [===========50%              ] profile_size_15000.sqlite
+[2/6] [===========51%              ] profile_size_15000.sqlite
+[2/6] [===========52%              ] profile_size_15000.sqlite
+[2/6] [===========53%              ] profile_size_15000.sqlite
+[2/6] [============54%             ] profile_size_15000.sqlite
+[2/6] [============55%             ] profile_size_15000.sqlite
+[2/6] [============56%             ] profile_size_15000.sqlite
+[2/6] [============57%             ] profile_size_15000.sqlite
+[2/6] [=============58%            ] profile_size_15000.sqlite
+[2/6] [=============59%            ] profile_size_15000.sqlite
+[2/6] [=============60%            ] profile_size_15000.sqlite
+[2/6] [==============61%           ] profile_size_15000.sqlite
+[2/6] [==============62%           ] profile_size_15000.sqlite
+[2/6] [==============63%           ] profile_size_15000.sqlite
+[2/6] [==============64%           ] profile_size_15000.sqlite
+[2/6] [===============65%          ] profile_size_15000.sqlite
+[2/6] [===============66%          ] profile_size_15000.sqlite
+[2/6] [===============67%          ] profile_size_15000.sqlite
+[2/6] [================68%         ] profile_size_15000.sqlite
+[2/6] [================69%         ] profile_size_15000.sqlite
+[2/6] [================70%         ] profile_size_15000.sqlite
+[2/6] [================71%         ] profile_size_15000.sqlite
+[2/6] [=================72%        ] profile_size_15000.sqlite
+[2/6] [=================73%        ] profile_size_15000.sqlite
+[2/6] [=================74%        ] profile_size_15000.sqlite
+[2/6] [==================75%       ] profile_size_15000.sqlite
+[2/6] [==================76%       ] profile_size_15000.sqlite
+[2/6] [==================77%       ] profile_size_15000.sqlite
+[2/6] [==================78%       ] profile_size_15000.sqlite
+[2/6] [===================79%      ] profile_size_15000.sqlite
+[2/6] [===================80%      ] profile_size_15000.sqlite
+[2/6] [===================81%      ] profile_size_15000.sqlite
+[2/6] [===================82%      ] profile_size_15000.sqlite
+[2/6] [====================83%     ] profile_size_15000.sqlite
+[2/6] [====================84%     ] profile_size_15000.sqlite
+[2/6] [====================85%     ] profile_size_15000.sqlite
+[2/6] [=====================86%    ] profile_size_15000.sqlite
+[2/6] [=====================87%    ] profile_size_15000.sqlite
+[2/6] [=====================88%    ] profile_size_15000.sqlite
+[2/6] [=====================89%    ] profile_size_15000.sqlite
+[2/6] [======================90%   ] profile_size_15000.sqlite
+[2/6] [======================91%   ] profile_size_15000.sqlite
+[2/6] [======================92%   ] profile_size_15000.sqlite
+[2/6] [=======================93%  ] profile_size_15000.sqlite
+[2/6] [=======================94%  ] profile_size_15000.sqlite
+[2/6] [=======================95%  ] profile_size_15000.sqlite
+[2/6] [=======================96%  ] profile_size_15000.sqlite
+[2/6] [========================97% ] profile_size_15000.sqlite
+[2/6] [========================98% ] profile_size_15000.sqlite
+[2/6] [========================99% ] profile_size_15000.sqlite
+[2/6] [========================100%] profile_size_15000.sqlite
+[2/6] [========================100%] profile_size_15000.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     87.6       4151266504          1  4151266504.0  4151266504.0  4151266504  4151266504          0.0  cudaEventSynchronize  
+      9.4        444357696          5    88871539.2    70477602.0    62667899   127191908   29658624.8  cudaMemcpy            
+      2.9        138464607          2    69232303.5    69232303.5      169943   138294664   97668926.9  cudaMalloc            
+      0.1          4555171       1000        4555.2        3030.0        2890     1193097      38087.5  cudaLaunchKernel      
+      0.0          1356600          2      678300.0      678300.0      551752      804848     178965.9  cudaFree              
+      0.0            19990          2        9995.0        9995.0        3610       16380       9029.8  cudaEventCreate       
+      0.0            16621          2        8310.5        8310.5        3751       12870       6448.1  cudaEventRecord       
+      0.0             2680          1        2680.0        2680.0        2680        2680          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       4153787009       1000  4153787.0  4154494.0   4105789   4188989      10048.1  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)     Med (ns)    Min (ns)  Max (ns)   StdDev (ns)           Operation          
+ --------  ---------------  -----  -----------  -----------  --------  ---------  -----------  ----------------------------
+     70.2        311106713      3  103702237.7  113614291.0  70377276  127115146   29639215.1  [CUDA memcpy Device-to-Host]
+     29.8        131964138      2   65982069.0   65982069.0  62467196   69496942    4970781.1  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   2700.720      3   900.240   900.240   900.240   900.240        0.000  [CUDA memcpy Device-to-Host]
+   1800.480      2   900.240   900.240   900.240   900.240        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_size_15000.nsys-rep
+    /scratch/ualmxs002/base/profile_size_15000.sqlite
+Running 20000x20000 grid, 1000 iterations...
+dimGrid: 2500 2500 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=7799.206055 ms for size=20000 iterations=1000
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-8878.qdstrm'
+
+[1/6] [0%                          ] profile_size_20000.nsys-rep
+[1/6] [0%                          ] profile_size_20000.nsys-rep
+[1/6] [=17%                        ] profile_size_20000.nsys-rep
+[1/6] [=======36%                  ] profile_size_20000.nsys-rep
+[1/6] [===========50%              ] profile_size_20000.nsys-rep
+[1/6] [===========51%              ] profile_size_20000.nsys-rep
+[1/6] [===========52%              ] profile_size_20000.nsys-rep
+[1/6] [===========53%              ] profile_size_20000.nsys-rep
+[1/6] [============54%             ] profile_size_20000.nsys-rep
+[1/6] [============56%             ] profile_size_20000.nsys-rep
+[1/6] [============57%             ] profile_size_20000.nsys-rep
+[1/6] [=============58%            ] profile_size_20000.nsys-rep
+[1/6] [=============59%            ] profile_size_20000.nsys-rep
+[1/6] [=============60%            ] profile_size_20000.nsys-rep
+[1/6] [==============61%           ] profile_size_20000.nsys-rep
+[1/6] [==============63%           ] profile_size_20000.nsys-rep
+[1/6] [==============64%           ] profile_size_20000.nsys-rep
+[1/6] [===============65%          ] profile_size_20000.nsys-rep
+[1/6] [===============66%          ] profile_size_20000.nsys-rep
+[1/6] [===============67%          ] profile_size_20000.nsys-rep
+[1/6] [================68%         ] profile_size_20000.nsys-rep
+[1/6] [================70%         ] profile_size_20000.nsys-rep
+[1/6] [================71%         ] profile_size_20000.nsys-rep
+[1/6] [=================72%        ] profile_size_20000.nsys-rep
+[1/6] [=================73%        ] profile_size_20000.nsys-rep
+[1/6] [=================74%        ] profile_size_20000.nsys-rep
+[1/6] [==================75%       ] profile_size_20000.nsys-rep
+[1/6] [==================77%       ] profile_size_20000.nsys-rep
+[1/6] [==================78%       ] profile_size_20000.nsys-rep
+[1/6] [===================79%      ] profile_size_20000.nsys-rep
+[1/6] [===================80%      ] profile_size_20000.nsys-rep
+[1/6] [===================81%      ] profile_size_20000.nsys-rep
+[1/6] [===================82%      ] profile_size_20000.nsys-rep
+[1/6] [====================84%     ] profile_size_20000.nsys-rep
+[1/6] [====================85%     ] profile_size_20000.nsys-rep
+[1/6] [=====================86%    ] profile_size_20000.nsys-rep
+[1/6] [=====================87%    ] profile_size_20000.nsys-rep
+[1/6] [=====================88%    ] profile_size_20000.nsys-rep
+[1/6] [=====================89%    ] profile_size_20000.nsys-rep
+[1/6] [======================91%   ] profile_size_20000.nsys-rep
+[1/6] [=======================93%  ] profile_size_20000.nsys-rep
+[1/6] [=======================94%  ] profile_size_20000.nsys-rep
+[1/6] [=======================95%  ] profile_size_20000.nsys-rep
+[1/6] [=======================96%  ] profile_size_20000.nsys-rep
+[1/6] [========================97% ] profile_size_20000.nsys-rep
+[1/6] [========================98% ] profile_size_20000.nsys-rep
+[1/6] [========================99% ] profile_size_20000.nsys-rep
+[1/6] [========================100%] profile_size_20000.nsys-rep
+[1/6] [========================100%] profile_size_20000.nsys-rep
+
+[2/6] [0%                          ] profile_size_20000.sqlite
+[2/6] [1%                          ] profile_size_20000.sqlite
+[2/6] [2%                          ] profile_size_20000.sqlite
+[2/6] [3%                          ] profile_size_20000.sqlite
+[2/6] [4%                          ] profile_size_20000.sqlite
+[2/6] [5%                          ] profile_size_20000.sqlite
+[2/6] [6%                          ] profile_size_20000.sqlite
+[2/6] [7%                          ] profile_size_20000.sqlite
+[2/6] [8%                          ] profile_size_20000.sqlite
+[2/6] [9%                          ] profile_size_20000.sqlite
+[2/6] [10%                         ] profile_size_20000.sqlite
+[2/6] [11%                         ] profile_size_20000.sqlite
+[2/6] [12%                         ] profile_size_20000.sqlite
+[2/6] [13%                         ] profile_size_20000.sqlite
+[2/6] [14%                         ] profile_size_20000.sqlite
+[2/6] [=15%                        ] profile_size_20000.sqlite
+[2/6] [=16%                        ] profile_size_20000.sqlite
+[2/6] [=17%                        ] profile_size_20000.sqlite
+[2/6] [==18%                       ] profile_size_20000.sqlite
+[2/6] [==19%                       ] profile_size_20000.sqlite
+[2/6] [==20%                       ] profile_size_20000.sqlite
+[2/6] [==21%                       ] profile_size_20000.sqlite
+[2/6] [===22%                      ] profile_size_20000.sqlite
+[2/6] [===23%                      ] profile_size_20000.sqlite
+[2/6] [===24%                      ] profile_size_20000.sqlite
+[2/6] [====25%                     ] profile_size_20000.sqlite
+[2/6] [====26%                     ] profile_size_20000.sqlite
+[2/6] [====27%                     ] profile_size_20000.sqlite
+[2/6] [====28%                     ] profile_size_20000.sqlite
+[2/6] [=====29%                    ] profile_size_20000.sqlite
+[2/6] [=====30%                    ] profile_size_20000.sqlite
+[2/6] [=====31%                    ] profile_size_20000.sqlite
+[2/6] [=====32%                    ] profile_size_20000.sqlite
+[2/6] [======33%                   ] profile_size_20000.sqlite
+[2/6] [======34%                   ] profile_size_20000.sqlite
+[2/6] [======35%                   ] profile_size_20000.sqlite
+[2/6] [=======36%                  ] profile_size_20000.sqlite
+[2/6] [=======37%                  ] profile_size_20000.sqlite
+[2/6] [=======38%                  ] profile_size_20000.sqlite
+[2/6] [=======39%                  ] profile_size_20000.sqlite
+[2/6] [========40%                 ] profile_size_20000.sqlite
+[2/6] [========41%                 ] profile_size_20000.sqlite
+[2/6] [========42%                 ] profile_size_20000.sqlite
+[2/6] [=========43%                ] profile_size_20000.sqlite
+[2/6] [=========44%                ] profile_size_20000.sqlite
+[2/6] [=========45%                ] profile_size_20000.sqlite
+[2/6] [=========46%                ] profile_size_20000.sqlite
+[2/6] [==========47%               ] profile_size_20000.sqlite
+[2/6] [==========48%               ] profile_size_20000.sqlite
+[2/6] [==========49%               ] profile_size_20000.sqlite
+[2/6] [===========50%              ] profile_size_20000.sqlite
+[2/6] [===========51%              ] profile_size_20000.sqlite
+[2/6] [===========52%              ] profile_size_20000.sqlite
+[2/6] [===========53%              ] profile_size_20000.sqlite
+[2/6] [============54%             ] profile_size_20000.sqlite
+[2/6] [============55%             ] profile_size_20000.sqlite
+[2/6] [============56%             ] profile_size_20000.sqlite
+[2/6] [============57%             ] profile_size_20000.sqlite
+[2/6] [=============58%            ] profile_size_20000.sqlite
+[2/6] [=============59%            ] profile_size_20000.sqlite
+[2/6] [=============60%            ] profile_size_20000.sqlite
+[2/6] [==============61%           ] profile_size_20000.sqlite
+[2/6] [==============62%           ] profile_size_20000.sqlite
+[2/6] [==============63%           ] profile_size_20000.sqlite
+[2/6] [==============64%           ] profile_size_20000.sqlite
+[2/6] [===============65%          ] profile_size_20000.sqlite
+[2/6] [===============66%          ] profile_size_20000.sqlite
+[2/6] [===============67%          ] profile_size_20000.sqlite
+[2/6] [================68%         ] profile_size_20000.sqlite
+[2/6] [================69%         ] profile_size_20000.sqlite
+[2/6] [================70%         ] profile_size_20000.sqlite
+[2/6] [================71%         ] profile_size_20000.sqlite
+[2/6] [=================72%        ] profile_size_20000.sqlite
+[2/6] [=================73%        ] profile_size_20000.sqlite
+[2/6] [=================74%        ] profile_size_20000.sqlite
+[2/6] [==================75%       ] profile_size_20000.sqlite
+[2/6] [==================76%       ] profile_size_20000.sqlite
+[2/6] [==================77%       ] profile_size_20000.sqlite
+[2/6] [==================78%       ] profile_size_20000.sqlite
+[2/6] [===================79%      ] profile_size_20000.sqlite
+[2/6] [===================80%      ] profile_size_20000.sqlite
+[2/6] [===================81%      ] profile_size_20000.sqlite
+[2/6] [===================82%      ] profile_size_20000.sqlite
+[2/6] [====================83%     ] profile_size_20000.sqlite
+[2/6] [====================84%     ] profile_size_20000.sqlite
+[2/6] [====================85%     ] profile_size_20000.sqlite
+[2/6] [=====================86%    ] profile_size_20000.sqlite
+[2/6] [=====================87%    ] profile_size_20000.sqlite
+[2/6] [=====================88%    ] profile_size_20000.sqlite
+[2/6] [=====================89%    ] profile_size_20000.sqlite
+[2/6] [======================90%   ] profile_size_20000.sqlite
+[2/6] [======================91%   ] profile_size_20000.sqlite
+[2/6] [======================92%   ] profile_size_20000.sqlite
+[2/6] [=======================93%  ] profile_size_20000.sqlite
+[2/6] [=======================94%  ] profile_size_20000.sqlite
+[2/6] [=======================95%  ] profile_size_20000.sqlite
+[2/6] [=======================96%  ] profile_size_20000.sqlite
+[2/6] [========================97% ] profile_size_20000.sqlite
+[2/6] [========================98% ] profile_size_20000.sqlite
+[2/6] [========================99% ] profile_size_20000.sqlite
+[2/6] [========================100%] profile_size_20000.sqlite
+[2/6] [========================100%] profile_size_20000.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     89.4       7794627177          1  7794627177.0  7794627177.0  7794627177  7794627177          0.0  cudaEventSynchronize  
+      8.9        773787264          5   154757452.8   126885608.0   110878997   210892711   50354498.6  cudaMemcpy            
+      1.7        147323535          2    73661767.5    73661767.5      248946   147074589  103821407.8  cudaMalloc            
+      0.1          4399079       1000        4399.1        3010.0        2890     1283698      40502.5  cudaLaunchKernel      
+      0.0          2206037          2     1103018.5     1103018.5     1070412     1135625      46112.6  cudaFree              
+      0.0            21450          2       10725.0       10725.0         610       20840      14304.8  cudaEventCreate       
+      0.0             9360          2        4680.0        4680.0        3610        5750       1513.2  cudaEventRecord       
+      0.0             3070          1        3070.0        3070.0        3070        3070          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       7796902288       1000  7796902.3  7795604.5   7715090   7868021      18741.0  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Operation          
+ --------  ---------------  -----  -----------  -----------  ---------  ---------  -----------  ----------------------------
+     70.6        545221374      3  181740458.0  208127607.0  126790873  210302894   47600164.3  [CUDA memcpy Device-to-Host]
+     29.4        227516916      2  113758458.0  113758458.0  110684870  116832046    4346709.8  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   4800.960      3  1600.320  1600.320  1600.320  1600.320        0.000  [CUDA memcpy Device-to-Host]
+   3200.640      2  1600.320  1600.320  1600.320  1600.320        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_size_20000.nsys-rep
+    /scratch/ualmxs002/base/profile_size_20000.sqlite
+Test 2: Iteration Scaling
+Running 10000x10000 grid, 100 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=174.413284 ms for size=10000 iterations=100
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-905d.qdstrm'
+
+[1/6] [0%                          ] profile_iter_100.nsys-rep
+[1/6] [0%                          ] profile_iter_100.nsys-rep
+[1/6] [===========50%              ] profile_iter_100.nsys-rep
+[1/6] [============55%             ] profile_iter_100.nsys-rep
+[1/6] [=============59%            ] profile_iter_100.nsys-rep
+[1/6] [==============64%           ] profile_iter_100.nsys-rep
+[1/6] [================69%         ] profile_iter_100.nsys-rep
+[1/6] [=================74%        ] profile_iter_100.nsys-rep
+[1/6] [===================79%      ] profile_iter_100.nsys-rep
+[1/6] [====================84%     ] profile_iter_100.nsys-rep
+[1/6] [=====================88%    ] profile_iter_100.nsys-rep
+[1/6] [=======================93%  ] profile_iter_100.nsys-rep
+[1/6] [========================98% ] profile_iter_100.nsys-rep
+[1/6] [========================99% ] profile_iter_100.nsys-rep
+[1/6] [========================100%] profile_iter_100.nsys-rep
+[1/6] [========================100%] profile_iter_100.nsys-rep
+
+[2/6] [0%                          ] profile_iter_100.sqlite
+[2/6] [1%                          ] profile_iter_100.sqlite
+[2/6] [2%                          ] profile_iter_100.sqlite
+[2/6] [3%                          ] profile_iter_100.sqlite
+[2/6] [4%                          ] profile_iter_100.sqlite
+[2/6] [5%                          ] profile_iter_100.sqlite
+[2/6] [6%                          ] profile_iter_100.sqlite
+[2/6] [7%                          ] profile_iter_100.sqlite
+[2/6] [8%                          ] profile_iter_100.sqlite
+[2/6] [9%                          ] profile_iter_100.sqlite
+[2/6] [10%                         ] profile_iter_100.sqlite
+[2/6] [11%                         ] profile_iter_100.sqlite
+[2/6] [12%                         ] profile_iter_100.sqlite
+[2/6] [13%                         ] profile_iter_100.sqlite
+[2/6] [14%                         ] profile_iter_100.sqlite
+[2/6] [=15%                        ] profile_iter_100.sqlite
+[2/6] [=16%                        ] profile_iter_100.sqlite
+[2/6] [=17%                        ] profile_iter_100.sqlite
+[2/6] [==18%                       ] profile_iter_100.sqlite
+[2/6] [==19%                       ] profile_iter_100.sqlite
+[2/6] [==20%                       ] profile_iter_100.sqlite
+[2/6] [==21%                       ] profile_iter_100.sqlite
+[2/6] [===22%                      ] profile_iter_100.sqlite
+[2/6] [===23%                      ] profile_iter_100.sqlite
+[2/6] [===24%                      ] profile_iter_100.sqlite
+[2/6] [====25%                     ] profile_iter_100.sqlite
+[2/6] [====26%                     ] profile_iter_100.sqlite
+[2/6] [====27%                     ] profile_iter_100.sqlite
+[2/6] [====28%                     ] profile_iter_100.sqlite
+[2/6] [=====29%                    ] profile_iter_100.sqlite
+[2/6] [=====30%                    ] profile_iter_100.sqlite
+[2/6] [=====31%                    ] profile_iter_100.sqlite
+[2/6] [=====32%                    ] profile_iter_100.sqlite
+[2/6] [======33%                   ] profile_iter_100.sqlite
+[2/6] [======34%                   ] profile_iter_100.sqlite
+[2/6] [======35%                   ] profile_iter_100.sqlite
+[2/6] [=======36%                  ] profile_iter_100.sqlite
+[2/6] [=======37%                  ] profile_iter_100.sqlite
+[2/6] [=======38%                  ] profile_iter_100.sqlite
+[2/6] [=======39%                  ] profile_iter_100.sqlite
+[2/6] [========40%                 ] profile_iter_100.sqlite
+[2/6] [========41%                 ] profile_iter_100.sqlite
+[2/6] [========42%                 ] profile_iter_100.sqlite
+[2/6] [=========43%                ] profile_iter_100.sqlite
+[2/6] [=========44%                ] profile_iter_100.sqlite
+[2/6] [=========45%                ] profile_iter_100.sqlite
+[2/6] [=========46%                ] profile_iter_100.sqlite
+[2/6] [==========47%               ] profile_iter_100.sqlite
+[2/6] [==========48%               ] profile_iter_100.sqlite
+[2/6] [==========49%               ] profile_iter_100.sqlite
+[2/6] [===========50%              ] profile_iter_100.sqlite
+[2/6] [===========51%              ] profile_iter_100.sqlite
+[2/6] [===========52%              ] profile_iter_100.sqlite
+[2/6] [===========53%              ] profile_iter_100.sqlite
+[2/6] [============54%             ] profile_iter_100.sqlite
+[2/6] [============55%             ] profile_iter_100.sqlite
+[2/6] [============56%             ] profile_iter_100.sqlite
+[2/6] [============57%             ] profile_iter_100.sqlite
+[2/6] [=============58%            ] profile_iter_100.sqlite
+[2/6] [=============59%            ] profile_iter_100.sqlite
+[2/6] [=============60%            ] profile_iter_100.sqlite
+[2/6] [==============61%           ] profile_iter_100.sqlite
+[2/6] [==============62%           ] profile_iter_100.sqlite
+[2/6] [==============63%           ] profile_iter_100.sqlite
+[2/6] [==============64%           ] profile_iter_100.sqlite
+[2/6] [===============65%          ] profile_iter_100.sqlite
+[2/6] [===============66%          ] profile_iter_100.sqlite
+[2/6] [===============67%          ] profile_iter_100.sqlite
+[2/6] [================68%         ] profile_iter_100.sqlite
+[2/6] [================69%         ] profile_iter_100.sqlite
+[2/6] [================70%         ] profile_iter_100.sqlite
+[2/6] [================71%         ] profile_iter_100.sqlite
+[2/6] [=================72%        ] profile_iter_100.sqlite
+[2/6] [=================73%        ] profile_iter_100.sqlite
+[2/6] [=================74%        ] profile_iter_100.sqlite
+[2/6] [==================75%       ] profile_iter_100.sqlite
+[2/6] [==================76%       ] profile_iter_100.sqlite
+[2/6] [==================77%       ] profile_iter_100.sqlite
+[2/6] [==================78%       ] profile_iter_100.sqlite
+[2/6] [===================79%      ] profile_iter_100.sqlite
+[2/6] [===================80%      ] profile_iter_100.sqlite
+[2/6] [===================81%      ] profile_iter_100.sqlite
+[2/6] [===================82%      ] profile_iter_100.sqlite
+[2/6] [====================83%     ] profile_iter_100.sqlite
+[2/6] [====================84%     ] profile_iter_100.sqlite
+[2/6] [====================85%     ] profile_iter_100.sqlite
+[2/6] [=====================86%    ] profile_iter_100.sqlite
+[2/6] [=====================87%    ] profile_iter_100.sqlite
+[2/6] [=====================88%    ] profile_iter_100.sqlite
+[2/6] [=====================89%    ] profile_iter_100.sqlite
+[2/6] [======================90%   ] profile_iter_100.sqlite
+[2/6] [======================91%   ] profile_iter_100.sqlite
+[2/6] [======================92%   ] profile_iter_100.sqlite
+[2/6] [=======================93%  ] profile_iter_100.sqlite
+[2/6] [=======================94%  ] profile_iter_100.sqlite
+[2/6] [=======================95%  ] profile_iter_100.sqlite
+[2/6] [=======================96%  ] profile_iter_100.sqlite
+[2/6] [========================97% ] profile_iter_100.sqlite
+[2/6] [========================98% ] profile_iter_100.sqlite
+[2/6] [========================99% ] profile_iter_100.sqlite
+[2/6] [========================100%] profile_iter_100.sqlite
+[2/6] [========================100%] profile_iter_100.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------------
+     38.8        205590099          5   41118019.8   35011476.0   28009162   58253931   13810756.2  cudaMemcpy            
+     32.7        172936864          1  172936864.0  172936864.0  172936864  172936864          0.0  cudaEventSynchronize  
+     28.1        148730707          2   74365353.5   74365353.5     153283  148577424  104951716.6  cudaMalloc            
+      0.3          1448642        100      14486.4       3040.0       2940    1108574     110534.8  cudaLaunchKernel      
+      0.2           808438          2     404219.0     404219.0     294317     514121     155424.9  cudaFree              
+      0.0            19220          2       9610.0       9610.0       3410      15810       8768.1  cudaEventCreate       
+      0.0            16441          2       8220.5       8220.5       3530      12911       6633.4  cudaEventRecord       
+      0.0             2610          1       2610.0       2610.0       2610       2610          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0        173192690        100  1731926.9  1732878.0   1715406   1745102       5660.3  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     71.4        146406591      3  48802197.0  53288611.0  34938675  58179305   12252659.0  [CUDA memcpy Device-to-Host]
+     28.6         58588141      2  29294070.5  29294070.5  27896700  30691441    1976180.3  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_iter_100.nsys-rep
+    /scratch/ualmxs002/base/profile_iter_100.sqlite
+Running 10000x10000 grid, 500 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=870.416931 ms for size=10000 iterations=500
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-2735.qdstrm'
+
+[1/6] [0%                          ] profile_iter_500.nsys-rep
+[1/6] [0%                          ] profile_iter_500.nsys-rep
+[1/6] [===========50%              ] profile_iter_500.nsys-rep
+[1/6] [============55%             ] profile_iter_500.nsys-rep
+[1/6] [=============59%            ] profile_iter_500.nsys-rep
+[1/6] [==============64%           ] profile_iter_500.nsys-rep
+[1/6] [================69%         ] profile_iter_500.nsys-rep
+[1/6] [=================73%        ] profile_iter_500.nsys-rep
+[1/6] [==================78%       ] profile_iter_500.nsys-rep
+[1/6] [====================83%     ] profile_iter_500.nsys-rep
+[1/6] [=====================87%    ] profile_iter_500.nsys-rep
+[1/6] [======================92%   ] profile_iter_500.nsys-rep
+[1/6] [========================97% ] profile_iter_500.nsys-rep
+[1/6] [========================99% ] profile_iter_500.nsys-rep
+[1/6] [========================100%] profile_iter_500.nsys-rep
+[1/6] [========================100%] profile_iter_500.nsys-rep
+
+[2/6] [0%                          ] profile_iter_500.sqlite
+[2/6] [1%                          ] profile_iter_500.sqlite
+[2/6] [2%                          ] profile_iter_500.sqlite
+[2/6] [3%                          ] profile_iter_500.sqlite
+[2/6] [4%                          ] profile_iter_500.sqlite
+[2/6] [5%                          ] profile_iter_500.sqlite
+[2/6] [6%                          ] profile_iter_500.sqlite
+[2/6] [7%                          ] profile_iter_500.sqlite
+[2/6] [8%                          ] profile_iter_500.sqlite
+[2/6] [9%                          ] profile_iter_500.sqlite
+[2/6] [10%                         ] profile_iter_500.sqlite
+[2/6] [11%                         ] profile_iter_500.sqlite
+[2/6] [12%                         ] profile_iter_500.sqlite
+[2/6] [13%                         ] profile_iter_500.sqlite
+[2/6] [14%                         ] profile_iter_500.sqlite
+[2/6] [=15%                        ] profile_iter_500.sqlite
+[2/6] [=16%                        ] profile_iter_500.sqlite
+[2/6] [=17%                        ] profile_iter_500.sqlite
+[2/6] [==18%                       ] profile_iter_500.sqlite
+[2/6] [==19%                       ] profile_iter_500.sqlite
+[2/6] [==20%                       ] profile_iter_500.sqlite
+[2/6] [==21%                       ] profile_iter_500.sqlite
+[2/6] [===22%                      ] profile_iter_500.sqlite
+[2/6] [===23%                      ] profile_iter_500.sqlite
+[2/6] [===24%                      ] profile_iter_500.sqlite
+[2/6] [====25%                     ] profile_iter_500.sqlite
+[2/6] [====26%                     ] profile_iter_500.sqlite
+[2/6] [====27%                     ] profile_iter_500.sqlite
+[2/6] [====28%                     ] profile_iter_500.sqlite
+[2/6] [=====29%                    ] profile_iter_500.sqlite
+[2/6] [=====30%                    ] profile_iter_500.sqlite
+[2/6] [=====31%                    ] profile_iter_500.sqlite
+[2/6] [=====32%                    ] profile_iter_500.sqlite
+[2/6] [======33%                   ] profile_iter_500.sqlite
+[2/6] [======34%                   ] profile_iter_500.sqlite
+[2/6] [======35%                   ] profile_iter_500.sqlite
+[2/6] [=======36%                  ] profile_iter_500.sqlite
+[2/6] [=======37%                  ] profile_iter_500.sqlite
+[2/6] [=======38%                  ] profile_iter_500.sqlite
+[2/6] [=======39%                  ] profile_iter_500.sqlite
+[2/6] [========40%                 ] profile_iter_500.sqlite
+[2/6] [========41%                 ] profile_iter_500.sqlite
+[2/6] [========42%                 ] profile_iter_500.sqlite
+[2/6] [=========43%                ] profile_iter_500.sqlite
+[2/6] [=========44%                ] profile_iter_500.sqlite
+[2/6] [=========45%                ] profile_iter_500.sqlite
+[2/6] [=========46%                ] profile_iter_500.sqlite
+[2/6] [==========47%               ] profile_iter_500.sqlite
+[2/6] [==========48%               ] profile_iter_500.sqlite
+[2/6] [==========49%               ] profile_iter_500.sqlite
+[2/6] [===========50%              ] profile_iter_500.sqlite
+[2/6] [===========51%              ] profile_iter_500.sqlite
+[2/6] [===========52%              ] profile_iter_500.sqlite
+[2/6] [===========53%              ] profile_iter_500.sqlite
+[2/6] [============54%             ] profile_iter_500.sqlite
+[2/6] [============55%             ] profile_iter_500.sqlite
+[2/6] [============56%             ] profile_iter_500.sqlite
+[2/6] [============57%             ] profile_iter_500.sqlite
+[2/6] [=============58%            ] profile_iter_500.sqlite
+[2/6] [=============59%            ] profile_iter_500.sqlite
+[2/6] [=============60%            ] profile_iter_500.sqlite
+[2/6] [==============61%           ] profile_iter_500.sqlite
+[2/6] [==============62%           ] profile_iter_500.sqlite
+[2/6] [==============63%           ] profile_iter_500.sqlite
+[2/6] [==============64%           ] profile_iter_500.sqlite
+[2/6] [===============65%          ] profile_iter_500.sqlite
+[2/6] [===============66%          ] profile_iter_500.sqlite
+[2/6] [===============67%          ] profile_iter_500.sqlite
+[2/6] [================68%         ] profile_iter_500.sqlite
+[2/6] [================69%         ] profile_iter_500.sqlite
+[2/6] [================70%         ] profile_iter_500.sqlite
+[2/6] [================71%         ] profile_iter_500.sqlite
+[2/6] [=================72%        ] profile_iter_500.sqlite
+[2/6] [=================73%        ] profile_iter_500.sqlite
+[2/6] [=================74%        ] profile_iter_500.sqlite
+[2/6] [==================75%       ] profile_iter_500.sqlite
+[2/6] [==================76%       ] profile_iter_500.sqlite
+[2/6] [==================77%       ] profile_iter_500.sqlite
+[2/6] [==================78%       ] profile_iter_500.sqlite
+[2/6] [===================79%      ] profile_iter_500.sqlite
+[2/6] [===================80%      ] profile_iter_500.sqlite
+[2/6] [===================81%      ] profile_iter_500.sqlite
+[2/6] [===================82%      ] profile_iter_500.sqlite
+[2/6] [====================83%     ] profile_iter_500.sqlite
+[2/6] [====================84%     ] profile_iter_500.sqlite
+[2/6] [====================85%     ] profile_iter_500.sqlite
+[2/6] [=====================86%    ] profile_iter_500.sqlite
+[2/6] [=====================87%    ] profile_iter_500.sqlite
+[2/6] [=====================88%    ] profile_iter_500.sqlite
+[2/6] [=====================89%    ] profile_iter_500.sqlite
+[2/6] [======================90%   ] profile_iter_500.sqlite
+[2/6] [======================91%   ] profile_iter_500.sqlite
+[2/6] [======================92%   ] profile_iter_500.sqlite
+[2/6] [=======================93%  ] profile_iter_500.sqlite
+[2/6] [=======================94%  ] profile_iter_500.sqlite
+[2/6] [=======================95%  ] profile_iter_500.sqlite
+[2/6] [=======================96%  ] profile_iter_500.sqlite
+[2/6] [========================97% ] profile_iter_500.sqlite
+[2/6] [========================98% ] profile_iter_500.sqlite
+[2/6] [========================99% ] profile_iter_500.sqlite
+[2/6] [========================100%] profile_iter_500.sqlite
+[2/6] [========================100%] profile_iter_500.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------------
+     70.8        867639160          1  867639160.0  867639160.0  867639160  867639160          0.0  cudaEventSynchronize  
+     16.7        204999536          5   40999907.2   35045727.0   28045762   57224579   12975595.1  cudaMemcpy            
+     12.2        149222499          2   74611249.5   74611249.5     150263  149072236  105303737.0  cudaMalloc            
+      0.2          2655808        500       5311.6       3040.0       2940    1096625      48904.9  cudaLaunchKernel      
+      0.1          1271138          2     635569.0     635569.0     566672     704466      97435.1  cudaFree              
+      0.0            27581          2      13790.5      13790.5       3490      24091      14567.1  cudaEventCreate       
+      0.0            13000          2       6500.0       6500.0       3630       9370       4058.8  cudaEventRecord       
+      0.0             3531          1       3531.0       3531.0       3531       3531          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0        868793948        500  1737587.9  1737661.0   1715021   1758253       5908.2  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     70.6        144281495      3  48093831.7  52186770.0  34956494  57138231   11643516.3  [CUDA memcpy Device-to-Host]
+     29.4         60131407      2  30065703.5  30065703.5  27961719  32169688    2975483.4  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_iter_500.nsys-rep
+    /scratch/ualmxs002/base/profile_iter_500.sqlite
+Running 10000x10000 grid, 1000 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=1741.055542 ms for size=10000 iterations=1000
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-eaf3.qdstrm'
+
+[1/6] [0%                          ] profile_iter_1000.nsys-rep
+[1/6] [0%                          ] profile_iter_1000.nsys-rep
+[1/6] [===========50%              ] profile_iter_1000.nsys-rep
+[1/6] [============55%             ] profile_iter_1000.nsys-rep
+[1/6] [=============59%            ] profile_iter_1000.nsys-rep
+[1/6] [==============64%           ] profile_iter_1000.nsys-rep
+[1/6] [================68%         ] profile_iter_1000.nsys-rep
+[1/6] [=================73%        ] profile_iter_1000.nsys-rep
+[1/6] [==================77%       ] profile_iter_1000.nsys-rep
+[1/6] [===================82%      ] profile_iter_1000.nsys-rep
+[1/6] [=====================86%    ] profile_iter_1000.nsys-rep
+[1/6] [======================91%   ] profile_iter_1000.nsys-rep
+[1/6] [=======================96%  ] profile_iter_1000.nsys-rep
+[1/6] [========================99% ] profile_iter_1000.nsys-rep
+[1/6] [========================100%] profile_iter_1000.nsys-rep
+[1/6] [========================100%] profile_iter_1000.nsys-rep
+
+[2/6] [0%                          ] profile_iter_1000.sqlite
+[2/6] [1%                          ] profile_iter_1000.sqlite
+[2/6] [2%                          ] profile_iter_1000.sqlite
+[2/6] [3%                          ] profile_iter_1000.sqlite
+[2/6] [4%                          ] profile_iter_1000.sqlite
+[2/6] [5%                          ] profile_iter_1000.sqlite
+[2/6] [6%                          ] profile_iter_1000.sqlite
+[2/6] [7%                          ] profile_iter_1000.sqlite
+[2/6] [8%                          ] profile_iter_1000.sqlite
+[2/6] [9%                          ] profile_iter_1000.sqlite
+[2/6] [10%                         ] profile_iter_1000.sqlite
+[2/6] [11%                         ] profile_iter_1000.sqlite
+[2/6] [12%                         ] profile_iter_1000.sqlite
+[2/6] [13%                         ] profile_iter_1000.sqlite
+[2/6] [14%                         ] profile_iter_1000.sqlite
+[2/6] [=15%                        ] profile_iter_1000.sqlite
+[2/6] [=16%                        ] profile_iter_1000.sqlite
+[2/6] [=17%                        ] profile_iter_1000.sqlite
+[2/6] [==18%                       ] profile_iter_1000.sqlite
+[2/6] [==19%                       ] profile_iter_1000.sqlite
+[2/6] [==20%                       ] profile_iter_1000.sqlite
+[2/6] [==21%                       ] profile_iter_1000.sqlite
+[2/6] [===22%                      ] profile_iter_1000.sqlite
+[2/6] [===23%                      ] profile_iter_1000.sqlite
+[2/6] [===24%                      ] profile_iter_1000.sqlite
+[2/6] [====25%                     ] profile_iter_1000.sqlite
+[2/6] [====26%                     ] profile_iter_1000.sqlite
+[2/6] [====27%                     ] profile_iter_1000.sqlite
+[2/6] [====28%                     ] profile_iter_1000.sqlite
+[2/6] [=====29%                    ] profile_iter_1000.sqlite
+[2/6] [=====30%                    ] profile_iter_1000.sqlite
+[2/6] [=====31%                    ] profile_iter_1000.sqlite
+[2/6] [=====32%                    ] profile_iter_1000.sqlite
+[2/6] [======33%                   ] profile_iter_1000.sqlite
+[2/6] [======34%                   ] profile_iter_1000.sqlite
+[2/6] [======35%                   ] profile_iter_1000.sqlite
+[2/6] [=======36%                  ] profile_iter_1000.sqlite
+[2/6] [=======37%                  ] profile_iter_1000.sqlite
+[2/6] [=======38%                  ] profile_iter_1000.sqlite
+[2/6] [=======39%                  ] profile_iter_1000.sqlite
+[2/6] [========40%                 ] profile_iter_1000.sqlite
+[2/6] [========41%                 ] profile_iter_1000.sqlite
+[2/6] [========42%                 ] profile_iter_1000.sqlite
+[2/6] [=========43%                ] profile_iter_1000.sqlite
+[2/6] [=========44%                ] profile_iter_1000.sqlite
+[2/6] [=========45%                ] profile_iter_1000.sqlite
+[2/6] [=========46%                ] profile_iter_1000.sqlite
+[2/6] [==========47%               ] profile_iter_1000.sqlite
+[2/6] [==========48%               ] profile_iter_1000.sqlite
+[2/6] [==========49%               ] profile_iter_1000.sqlite
+[2/6] [===========50%              ] profile_iter_1000.sqlite
+[2/6] [===========51%              ] profile_iter_1000.sqlite
+[2/6] [===========52%              ] profile_iter_1000.sqlite
+[2/6] [===========53%              ] profile_iter_1000.sqlite
+[2/6] [============54%             ] profile_iter_1000.sqlite
+[2/6] [============55%             ] profile_iter_1000.sqlite
+[2/6] [============56%             ] profile_iter_1000.sqlite
+[2/6] [============57%             ] profile_iter_1000.sqlite
+[2/6] [=============58%            ] profile_iter_1000.sqlite
+[2/6] [=============59%            ] profile_iter_1000.sqlite
+[2/6] [=============60%            ] profile_iter_1000.sqlite
+[2/6] [==============61%           ] profile_iter_1000.sqlite
+[2/6] [==============62%           ] profile_iter_1000.sqlite
+[2/6] [==============63%           ] profile_iter_1000.sqlite
+[2/6] [==============64%           ] profile_iter_1000.sqlite
+[2/6] [===============65%          ] profile_iter_1000.sqlite
+[2/6] [===============66%          ] profile_iter_1000.sqlite
+[2/6] [===============67%          ] profile_iter_1000.sqlite
+[2/6] [================68%         ] profile_iter_1000.sqlite
+[2/6] [================69%         ] profile_iter_1000.sqlite
+[2/6] [================70%         ] profile_iter_1000.sqlite
+[2/6] [================71%         ] profile_iter_1000.sqlite
+[2/6] [=================72%        ] profile_iter_1000.sqlite
+[2/6] [=================73%        ] profile_iter_1000.sqlite
+[2/6] [=================74%        ] profile_iter_1000.sqlite
+[2/6] [==================75%       ] profile_iter_1000.sqlite
+[2/6] [==================76%       ] profile_iter_1000.sqlite
+[2/6] [==================77%       ] profile_iter_1000.sqlite
+[2/6] [==================78%       ] profile_iter_1000.sqlite
+[2/6] [===================79%      ] profile_iter_1000.sqlite
+[2/6] [===================80%      ] profile_iter_1000.sqlite
+[2/6] [===================81%      ] profile_iter_1000.sqlite
+[2/6] [===================82%      ] profile_iter_1000.sqlite
+[2/6] [====================83%     ] profile_iter_1000.sqlite
+[2/6] [====================84%     ] profile_iter_1000.sqlite
+[2/6] [====================85%     ] profile_iter_1000.sqlite
+[2/6] [=====================86%    ] profile_iter_1000.sqlite
+[2/6] [=====================87%    ] profile_iter_1000.sqlite
+[2/6] [=====================88%    ] profile_iter_1000.sqlite
+[2/6] [=====================89%    ] profile_iter_1000.sqlite
+[2/6] [======================90%   ] profile_iter_1000.sqlite
+[2/6] [======================91%   ] profile_iter_1000.sqlite
+[2/6] [======================92%   ] profile_iter_1000.sqlite
+[2/6] [=======================93%  ] profile_iter_1000.sqlite
+[2/6] [=======================94%  ] profile_iter_1000.sqlite
+[2/6] [=======================95%  ] profile_iter_1000.sqlite
+[2/6] [=======================96%  ] profile_iter_1000.sqlite
+[2/6] [========================97% ] profile_iter_1000.sqlite
+[2/6] [========================98% ] profile_iter_1000.sqlite
+[2/6] [========================99% ] profile_iter_1000.sqlite
+[2/6] [========================100%] profile_iter_1000.sqlite
+[2/6] [========================100%] profile_iter_1000.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     83.1       1736482947          1  1736482947.0  1736482947.0  1736482947  1736482947          0.0  cudaEventSynchronize  
+      9.9        205728543          5    41145708.6    34884784.0    28020902    57524145   12897365.1  cudaMemcpy            
+      6.8        141108208          2    70554104.0    70554104.0      154563   140953645   99559985.7  cudaMalloc            
+      0.2          4363287       1000        4363.3        3030.0        2900     1003603      32203.0  cudaLaunchKernel      
+      0.0           812638          2      406319.0      406319.0      326137      486501     113394.5  cudaFree              
+      0.0            19750          2        9875.0        9875.0        3740       16010       8676.2  cudaEventCreate       
+      0.0             9800          2        4900.0        4900.0        3910        5890       1400.1  cudaEventRecord       
+      0.0             2560          1        2560.0        2560.0        2560        2560          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       1739004271       1000  1739004.3  1739149.0   1720494   1758701       5388.5  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     70.3        144165832      3  48055277.3  51925803.0  34799528  57440501   11806317.9  [CUDA memcpy Device-to-Host]
+     29.7         60877390      2  30438695.0  30438695.0  27842515  33034875    3671553.0  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_iter_1000.nsys-rep
+    /scratch/ualmxs002/base/profile_iter_1000.sqlite
+Running 10000x10000 grid, 2500 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=4354.628906 ms for size=10000 iterations=2500
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-ecbf.qdstrm'
+
+[1/6] [0%                          ] profile_iter_2500.nsys-rep
+[1/6] [0%                          ] profile_iter_2500.nsys-rep
+[1/6] [7%                          ] profile_iter_2500.nsys-rep
+[1/6] [===========50%              ] profile_iter_2500.nsys-rep
+[1/6] [===========52%              ] profile_iter_2500.nsys-rep
+[1/6] [============56%             ] profile_iter_2500.nsys-rep
+[1/6] [=============60%            ] profile_iter_2500.nsys-rep
+[1/6] [==============64%           ] profile_iter_2500.nsys-rep
+[1/6] [================68%         ] profile_iter_2500.nsys-rep
+[1/6] [=================72%        ] profile_iter_2500.nsys-rep
+[1/6] [==================76%       ] profile_iter_2500.nsys-rep
+[1/6] [===================80%      ] profile_iter_2500.nsys-rep
+[1/6] [====================84%     ] profile_iter_2500.nsys-rep
+[1/6] [=====================88%    ] profile_iter_2500.nsys-rep
+[1/6] [======================92%   ] profile_iter_2500.nsys-rep
+[1/6] [=======================96%  ] profile_iter_2500.nsys-rep
+[1/6] [========================100%] profile_iter_2500.nsys-rep
+[1/6] [========================100%] profile_iter_2500.nsys-rep
+
+[2/6] [0%                          ] profile_iter_2500.sqlite
+[2/6] [1%                          ] profile_iter_2500.sqlite
+[2/6] [2%                          ] profile_iter_2500.sqlite
+[2/6] [3%                          ] profile_iter_2500.sqlite
+[2/6] [4%                          ] profile_iter_2500.sqlite
+[2/6] [5%                          ] profile_iter_2500.sqlite
+[2/6] [6%                          ] profile_iter_2500.sqlite
+[2/6] [7%                          ] profile_iter_2500.sqlite
+[2/6] [8%                          ] profile_iter_2500.sqlite
+[2/6] [9%                          ] profile_iter_2500.sqlite
+[2/6] [10%                         ] profile_iter_2500.sqlite
+[2/6] [11%                         ] profile_iter_2500.sqlite
+[2/6] [12%                         ] profile_iter_2500.sqlite
+[2/6] [13%                         ] profile_iter_2500.sqlite
+[2/6] [14%                         ] profile_iter_2500.sqlite
+[2/6] [=15%                        ] profile_iter_2500.sqlite
+[2/6] [=16%                        ] profile_iter_2500.sqlite
+[2/6] [=17%                        ] profile_iter_2500.sqlite
+[2/6] [==18%                       ] profile_iter_2500.sqlite
+[2/6] [==19%                       ] profile_iter_2500.sqlite
+[2/6] [==20%                       ] profile_iter_2500.sqlite
+[2/6] [==21%                       ] profile_iter_2500.sqlite
+[2/6] [===22%                      ] profile_iter_2500.sqlite
+[2/6] [===23%                      ] profile_iter_2500.sqlite
+[2/6] [===24%                      ] profile_iter_2500.sqlite
+[2/6] [====25%                     ] profile_iter_2500.sqlite
+[2/6] [====26%                     ] profile_iter_2500.sqlite
+[2/6] [====27%                     ] profile_iter_2500.sqlite
+[2/6] [====28%                     ] profile_iter_2500.sqlite
+[2/6] [=====29%                    ] profile_iter_2500.sqlite
+[2/6] [=====30%                    ] profile_iter_2500.sqlite
+[2/6] [=====31%                    ] profile_iter_2500.sqlite
+[2/6] [=====32%                    ] profile_iter_2500.sqlite
+[2/6] [======33%                   ] profile_iter_2500.sqlite
+[2/6] [======34%                   ] profile_iter_2500.sqlite
+[2/6] [======35%                   ] profile_iter_2500.sqlite
+[2/6] [=======36%                  ] profile_iter_2500.sqlite
+[2/6] [=======37%                  ] profile_iter_2500.sqlite
+[2/6] [=======38%                  ] profile_iter_2500.sqlite
+[2/6] [=======39%                  ] profile_iter_2500.sqlite
+[2/6] [========40%                 ] profile_iter_2500.sqlite
+[2/6] [========41%                 ] profile_iter_2500.sqlite
+[2/6] [========42%                 ] profile_iter_2500.sqlite
+[2/6] [=========43%                ] profile_iter_2500.sqlite
+[2/6] [=========44%                ] profile_iter_2500.sqlite
+[2/6] [=========45%                ] profile_iter_2500.sqlite
+[2/6] [=========46%                ] profile_iter_2500.sqlite
+[2/6] [==========47%               ] profile_iter_2500.sqlite
+[2/6] [==========48%               ] profile_iter_2500.sqlite
+[2/6] [==========49%               ] profile_iter_2500.sqlite
+[2/6] [===========50%              ] profile_iter_2500.sqlite
+[2/6] [===========51%              ] profile_iter_2500.sqlite
+[2/6] [===========52%              ] profile_iter_2500.sqlite
+[2/6] [===========53%              ] profile_iter_2500.sqlite
+[2/6] [============54%             ] profile_iter_2500.sqlite
+[2/6] [============55%             ] profile_iter_2500.sqlite
+[2/6] [============56%             ] profile_iter_2500.sqlite
+[2/6] [============57%             ] profile_iter_2500.sqlite
+[2/6] [=============58%            ] profile_iter_2500.sqlite
+[2/6] [=============59%            ] profile_iter_2500.sqlite
+[2/6] [=============60%            ] profile_iter_2500.sqlite
+[2/6] [==============61%           ] profile_iter_2500.sqlite
+[2/6] [==============62%           ] profile_iter_2500.sqlite
+[2/6] [==============63%           ] profile_iter_2500.sqlite
+[2/6] [==============64%           ] profile_iter_2500.sqlite
+[2/6] [===============65%          ] profile_iter_2500.sqlite
+[2/6] [===============66%          ] profile_iter_2500.sqlite
+[2/6] [===============67%          ] profile_iter_2500.sqlite
+[2/6] [================68%         ] profile_iter_2500.sqlite
+[2/6] [================69%         ] profile_iter_2500.sqlite
+[2/6] [================70%         ] profile_iter_2500.sqlite
+[2/6] [================71%         ] profile_iter_2500.sqlite
+[2/6] [=================72%        ] profile_iter_2500.sqlite
+[2/6] [=================73%        ] profile_iter_2500.sqlite
+[2/6] [=================74%        ] profile_iter_2500.sqlite
+[2/6] [==================75%       ] profile_iter_2500.sqlite
+[2/6] [==================76%       ] profile_iter_2500.sqlite
+[2/6] [==================77%       ] profile_iter_2500.sqlite
+[2/6] [==================78%       ] profile_iter_2500.sqlite
+[2/6] [===================79%      ] profile_iter_2500.sqlite
+[2/6] [===================80%      ] profile_iter_2500.sqlite
+[2/6] [===================81%      ] profile_iter_2500.sqlite
+[2/6] [===================82%      ] profile_iter_2500.sqlite
+[2/6] [====================83%     ] profile_iter_2500.sqlite
+[2/6] [====================84%     ] profile_iter_2500.sqlite
+[2/6] [====================85%     ] profile_iter_2500.sqlite
+[2/6] [=====================86%    ] profile_iter_2500.sqlite
+[2/6] [=====================87%    ] profile_iter_2500.sqlite
+[2/6] [=====================88%    ] profile_iter_2500.sqlite
+[2/6] [=====================89%    ] profile_iter_2500.sqlite
+[2/6] [======================90%   ] profile_iter_2500.sqlite
+[2/6] [======================91%   ] profile_iter_2500.sqlite
+[2/6] [======================92%   ] profile_iter_2500.sqlite
+[2/6] [=======================93%  ] profile_iter_2500.sqlite
+[2/6] [=======================94%  ] profile_iter_2500.sqlite
+[2/6] [=======================95%  ] profile_iter_2500.sqlite
+[2/6] [=======================96%  ] profile_iter_2500.sqlite
+[2/6] [========================97% ] profile_iter_2500.sqlite
+[2/6] [========================98% ] profile_iter_2500.sqlite
+[2/6] [========================99% ] profile_iter_2500.sqlite
+[2/6] [========================100%] profile_iter_2500.sqlite
+[2/6] [========================100%] profile_iter_2500.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     54.4       2573206017       2500     1029282.4     1735204.0        2670     1762739     854206.7  cudaLaunchKernel      
+     37.6       1779094321          1  1779094321.0  1779094321.0  1779094321  1779094321          0.0  cudaEventSynchronize  
+      4.5        213477344          5    42695468.8    35690311.0    29072024    60038862   15683425.4  cudaMemcpy            
+      3.4        158723069          2    79361534.5    79361534.5      153003   158570066  112017779.5  cudaMalloc            
+      0.0          1756689          2      878344.5      878344.5       19800     1736889    1214165.3  cudaEventRecord       
+      0.0           881839          2      440919.5      440919.5      345257      536582     135287.2  cudaFree              
+      0.0            29741          2       14870.5       14870.5        5900       23841      12686.2  cudaEventCreate       
+      0.0             1870          1        1870.0        1870.0        1870        1870          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       4350642894       2500  1740257.2  1740429.0   1716813   1763469       4988.9  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     72.6        154363550      3  51454516.7  58913797.0  35540274  59909479   13791127.1  [CUDA memcpy Device-to-Host]
+     27.4         58203034      2  29101517.0  29101517.0  28871515  29331519     325271.9  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_iter_2500.nsys-rep
+    /scratch/ualmxs002/base/profile_iter_2500.sqlite
+Running 10000x10000 grid, 5000 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=8713.199219 ms for size=10000 iterations=5000
+Generating '/scratch-local/ualmxs002.base_ampere.31029.asax-pbs1/nsys-report-dd6d.qdstrm'
+
+[1/6] [0%                          ] profile_iter_5000.nsys-rep
+[1/6] [0%                          ] profile_iter_5000.nsys-rep
+[1/6] [12%                         ] profile_iter_5000.nsys-rep
+[1/6] [====25%                     ] profile_iter_5000.nsys-rep
+[1/6] [===========53%              ] profile_iter_5000.nsys-rep
+[1/6] [============57%             ] profile_iter_5000.nsys-rep
+[1/6] [=============60%            ] profile_iter_5000.nsys-rep
+[1/6] [==============64%           ] profile_iter_5000.nsys-rep
+[1/6] [===============67%          ] profile_iter_5000.nsys-rep
+[1/6] [================71%         ] profile_iter_5000.nsys-rep
+[1/6] [=================74%        ] profile_iter_5000.nsys-rep
+[1/6] [==================78%       ] profile_iter_5000.nsys-rep
+[1/6] [===================81%      ] profile_iter_5000.nsys-rep
+[1/6] [====================85%     ] profile_iter_5000.nsys-rep
+[1/6] [=====================88%    ] profile_iter_5000.nsys-rep
+[1/6] [======================92%   ] profile_iter_5000.nsys-rep
+[1/6] [=======================93%  ] profile_iter_5000.nsys-rep
+[1/6] [========================100%] profile_iter_5000.nsys-rep
+[1/6] [========================100%] profile_iter_5000.nsys-rep
+
+[2/6] [0%                          ] profile_iter_5000.sqlite
+[2/6] [1%                          ] profile_iter_5000.sqlite
+[2/6] [2%                          ] profile_iter_5000.sqlite
+[2/6] [3%                          ] profile_iter_5000.sqlite
+[2/6] [4%                          ] profile_iter_5000.sqlite
+[2/6] [5%                          ] profile_iter_5000.sqlite
+[2/6] [6%                          ] profile_iter_5000.sqlite
+[2/6] [7%                          ] profile_iter_5000.sqlite
+[2/6] [8%                          ] profile_iter_5000.sqlite
+[2/6] [9%                          ] profile_iter_5000.sqlite
+[2/6] [10%                         ] profile_iter_5000.sqlite
+[2/6] [11%                         ] profile_iter_5000.sqlite
+[2/6] [12%                         ] profile_iter_5000.sqlite
+[2/6] [13%                         ] profile_iter_5000.sqlite
+[2/6] [14%                         ] profile_iter_5000.sqlite
+[2/6] [=15%                        ] profile_iter_5000.sqlite
+[2/6] [=16%                        ] profile_iter_5000.sqlite
+[2/6] [=17%                        ] profile_iter_5000.sqlite
+[2/6] [==18%                       ] profile_iter_5000.sqlite
+[2/6] [==19%                       ] profile_iter_5000.sqlite
+[2/6] [==20%                       ] profile_iter_5000.sqlite
+[2/6] [==21%                       ] profile_iter_5000.sqlite
+[2/6] [===22%                      ] profile_iter_5000.sqlite
+[2/6] [===23%                      ] profile_iter_5000.sqlite
+[2/6] [===24%                      ] profile_iter_5000.sqlite
+[2/6] [====25%                     ] profile_iter_5000.sqlite
+[2/6] [====26%                     ] profile_iter_5000.sqlite
+[2/6] [====27%                     ] profile_iter_5000.sqlite
+[2/6] [====28%                     ] profile_iter_5000.sqlite
+[2/6] [=====29%                    ] profile_iter_5000.sqlite
+[2/6] [=====30%                    ] profile_iter_5000.sqlite
+[2/6] [=====31%                    ] profile_iter_5000.sqlite
+[2/6] [=====32%                    ] profile_iter_5000.sqlite
+[2/6] [======33%                   ] profile_iter_5000.sqlite
+[2/6] [======34%                   ] profile_iter_5000.sqlite
+[2/6] [======35%                   ] profile_iter_5000.sqlite
+[2/6] [=======36%                  ] profile_iter_5000.sqlite
+[2/6] [=======37%                  ] profile_iter_5000.sqlite
+[2/6] [=======38%                  ] profile_iter_5000.sqlite
+[2/6] [=======39%                  ] profile_iter_5000.sqlite
+[2/6] [========40%                 ] profile_iter_5000.sqlite
+[2/6] [========41%                 ] profile_iter_5000.sqlite
+[2/6] [========42%                 ] profile_iter_5000.sqlite
+[2/6] [=========43%                ] profile_iter_5000.sqlite
+[2/6] [=========44%                ] profile_iter_5000.sqlite
+[2/6] [=========45%                ] profile_iter_5000.sqlite
+[2/6] [=========46%                ] profile_iter_5000.sqlite
+[2/6] [==========47%               ] profile_iter_5000.sqlite
+[2/6] [==========48%               ] profile_iter_5000.sqlite
+[2/6] [==========49%               ] profile_iter_5000.sqlite
+[2/6] [===========50%              ] profile_iter_5000.sqlite
+[2/6] [===========51%              ] profile_iter_5000.sqlite
+[2/6] [===========52%              ] profile_iter_5000.sqlite
+[2/6] [===========53%              ] profile_iter_5000.sqlite
+[2/6] [============54%             ] profile_iter_5000.sqlite
+[2/6] [============55%             ] profile_iter_5000.sqlite
+[2/6] [============56%             ] profile_iter_5000.sqlite
+[2/6] [============57%             ] profile_iter_5000.sqlite
+[2/6] [=============58%            ] profile_iter_5000.sqlite
+[2/6] [=============59%            ] profile_iter_5000.sqlite
+[2/6] [=============60%            ] profile_iter_5000.sqlite
+[2/6] [==============61%           ] profile_iter_5000.sqlite
+[2/6] [==============62%           ] profile_iter_5000.sqlite
+[2/6] [==============63%           ] profile_iter_5000.sqlite
+[2/6] [==============64%           ] profile_iter_5000.sqlite
+[2/6] [===============65%          ] profile_iter_5000.sqlite
+[2/6] [===============66%          ] profile_iter_5000.sqlite
+[2/6] [===============67%          ] profile_iter_5000.sqlite
+[2/6] [================68%         ] profile_iter_5000.sqlite
+[2/6] [================69%         ] profile_iter_5000.sqlite
+[2/6] [================70%         ] profile_iter_5000.sqlite
+[2/6] [================71%         ] profile_iter_5000.sqlite
+[2/6] [=================72%        ] profile_iter_5000.sqlite
+[2/6] [=================73%        ] profile_iter_5000.sqlite
+[2/6] [=================74%        ] profile_iter_5000.sqlite
+[2/6] [==================75%       ] profile_iter_5000.sqlite
+[2/6] [==================76%       ] profile_iter_5000.sqlite
+[2/6] [==================77%       ] profile_iter_5000.sqlite
+[2/6] [==================78%       ] profile_iter_5000.sqlite
+[2/6] [===================79%      ] profile_iter_5000.sqlite
+[2/6] [===================80%      ] profile_iter_5000.sqlite
+[2/6] [===================81%      ] profile_iter_5000.sqlite
+[2/6] [===================82%      ] profile_iter_5000.sqlite
+[2/6] [====================83%     ] profile_iter_5000.sqlite
+[2/6] [====================84%     ] profile_iter_5000.sqlite
+[2/6] [====================85%     ] profile_iter_5000.sqlite
+[2/6] [=====================86%    ] profile_iter_5000.sqlite
+[2/6] [=====================87%    ] profile_iter_5000.sqlite
+[2/6] [=====================88%    ] profile_iter_5000.sqlite
+[2/6] [=====================89%    ] profile_iter_5000.sqlite
+[2/6] [======================90%   ] profile_iter_5000.sqlite
+[2/6] [======================91%   ] profile_iter_5000.sqlite
+[2/6] [======================92%   ] profile_iter_5000.sqlite
+[2/6] [=======================93%  ] profile_iter_5000.sqlite
+[2/6] [=======================94%  ] profile_iter_5000.sqlite
+[2/6] [=======================95%  ] profile_iter_5000.sqlite
+[2/6] [=======================96%  ] profile_iter_5000.sqlite
+[2/6] [========================97% ] profile_iter_5000.sqlite
+[2/6] [========================98% ] profile_iter_5000.sqlite
+[2/6] [========================99% ] profile_iter_5000.sqlite
+[2/6] [========================100%] profile_iter_5000.sqlite
+[2/6] [========================100%] profile_iter_5000.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     76.5       6929903751       5000     1385980.8     1740319.0        2910     1762149     701381.4  cudaLaunchKernel      
+     19.6       1780239059          1  1780239059.0  1780239059.0  1780239059  1780239059          0.0  cudaEventSynchronize  
+      2.3        207972928          5    41594585.6    34831773.0    28307209    58244613   13133936.9  cudaMemcpy            
+      1.6        143195500          2    71597750.0    71597750.0      159193   143036307  101029376.2  cudaMalloc            
+      0.0          1753729          2      876864.5      876864.5       14780     1738949    1219171.6  cudaEventRecord       
+      0.0           835498          2      417749.0      417749.0      326967      508531     128385.1  cudaFree              
+      0.0            18220          2        9110.0        9110.0         440       17780      12261.2  cudaEventCreate       
+      0.0             2310          1        2310.0        2310.0        2310        2310          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       8706958544       5000  1741391.7  1741422.0   1717261   1759501       4665.2  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     70.2        145546678      3  48515559.3  52665014.0  34732289  58149375   12247590.0  [CUDA memcpy Device-to-Host]
+     29.8         61707834      2  30853917.0  30853917.0  28125848  33581986    3858072.2  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Generated:
+    /scratch/ualmxs002/base/profile_iter_5000.nsys-rep
+    /scratch/ualmxs002/base/profile_iter_5000.sqlite
+Tests complete! Results in /scratch/ualmxs002/base

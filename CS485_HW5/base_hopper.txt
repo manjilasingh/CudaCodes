@@ -1,0 +1,330 @@
+Test 1: Grid Size Scaling
+Running 500x500 grid, 1000 iterations...
+dimGrid: 63 63 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=18.931681 ms for size=500 iterations=1000
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ----------  --------  ---------  -----------  ----------------------
+     89.6        170685092          2  85342546.0  85342546.0      5797  170679295  120684387.8  cudaMalloc            
+      9.0         17080551       1000     17080.6      5169.0      4609   11765887     371905.5  cudaLaunchKernel      
+      1.4          2620594          5    524118.8    328823.0    109794    1133977     426914.4  cudaMemcpy            
+      0.1           139128          2     69564.0     69564.0     11873     127255      81587.4  cudaFree              
+      0.0            21302          2     10651.0     10651.0      4260      17042       9038.2  cudaEventCreate       
+      0.0            15645          2      7822.5      7822.5      5727       9918       2963.5  cudaEventRecord       
+      0.0             8940          1      8940.0      8940.0      8940       8940          0.0  cudaEventSynchronize  
+      0.0             4191          1      4191.0      4191.0      4191       4191          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -----------------------------------
+    100.0          4990096       1000    4990.1    4992.0      4896      5216         35.6  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     68.5           871143      3  290381.0  250243.0    240449    380451      78156.5  [CUDA memcpy Device-to-Host]
+     31.5           401378      2  200689.0  200689.0    199617    201761       1516.0  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+      3.024      3     1.008     1.008     1.008     1.008        0.000  [CUDA memcpy Device-to-Host]
+      2.016      2     1.008     1.008     1.008     1.008        0.000  [CUDA memcpy Host-to-Device]
+
+Running 1000x1000 grid, 1000 iterations...
+dimGrid: 125 125 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=24.162975 ms for size=1000 iterations=1000
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ----------  --------  ---------  -----------  ----------------------
+     88.0        196846821          2  98423410.5  98423410.5     98410  196748411  139052549.2  cudaMalloc            
+      6.6         14827343       1000     14827.3      4261.0      3701   10372442     327866.6  cudaLaunchKernel      
+      3.4          7684659          1   7684659.0   7684659.0   7684659    7684659          0.0  cudaEventSynchronize  
+      1.8          4044701          5    808940.2    371916.0    349148    1563165     621209.3  cudaMemcpy            
+      0.1           313317          2    156658.5    156658.5     92333     220984      90970.0  cudaFree              
+      0.0            16063          2      8031.5      8031.5      1885      14178       8692.5  cudaEventCreate       
+      0.0            14107          2      7053.5      7053.5      4679       9428       3358.1  cudaEventRecord       
+      0.0             2864          1      2864.0      2864.0      2864       2864          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -----------------------------------
+    100.0         12700329       1000   12700.3   12704.0     12607     13024         42.3  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ---------  ---------  --------  --------  -----------  ----------------------------
+     83.9          3005656      3  1001885.3  1312747.0    253761   1439148     650969.9  [CUDA memcpy Device-to-Host]
+     16.1           578726      2   289363.0   289363.0    284707    294019       6584.6  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     12.048      3     4.016     4.016     4.016     4.016        0.000  [CUDA memcpy Device-to-Host]
+      8.032      2     4.016     4.016     4.016     4.016        0.000  [CUDA memcpy Host-to-Device]
+
+Running 5000x5000 grid, 1000 iterations...
+dimGrid: 625 625 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=264.052826 ms for size=5000 iterations=1000
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     69.5       1029525735          1  1029525735.0  1029525735.0  1029525735  1029525735          0.0  cudaEventSynchronize  
+     15.6        230441564          2   115220782.0   115220782.0      158475   230283089  162722675.1  cudaMalloc            
+     14.4        213660503          5    42732100.6    35851591.0    28783020    60109527   15061898.5  cudaMemcpy            
+      0.4          6514716       1000        6514.7        4750.0        3772     1227358      39220.6  cudaLaunchKernel      
+      0.1           871435          2      435717.5      435717.5      343908      527527     129838.2  cudaFree              
+      0.0            21721          2       10860.5       10860.5        1886       19835      12691.9  cudaEventCreate       
+      0.0            13758          2        6879.0        6879.0        5657        8101       1728.2  cudaEventRecord       
+      0.0             4749          1        4749.0        4749.0        4749        4749          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       1034915480       1000  1034915.5  1034889.0   1034600   1036521        156.3  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     72.0        153332794      3  51110931.3  57569023.0  35747081  60016690   13361650.0  [CUDA memcpy Device-to-Host]
+     28.0         59588815      2  29794407.5  29794407.5  28627214  30961601    1650660.9  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Running 15000x15000 grid, 1000 iterations...
+dimGrid: 1875 1875 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=2327.901367 ms for size=15000 iterations=1000
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     78.0       2319591406          1  2319591406.0  2319591406.0  2319591406  2319591406          0.0  cudaEventSynchronize  
+     15.9        472906367          5    94581273.4    79672680.0    64022393   128109111   30036005.5  cudaMemcpy            
+      5.8        172087581          2    86043790.5    86043790.5      212324   171875257  121384024.0  cudaMalloc            
+      0.2          6565974       1000        6566.0        4749.0        3283     1566586      49766.6  cudaLaunchKernel      
+      0.0          1423617          2      711808.5      711808.5      650102      773515      87266.2  cudaFree              
+      0.0            19416          2        9708.0        9708.0        1885       17531      11063.4  cudaEventCreate       
+      0.0            13270          2        6635.0        6635.0        6146        7124        691.6  cudaEventRecord       
+      0.0             3841          1        3841.0        3841.0        3841        3841          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       2324632070       1000  2324632.1  2324597.0   2324117   2329364        270.2  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)     Med (ns)    Min (ns)  Max (ns)   StdDev (ns)           Operation          
+ --------  ---------------  -----  -----------  -----------  --------  ---------  -----------  ----------------------------
+     69.6        328184580      3  109394860.0  124801515.0  75371929  128011136   29508393.6  [CUDA memcpy Device-to-Host]
+     30.4        143469279      2   71734639.5   71734639.5  63899055   79570224   11081189.9  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   2700.720      3   900.240   900.240   900.240   900.240        0.000  [CUDA memcpy Device-to-Host]
+   1800.480      2   900.240   900.240   900.240   900.240        0.000  [CUDA memcpy Host-to-Device]
+
+Running 20000x20000 grid, 1000 iterations...
+dimGrid: 2500 2500 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=4133.914551 ms for size=20000 iterations=1000
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     80.3       4125840979          1  4125840979.0  4125840979.0  4125840979  4125840979          0.0  cudaEventSynchronize  
+     16.1        827296701          5   165459340.2   136078043.0   114505107   229903161   58333225.2  cudaMemcpy            
+      3.4        174332296          2    87166148.0    87166148.0      235652   174096644  122938286.4  cudaMalloc            
+      0.1          6413776       1000        6413.8        4749.0        3841     1388695      44231.8  cudaLaunchKernel      
+      0.0          2362381          2     1181190.5     1181190.5     1042342     1320039     196361.4  cudaFree              
+      0.0            28915          2       14457.5       14457.5        1886       27029      17778.8  cudaEventCreate       
+      0.0            18509          2        9254.5        9254.5        5169       13340       5777.8  cudaEventRecord       
+      0.0             4330          1        4330.0        4330.0        4330        4330          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       4130819899       1000  4130819.9  4130364.0   4129373   4147965       2625.4  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Operation          
+ --------  ---------------  -----  -----------  -----------  ---------  ---------  -----------  ----------------------------
+     71.8        592742775      3  197580925.0  226967388.0  135968297  229807090   53376988.7  [CUDA memcpy Device-to-Host]
+     28.2        233218791      2  116609395.5  116609395.5  114279397  118939394    3295115.5  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   4800.960      3  1600.320  1600.320  1600.320  1600.320        0.000  [CUDA memcpy Device-to-Host]
+   3200.640      2  1600.320  1600.320  1600.320  1600.320        0.000  [CUDA memcpy Host-to-Device]
+
+Test 2: Iteration Scaling
+Running 10000x10000 grid, 100 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=105.233246 ms for size=10000 iterations=100
+
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------------
+     41.6        201222858          5   40244571.6   31987097.0   28449457   56653416   14354964.1  cudaMemcpy            
+     36.4        176111358          2   88055679.0   88055679.0     153236  175958122  124312827.1  cudaMalloc            
+     21.3        103069115          1  103069115.0  103069115.0  103069115  103069115          0.0  cudaEventSynchronize  
+      0.4          1993817        100      19938.2       4261.0       3771    1558067     155367.5  cudaLaunchKernel      
+      0.2           854955          2     427477.5     427477.5     341116     513839     122133.6  cudaFree              
+      0.0            28845          2      14422.5      14422.5       6146      22699      11704.7  cudaEventRecord       
+      0.0            27938          2      13969.0      13969.0       1956      25982      16988.9  cudaEventCreate       
+      0.0             5239          1       5239.0       5239.0       5239       5239          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0        103505707        100  1035057.1  1035018.0   1034793   1037002        241.6  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     71.5        143307140      3  47769046.7  54861924.0  31897196  56548020   13771254.9  [CUDA memcpy Device-to-Host]
+     28.5         57177914      2  28588957.0  28588957.0  28282443  28895471     433476.3  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Running 10000x10000 grid, 500 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=519.696045 ms for size=10000 iterations=500
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     69.8       1029637821          1  1029637821.0  1029637821.0  1029637821  1029637821          0.0  cudaEventSynchronize  
+     15.0        220915259          2   110457629.5   110457629.5      125858   220789401  156032687.6  cudaMalloc            
+     14.7        216505623          5    43301124.6    35471706.0    28853090    60808484   15875325.3  cudaMemcpy            
+      0.5          6909463       1000        6909.5        4819.0        4190     1672960      53101.0  cudaLaunchKernel      
+      0.1           875836          2      437918.0      437918.0      357249      518587     114083.2  cudaFree              
+      0.0            22209          2       11104.5       11104.5        2304       19905      12445.8  cudaEventCreate       
+      0.0            15086          2        7543.0        7543.0        6146        8940       1975.7  cudaEventRecord       
+      0.0             5657          1        5657.0        5657.0        5657        5657          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       1034861063       1000  1034861.1  1034825.5   1034569   1036873        169.7  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     72.3        156020241      3  52006747.0  59926487.0  35364924  60728830   14417823.8  [CUDA memcpy Device-to-Host]
+     27.7         59718388      2  29859194.0  29859194.0  28639391  31078997    1725061.9  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+
+Running 10000x10000 grid, 2500 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=2592.577393 ms for size=10000 iterations=2500
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     51.7       1529216114       2500      611686.4     1034171.0        3283     1543329     507278.2  cudaLaunchKernel      
+     35.8       1058163699          1  1058163699.0  1058163699.0  1058163699  1058163699          0.0  cudaEventSynchronize  
+      6.8        202118408          5    40423681.6    32236418.0    28878628    56441407   14051081.7  cudaMemcpy            
+      5.6        164096656          2    82048328.0    82048328.0      169929   163926727  115793542.3  cudaMalloc            
+      0.0          1052191          2      526095.5      526095.5       12712     1039479     726033.9  cudaEventRecord       
+      0.0           981858          2      490929.0      490929.0      329381      652477     228463.4  cudaFree              
+      0.0            30732          2       15366.0       15366.0        1816       28916      19162.6  cudaEventCreate       
+      0.0             5238          1        5238.0        5238.0        5238        5238          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       2586975426       2500  1034790.2  1034760.0   1034504   1036872        141.2  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     71.2        143205683      3  47735227.7  54759442.0  32119583  56326658   13546228.6  [CUDA memcpy Device-to-Host]
+     28.8         58046032      2  29023016.0  29023016.0  28667205  29378827     503192.7  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+Running 10000x10000 grid, 5000 iterations...
+dimGrid: 1250 1250 1. dimBlock: 8 8 1
+----------------------------------
+Baseline  GPU time is taken=5187.154297 ms for size=10000 iterations=5000
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     74.2       4118584664       5000      823716.9     1034310.0        3702     2326831     417458.2  cudaLaunchKernel      
+     19.1       1058250057          1  1058250057.0  1058250057.0  1058250057  1058250057          0.0  cudaEventSynchronize  
+      3.8        208395044          5    41679008.8    34637067.0    28330211    57337135   13340329.4  cudaMemcpy            
+      3.0        165826288          2    82913144.0    82913144.0      124461   165701827  117080878.3  cudaMalloc            
+      0.0          1045625          2      522812.5      522812.5        8032     1037593     728009.6  cudaEventRecord       
+      0.0           768347          2      384173.5      384173.5      311781      456566     102378.5  cudaFree              
+      0.0            28008          2       14004.0       14004.0        1956       26052      17038.4  cudaEventCreate       
+      0.0             4749          1        4749.0        4749.0        4749        4749          0.0  cuModuleGetLoadingMode
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                 Name                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  -----------------------------------
+    100.0       5177490480       5000  1035498.1  1034760.0   1034440   2326482      28607.6  compute_gpu(int *, int *, int, int)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  ----------  ----------  --------  --------  -----------  ----------------------------
+     70.4        146220794      3  48740264.7  54460280.0  34535895  57224619   12378751.2  [CUDA memcpy Device-to-Host]
+     29.6         61501517      2  30750758.5  30750758.5  28232098  33269419    3561923.8  [CUDA memcpy Host-to-Device]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+   1200.480      3   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Device-to-Host]
+    800.320      2   400.160   400.160   400.160   400.160        0.000  [CUDA memcpy Host-to-Device]
+
+
+
