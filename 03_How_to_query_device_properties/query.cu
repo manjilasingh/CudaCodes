@@ -1,3 +1,15 @@
+/* 
+ * NOTICE:
+ * This code is not my original work.  
+ * It is adapted from NVIDIA’s Developer Blog series 
+ * “An Even Easier Introduction to CUDA” 
+ * (https://developer.nvidia.com/blog/even-easier-introduction-cuda/)
+ * and their accompanying GitHub repository: 
+ * https://github.com/NVIDIA-developer-blog/code-samples/tree/master/series/cuda-cpp
+ *
+ * All credit for the original implementation belongs to NVIDIA.
+ */
+ 
 #include <stdio.h> 
 
 int main() {

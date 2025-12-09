@@ -1,9 +1,8 @@
 #!/bin/bash
 
 cd $PBS_O_WORKDIR
-module load cuda
+module load cuda/12.2.1
 
-# Compile with optimizations
 nvcc -O3 hw.shared.cu -o shared
 
 OUTPUT_DIR="/scratch/$USER/shared"

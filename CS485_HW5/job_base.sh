@@ -1,9 +1,8 @@
 #!/bin/bash
 
 cd $PBS_O_WORKDIR
-module load cuda
+module load cuda/12.2.1
 
-# Compile with optimizations
 nvcc -O3 hw_base.cu -o base
 
 OUTPUT_DIR="/scratch/$USER/base"
